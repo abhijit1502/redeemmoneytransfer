@@ -11301,7 +11301,6 @@ button.show {
 }
 
 /* Calculator Css */
-/* Calculator Css */
 .calculator {
   padding: 25px;
   border-radius: 30px;
@@ -11317,27 +11316,53 @@ button.show {
 .calculator label {
   font-size: 14px !important;
   font-weight: 600 !important;
+  text-align: left;
+  width: 100%;
 }
 
-/* --- FIX STARTS HERE --- */
 .send-money-input {
-  /* REMOVED: width: 100% !important; */
-  flex-grow: 1; /* ADDED: Allows the input to take up the remaining space */
-  min-width: 0; /* ADDED: Prevents overflow on small screens */
+  /* This input will grow to fill all available space */
+  flex-grow: 1;
+  /* This prevents it from overflowing when the screen is narrow */
+  min-width: 0;
 
-  /* Your original styles */
+  /* Your original styling */
   font-weight: 600;
   font-size: 24px !important;
   color: #000;
-  padding: 12px 20px 12px 0; /* Adjusted padding to remove left padding */
-  border-bottom: 1px solid #000 !important;
+  padding: 12px 10px 12px 0;
   border: none;
+  border-bottom: 1px solid #000 !important;
   background-color: transparent;
   margin-bottom: 10px;
 }
-/* --- FIX ENDS HERE --- */
 
+/* --- KEY FIX IS HERE --- */
+/* Target the wrapper div that you are using */
+.form-group {
+  /* This tells the wrapper div NOT to shrink, protecting the selector inside */
+  flex-shrink: 0;
+}
 
+/* The currency selector box */
+.send-money-side {
+  /* This is CRUCIAL to prevent text like "GBP" from wrapping to "G BP" */
+  white-space: nowrap;
+
+  /* Your original styling for the selector */
+  display: flex !important;
+  align-items: center;
+  gap: 8px !important;
+  outline: 1px solid #000 !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  font-size: 16px !important;
+  font-weight: 600;
+  height: fit-content;
+}
+
+/* --- The rest of your styles --- */
 .dropdown-clc {
   padding: 13px;
   position: absolute !important;
@@ -11370,35 +11395,15 @@ button.show {
   border-radius: 50%;
 }
 
-/* --- FIX STARTS HERE --- */
-.send-money-side {
-  /* REMOVED: width: 100% !important; */
-  
-  /* Your original styles */
-  font-size: 16px !important;
-  font-weight: 600;
-  display: flex !important;
-  outline: 1px solid #000 !important;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px !important;
-  padding: 12px 12px !important;
-  border-radius: 8px !important;
-  cursor: pointer;
-  flex-shrink: 0; /* Prevents the selector from shrinking */
-}
-/* --- FIX ENDS HERE --- */
-
-
 .list-group-item.active {
   z-index: 2;
   color: #000000 !important;
   background-color: #e3e3e3 !important;
-  /* border-color: var(--bs-list-group-active-border-color); */
 }
 
 .countryNamecss {
   font-size: 16px;
+  font-weight: 500;
 }
 
 .currencycodecss {
@@ -11413,3 +11418,4 @@ button.show {
 .cursor-pointer {
   cursor: pointer;
 }
+
