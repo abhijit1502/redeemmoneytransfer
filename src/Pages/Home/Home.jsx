@@ -44,253 +44,176 @@ function Home() {
         <>
           <Header />
           <Banner />
-          {/* =================== why choose us section start ======================= */}
-          <section className="py-80 z-1 overflow-hidden">
+          {/* ======================== Why Choose Us section start ========================= */}
+          <section className="py-140 bg-white">
             <div className="container">
-              <div className="d-flex align-items-center tw-gap-4 justify-content-between flex-wrap tw-mb-80-px">
-                <div className="max-w-526">
+              <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
+                <div className="max-w-526-px">
                   <div
                     className="d-flex align-items-center tw-gap-1 tw-mb-3"
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
-                    <img src="assets/images/icon/star-icon2.png" alt="Image" />
-                    <h5 className="fw-normal text-primary-600">
-                      Why Choose Us
-                    </h5>
+                    <img src="assets/images/icon/star-icon2.png" alt />
+                    <h5 className="fw-normal text-primary-600">Why Choose Us</h5>
                   </div>
                   <h2
-                    className="fw-normal text-dark-700 cursor-big"
+                    className="fw-normal cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
                     Why Choose Redeem for International Transfers
                   </h2>
                 </div>
-                <div className="max-w-426">
+                <div className="max-w-418-px">
                   <p
-                    className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                    className="fw-normal tw-text-405 text-dark-500"
                     data-aos="fade-up"
-                    data-aos-duration={900}
+                    data-aos-duration={1000}
                   >
-                    Our platform is designed to make cross-border payments and
-                    remittances faster, safer, and more affordable than
-                    traditional banks.
+                    Our platform is designed to make cross-border payments and remittances faster, safer, and more affordable than traditional banks.
                   </p>
                 </div>
               </div>
               <div className="row gy-4">
-                <div
-                  className="col-lg-3"
-                  data-aos="fade-up"
-                  data-aos-duration={600}
-                >
-                  <img
-                    src="assets/images/thumbs/about-us-three-img1.png"
-                    alt="Image"
-                    className="bg-img tw-h-420-px"
-                  />
-                </div>
-                <div className="col-xl-9">
-                  <div className="one-platform__title d-flex align-items-center tw-gap-4">
-                    <div
-                      className="payment-solutions__item cursor-pointer active"
-                      data-aos="fade-up"
-                      data-aos-duration={800}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-w-86-px tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="group animation-item"
+                    data-aos="fade-up"
+                    data-aos-duration={600}
+                  >
+                    <div className="tw-px-10 tw-py-8 tw-rounded-xl text-center group-hover-bg-neutral-10 tw-duration-300 group-hover-border-base-two-600 tw-transition-all">
+                      <span className="tw-w-72-px tw-h-72-px bg-neutral-10 rounded-circle border-neutral-50 border tw-mb-6 group-hover-bg-white tw-duration-300 d-flex align-items-center justify-content-center mx-auto">
+                        <img
                            src="assets/images/icon/Fast-Global-Transfers.png"
                             alt="Fast Global Transfers"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-transform-rotate-90deg-translate-72px tw-w-406-px">
-                          Fast Global Transfers
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Fast-Global-Transfers.png"
-                            alt="Fast Global Transfers"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Fast Global Transfers
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Send money to over 180 countries with delivery in as
+                          className="animate__heartBeat"
+                        />
+                      </span>
+                      <h5 className="fw-normal tw-mb-2">
+                        Fast Global Transfers
+                      </h5>
+                      <p className="fw-normal tw-text-405 text-dark-500">
+                        Send money to over 180 countries with delivery in as
                           little as minutes.
-                        </p>
-                      </div>
+                      </p>
                     </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-w-86-px tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Exchange-Rates.png"
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="group animation-item"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                  >
+                    <div className="tw-px-10 tw-py-8 tw-rounded-xl text-center group-hover-bg-neutral-10 tw-duration-300 group-hover-border-base-two-600 tw-transition-all">
+                      <span className="tw-w-72-px tw-h-72-px bg-neutral-10 rounded-circle border-neutral-50 border tw-mb-6 group-hover-bg-white tw-duration-300 d-flex align-items-center justify-content-center mx-auto">
+                        <img
+                         src="assets/images/icon/Exchange-Rates.png"
                             alt="Competitive Exchange Rates"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-transform-rotate-90deg-translate-72px tw-w-406-px">
-                          Competitive Exchange Rates
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Exchange-Rates.png"
-                            alt="Competitive Exchange Rates"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Competitive Exchange Rates
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Get market-leading exchange rates with transparent
+                          className="animate__heartBeat"
+                        />
+                      </span>
+                      <h5 className="fw-normal tw-mb-2">Competitive Exchange Rates</h5>
+                      <p className="fw-normal tw-text-405 text-dark-500">
+                        Get market-leading exchange rates with transparent
                           pricing and no hidden fees.
-                        </p>
-                      </div>
+                      </p>
                     </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1200}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-w-86-px tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                           <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Secure-Transactions.png"
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="group animation-item"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    <div className="tw-px-10 tw-py-8 tw-rounded-xl text-center group-hover-bg-neutral-10 tw-duration-300 group-hover-border-base-two-600 tw-transition-all">
+                      <span className="tw-w-72-px tw-h-72-px bg-neutral-10 rounded-circle border-neutral-50 border tw-mb-6 group-hover-bg-white tw-duration-300 d-flex align-items-center justify-content-center mx-auto">
+                        <img
+                         src="assets/images/icon/Secure-Transactions.png"
                             alt="Secure Transactions"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-transform-rotate-90deg-translate-72px tw-w-406-px">
-                          Secure Transactions
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Secure-Transactions.png"
-                            alt="Secure Transactions"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Secure Transactions
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Bank-level encryption and security protocols to
+                          className="animate__heartBeat"
+                        />
+                      </span>
+                      <h5 className="fw-normal tw-mb-2">Secure Transactions</h5>
+                      <p className="fw-normal tw-text-405 text-dark-500">
+                        Bank-level encryption and security protocols to
                           protect your money and data.
-                        </p>
-                      </div>
+                      </p>
                     </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1300}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-w-86-px tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                           <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Multi-Currency-Wallet.png"
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="group animation-item"
+                    data-aos="fade-up"
+                    data-aos-duration={600}
+                  >
+                    <div className="tw-px-10 tw-py-8 tw-rounded-xl text-center group-hover-bg-neutral-10 tw-duration-300 group-hover-border-base-two-600 tw-transition-all">
+                      <span className="tw-w-72-px tw-h-72-px bg-neutral-10 rounded-circle border-neutral-50 border tw-mb-6 group-hover-bg-white tw-duration-300 d-flex align-items-center justify-content-center mx-auto">
+                        <img
+                           src="assets/images/icon/Multi-Currency-Wallet.png"
                             alt="Multi-Currency Wallet"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-transform-rotate-90deg-translate-72px tw-w-406-px">
-                          Multi-Currency Wallet
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Multi-Currency-Wallet.png"
-                            alt="Multi-Currency Wallet"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Multi-Currency Wallet
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Hold and manage multiple currencies in one place with
+                          className="animate__heartBeat"
+                        />
+                      </span>
+                      <h5 className="fw-normal tw-mb-2">Multi-Currency Wallet</h5>
+                      <p className="fw-normal tw-text-405 text-dark-500">
+                        Hold and manage multiple currencies in one place with
                           our digital wallet.
-                        </p>
-                      </div>
+                      </p>
                     </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1300}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-w-86-px tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                            <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Multiple-Payout-Options.png"
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="group animation-item"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                  >
+                    <div className="tw-px-10 tw-py-8 tw-rounded-xl text-center group-hover-bg-neutral-10 tw-duration-300 group-hover-border-base-two-600 tw-transition-all">
+                      <span className="tw-w-72-px tw-h-72-px bg-neutral-10 rounded-circle border-neutral-50 border tw-mb-6 group-hover-bg-white tw-duration-300 d-flex align-items-center justify-content-center mx-auto">
+                        <img
+                          src="assets/images/icon/Multiple-Payout-Options.png"
                             alt="Multiple Payout Options"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-transform-rotate-90deg-translate-72px tw-w-406-px">
-                          Multiple Payout Options
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Multiple-Payout-Options.png"
-                            alt="Multiple Payout Options"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Multiple Payout Options
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Bank deposits, mobile money, cash pickup, and home
+                          className="animate__heartBeat"
+                        />
+                      </span>
+                      <h5 className="fw-normal tw-mb-2">Multiple Payout Options</h5>
+                      <p className="fw-normal tw-text-405 text-dark-500">
+                        Bank deposits, mobile money, cash pickup, and home
                           delivery options available.
-                        </p>
-                      </div>
+                      </p>
                     </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1300}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-w-86-px tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                           <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Instant-Notifications.png"
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="group animation-item"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    <div className="tw-px-10 tw-py-8 tw-rounded-xl text-center group-hover-bg-neutral-10 tw-duration-300 group-hover-border-base-two-600 tw-transition-all">
+                      <span className="tw-w-72-px tw-h-72-px bg-neutral-10 rounded-circle border-neutral-50 border tw-mb-6 group-hover-bg-white tw-duration-300 d-flex align-items-center justify-content-center mx-auto">
+                        <img
+                          src="assets/images/icon/Instant-Notifications.png"
                             alt="Instant Notifications"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-transform-rotate-90deg-translate-72px tw-w-406-px">
-                          Instant Notifications
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Instant-Notifications.png"
-                            alt="Instant Notifications"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Instant Notifications
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Real-time tracking and alerts for all your
+                          className="animate__heartBeat"
+                        />
+                      </span>
+                      <h5 className="fw-normal tw-mb-2">Instant Notifications</h5>
+                      <p className="fw-normal tw-text-405 text-dark-500">
+                        Real-time tracking and alerts for all your
                           international money transfers.
-                        </p>
-                      </div>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* =================== why choose us section end ======================= */}
+          {/* ======================== Why Choose Us section end ========================= */}
 
           {/* ================== Working Section Start ===================== */}
           <section className="py-80 z-1 bg-neutral-10 overflow-hidden">
@@ -447,7 +370,8 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={900}
                   >
-                   Join millions of customers who trust Redeem for their international money transfer needs.
+                    Join millions of customers who trust Redeem for their
+                    international money transfer needs.
                   </p>
                 </div>
               </div>
@@ -461,17 +385,14 @@ function Home() {
                         data-aos-duration={600}
                       >
                         <span className="tw-w-82px tw-h-82-px border-dashed-white rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center flex-shrink-0">
-                          <img
-                            src="assets/images/icon/star.png"
-                            alt="Image"
-                          />
+                          <img src="assets/images/icon/star.png" alt="Image" />
                         </span>
                         <div className="our-peature__item max-w-310">
                           <h5 className="fw-normal text-white">
                             No Registration Fees
                           </h5>
                           <p className="fw-medium tw-text-lg text-white">
-                           Create your account for free in minutes
+                            Create your account for free in minutes
                           </p>
                         </div>
                       </div>
@@ -481,17 +402,14 @@ function Home() {
                         data-aos-duration={800}
                       >
                         <span className="tw-w-82px tw-h-82-px border-dashed-white rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center">
-                          <img
-                            src="assets/images/icon/star.png"
-                            alt="Image"
-                          />
+                          <img src="assets/images/icon/star.png" alt="Image" />
                         </span>
                         <div className="our-peature__item max-w-310">
                           <h5 className="fw-normal text-white">
-                           Transparent Pricing
+                            Transparent Pricing
                           </h5>
                           <p className="fw-medium tw-text-lg text-white">
-                           See exactly what you'll pay before confirming
+                            See exactly what you'll pay before confirming
                           </p>
                         </div>
                       </div>
@@ -501,24 +419,19 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <span className="tw-w-82px tw-h-82-px border-dashed-white rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center">
-                          <img
-                            src="assets/images/icon/star.png"
-                            alt="Image"
-                          />
+                          <img src="assets/images/icon/star.png" alt="Image" />
                         </span>
                         <div className="our-peature__item max-w-310">
-                          <h5 className="fw-normal text-white">
-                            24/7 Support
-                          </h5>
+                          <h5 className="fw-normal text-white">24/7 Support</h5>
                           <p className="fw-medium tw-text-lg text-white">
-                           Get help anytime via chat, email, or phone
+                            Get help anytime via chat, email, or phone
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="col-xl-5">
-                  <Calculator/>
+                    <Calculator />
                   </div>
                 </div>
               </div>
@@ -544,7 +457,7 @@ function Home() {
                     data-aos-duration={800}
                   >
                     <h4 className="fw-normal text-dark-600 tw-mb-3">
-                     Countries Supported
+                      Countries Supported
                     </h4>
                     <h2 className="banner-item-title h1 tw-text-15 text-base-two-600 tw-mb-6 cursor-big counter">
                       180+
