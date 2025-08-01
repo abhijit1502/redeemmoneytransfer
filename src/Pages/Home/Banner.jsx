@@ -66,7 +66,7 @@ function Banner() {
                           <div className="position-relative">
                             <NavLink
                               to="#"
-                              className="banner-three-item-link bg-main-600 text-dark-600 fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-white"
+                              className="banner-three-item-link bg-main-600 text-white fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-white"
                             >
                               Send Money Now
                             </NavLink>
