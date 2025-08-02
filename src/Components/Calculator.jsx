@@ -258,7 +258,7 @@ function Calculator() {
     }
     //  toast.success("Amount Calculated Successfully!");
     // Open the link in a new tab
-    window.open("https://www.tassapay.co.uk/app/app-login", "_blank");
+    window.open("https://www.redeem.co.uk/app/app-login", "_blank");
   };
 
   // Fetch countries on component mount

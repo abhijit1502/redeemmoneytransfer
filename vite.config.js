@@ -1,39 +1,51 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
-  plugins: [react()],
-  
-  server: {
-    proxy: {
-      // Proxy setup
-      '/api': {
-        target: 'https://redeemmoneytransfer.com/prod/api',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''), // Fixing the rewrite
-      },
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    plugins: [react()],
+    
+    // Environment configuration
+    envPrefix: 'VITE_',
+    define: {
+      'process.env': env,
+      __API_URL__: JSON.stringify(env.VITE_API_BASE_URL),
     },
-  },
 
-  base: '/',
+    // Server configuration
+    server: {
+      host: true,
+      port: 3000,
+      strictPort: true,
+      proxy: env.VITE_USE_PROXY === 'true' ? {
+        '/api': {
+          target: env.VITE_API_BASE_URL,
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+          headers: {
+            'Host': new URL(env.VITE_API_BASE_URL).hostname,
+            'X-Forwarded-Host': env.VITE_SITE_URL
+          }
+        }
+      } : undefined,
+    },
 
-  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
-
-  build: {
-    sourcemap: false,
-    rollupOptions: {
-      external: ['jquery'], // Keeping jQuery external if used via CDN
-      output: {
-        globals: {
-          jquery: 'jQuery',
+    // Build configuration
+    build: {
+      sourcemap: env.GENERATE_SOURCEMAP === 'true',
+      outDir: 'dist',
+      emptyOutDir: true,
+      rollupOptions: {
+        external: ['jquery'],
+        output: {
+          globals: {
+            jquery: 'jQuery',
+          },
         },
       },
     },
-  },
-
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'], 
-    exclude: ['jquery'],
-  },
-  
+  };
 });

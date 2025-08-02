@@ -1,8 +1,33 @@
 {
+  "version": 2,
+  "public": true,
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://qfremit.com/pilot/$1"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "VITE_API_BASE_URL": "/api",
+    "VITE_SITE_URL": "https://qfremit.com/pilot"
+  }
 }
