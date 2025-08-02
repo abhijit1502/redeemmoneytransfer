@@ -107,7 +107,7 @@ function Home() {
                           Fast Global Transfers
                         </h5>
                       </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-danger-700 tw-rounded-xl tw-px-8 tw-py-8">
+                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
                         <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
                           <img
                            src="assets/images/icon/Fast-Global-Transfers.png"
@@ -139,7 +139,7 @@ function Home() {
                           Competitive Exchange Rates
                         </h5>
                       </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-danger-700 tw-rounded-xl tw-px-8 tw-py-8">
+                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
                         <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
                           <img
                             src="assets/images/icon/Exchange-Rates.png"
@@ -171,7 +171,7 @@ function Home() {
                           Secure Transactions
                         </h5>
                       </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-danger-700 tw-rounded-xl tw-px-8 tw-py-8">
+                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
                         <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
                           <img
                             src="assets/images/icon/Secure-Transactions.png"
@@ -203,7 +203,7 @@ function Home() {
                           Multi-Currency Wallet
                         </h5>
                       </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-danger-700 tw-rounded-xl tw-px-8 tw-py-8">
+                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
                         <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
                           <img
                            src="assets/images/icon/Multi-Currency-Wallet.png"
@@ -235,7 +235,7 @@ function Home() {
                           Multiple Payout Options
                         </h5>
                       </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-danger-700 tw-rounded-xl tw-px-8 tw-py-8">
+                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
                         <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
                           <img
                           src="assets/images/icon/Multiple-Payout-Options.png"
@@ -267,7 +267,7 @@ function Home() {
                           Instant Notifications
                         </h5>
                       </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-danger-700 tw-rounded-xl tw-px-8 tw-py-8">
+                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
                         <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
                           <img
                           src="assets/images/icon/Instant-Notifications.png"
