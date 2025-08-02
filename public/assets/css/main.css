@@ -10255,6 +10255,89 @@ input:focus, input:focus-visible {
     display: none;
 }
 
+/* Responsive CSS for Payment Solutions Section */
+.payment-solutions__button {
+  width: 72px;
+  position: relative;
+}
+
+.payment-solutions__button h5 {
+  position: absolute;
+  white-space: nowrap;
+  left: 50%;
+  bottom: 295px;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left center;
+  width: 420px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+  .payment-solutions__button h5 {
+    width: 380px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .payment-solutions__button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto !important;
+    padding: 10px;
+  }
+  
+  .payment-solutions__button h5 {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+  
+  .choose-us__icon {
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+    
+  .payment-solutions__content {
+    margin-top: 15px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .one-platform__title {
+    flex-direction: column;
+  }
+  
+  .payment-solutions__item {
+    width: 100%;
+  }
+}
+
+/* Maintain existing styles */
+.payment-solutions__button.bg-base-two-10 {
+  background-color: var(--base-two-10);
+}
+
+.payment-solutions__content.bg-danger-700 {
+  background-color: var(--danger-700);
+}
+
+.tw-h-420-px {
+  height: 420px;
+}
+
+.tw-rounded-md {
+  border-radius: 0.375rem;
+}
+
+.tw-rounded-xl {
+  border-radius: 1rem;
+}
+
 .payment-solutions__item.active .payment-solutions__button {
     display: none;
 }
