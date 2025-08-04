@@ -7,85 +7,21 @@ import CookieConsent from "../../Components/CookieConsent";
 import Help_Seo from "../../SEO/Help_Seo";
 
 function Help() {
-const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const smootherRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 300);
+    return () => clearTimeout(timer);
   }, []);
 
-useEffect(() => {
-  const gsap = window.gsap;
-  const ScrollTrigger = window.ScrollTrigger;
-  const ScrollSmoother = window.ScrollSmoother;
-  const SplitText = window.SplitText;
-
-  let smoother;
-
-  const initializeSmoother = () => {
-    // Register plugins
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
-    // Kill existing instance
-    if (ScrollSmoother.get()) {
-      ScrollSmoother.get().kill();
+  useEffect(() => {
+    if (!isLoading) {
+      if (window.initThemeScripts) window.initThemeScripts();
+      if (window.initGsapScripts) window.initGsapScripts();
     }
-
-    // Check if wrapper and content exist
-    const wrapper = document.getElementById("smooth-wrapper");
-    const content = document.getElementById("smooth-content");
-
-    if (!wrapper || !content) return;
-
-    // Recreate smoother
-    smoother = ScrollSmoother.create({
-      wrapper: wrapper,
-      content: content,
-      smooth: 1.2,
-      effects: true,
-    });
-
-    // SplitText animation
-    const split = new SplitText(".headline", { type: "words,chars" });
-    gsap.from(split.chars, {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.05,
-      ease: "power2.out",
-    });
-
-    // Scroll animation
-    gsap.to(".line_item_one", {
-      scrollTrigger: {
-        trigger: ".line_item_one",
-        start: "top 80%",
-        end: "bottom top",
-        scrub: true,
-      },
-      x: 200,
-    });
-  };
-
-  if (!isLoading) {
-    // Wait for DOM + React hydration
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        initializeSmoother();
-      }, 100); // delay ensures DOM is ready
-    });
-  }
-
-  // Clean up on unmount/route change
-  return () => {
-    if (ScrollSmoother.get()) {
-      ScrollSmoother.get().kill();
-    }
-  };
-}, [isLoading, location.pathname]);
+  }, [isLoading]);
 
   return (
     <>
@@ -95,169 +31,204 @@ useEffect(() => {
       ) : (
         <>
           <Header />
-          <div id="smooth-wrapper">
-            <div id="smooth-content">
-              <div className="line_wrap">
-                <div className="line_item_one" />
-                <div className="line_item" />
-                <div className="line_item" />
-                <div className="line_item" />
-                <div className="line_item" />
-              </div>
-              <main>
-                {/*======  Start Page Hero Section  ======*/}
-                <section className="page-hero-ss">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className="page-content text-center">
-                          <h1 className="page-title">Help</h1>
-                          <ul className="breadcrumb-link">
-                            <li>
-                              <NavLink to="/">Home</NavLink>
-                            </li>
-                            <li className="active">Help</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                {/*======  End Page Hero Section  ======*/}
-                {/*<<Help Section Start>>*/}
-                <section className="help-area pb-80">
-                  <div className="container">
-                    <div className="row align-items-center justify-content-center justify-content-lg-between">
-                      <div className="col-lg-7">
-                        <div className="title-area mb-2 text-center text-lg-start">
-                          <p className="">For Documents</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="nav nav-tabs help-tabs"
-                      id="nav-tab"
-                      role="tablist"
-                    >
-                      <NavLink to="/onboarding" className="nav-link">
-                        <img src="assets/images/photo/kyc.png" />
-                        <span className="box-title">KYC Upload</span>
-                      </NavLink>
-                    </div>
-                    <hr style={{ color: "#2d2bb5" }} />
-                    <div className="row align-items-center justify-content-center justify-content-lg-between">
-                      <div className="col-lg-7">
-                        <div className="title-area mb-2 text-center text-lg-start">
-                          <p className="">For Safety</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="nav nav-tabs help-tabs"
-                      id="nav-tab"
-                      role="tablist"
-                    >
-                      <NavLink to="/data-safety" className="nav-link">
-                        <img src="assets/images/photo/data-safety.png" />
-                        <span className="box-title">Data Safety</span>
-                      </NavLink>
-                    </div>
-                    <hr style={{ color: "#2d2bb5" }} />
-                    <div className="row align-items-center justify-content-center justify-content-lg-between">
-                      <div className="col-lg-7">
-                        <div className="title-area mb-2 text-center text-lg-start">
-                          <p className="">For FAQ's</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="nav nav-tabs help-tabs"
-                      id="nav-tab"
-                      role="tablist"
-                    >
-                      <NavLink to="/onboarding-faq" className="nav-link">
-                        <img src="assets/images/photo/onbordingfaq.png" />
-                        <span className="box-title">Onboarding FAQs</span>
-                      </NavLink>
-                      <NavLink to="/general-faq" className="nav-link">
-                        <img src="assets/images/photo/faq.png" />
-                        <span className="box-title">General FAQs</span>
-                      </NavLink>
-                    </div>
-                    <hr style={{ color: "#2d2bb5" }} />
-                    <div className="row align-items-center justify-content-center justify-content-lg-between">
-                      <div className="col-lg-7">
-                        <div className="title-area mb-2 text-center text-lg-start">
-                          <p className="">For Any Help</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="nav nav-tabs help-tabs"
-                      id="nav-tab"
-                      role="tablist"
-                    >
-                      <NavLink
-                        to="https://api.whatsapp.com/send?phone=14379861192&amp;text=Hello There, I would like to enquire about money transfer."
-                        className="nav-link"
-                        target="_blank"
-                      >
-                        <img src="assets/images/photo/whatsapp.png" />
-                        <span className="box-title">Whatsapp</span>
-                      </NavLink>
-                      <NavLink to="tel:14379861192" className="nav-link">
-                        <img src="assets/images/photo/phone.png" />
-                        <span className="box-title">Phone</span>
-                      </NavLink>
-                    </div>
-                  </div>
-                </section>
-
-                {/*====== Start CTA Section ======*/}
-                <section
-                  className="cta-sb bg_cover p-r z-1 pt-90 pb-40"
-                  style={{
-                    backgroundImage: "url(assets/images/bg/cta-bg1.jpg)",
-                  }}
+          {/* ==================== Breadcrumb Start Here ==================== */}
+          <div className="bg-neutral-20 position-relative z-1 py-120 pb-5">
+            <img
+              src="assets/images/shape/my-profile-shape-1.png"
+              alt="Image"
+              className="shape__one position-absolute z-n1 tw-block-end-0 tw-start-0"
+            />
+            <img
+              src="assets/images/shape/my-profile-shape-2.png"
+              alt="Image"
+              className="shape__two position-absolute z-n1 tw-block-end-0 tw-end-0"
+            />
+            <div className="text-center">
+              <h1
+                className="fw-normal text-dark-600 text-uppercase cursor-big"
+                data-aos="fade-up"
+                data-aos-duration={600}
+              >
+                Help
+              </h1>
+              <div
+                className="d-flex align-items-center tw-gap-105 justify-content-center"
+                data-aos="fade-up"
+                data-aos-duration={800}
+              >
+                <NavLink
+                  to="/"
+                  className="fw-semibold tw-text-base text-dark-600 text-uppercase"
                 >
-                  <div className="container">
-                    <div className="row align-items-center">
-                      <div className="col-xl-12">
-                        {/*=== Section Content Box ===*/}
-                        <div className="section-content-box mb-50 text-center">
-                          <div className="section-title text-white mb-55">
-                            <h2 className="text-anm">
-                              <span className="font-200">Download</span> Our
-                              Mobile App
-                            </h2>
-                          </div>
-                        </div>
-                        <div className="section-content-box mb-40 text-center">
-                          <div className="row justify-content-center">
-                            <div className="col-xl-2 col-md-6">
-                              {/*=== Iconic Box ===*/}
-                              <NavLink to="#" target="_blank" className="mb-3">
-                                <img src="assets/images/icons/Play-store.png" />
-                              </NavLink>
-                            </div>
-                            <div className="col-xl-2 col-md-6">
-                              {/*=== Iconic Box ===*/}
-                              <NavLink to="#" target="_blank" className="mb-3">
-                                <img src="assets/images/icons/Appstore.png" />
-                              </NavLink>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                {/*====== End CTA Section ======*/}
-              </main>
-              <Footer />
+                  HOME
+                </NavLink>
+                <span className="tw-text-6 text-main-600">
+                  <i className="ph ph-caret-double-right" />
+                </span>
+                <span className="fw-semibold tw-text-base text-main-600 text-uppercase">
+                  Help
+                </span>
+              </div>
             </div>
           </div>
-          <CookieConsent />
+          {/* ==================== Breadcrumb End Here ==================== */}
+          {/* ==================== Help Start Here ==================== */}
+          <section className="help-area py-80">
+            <div className="container">
+              <div className="row align-items-center justify-content-center justify-content-lg-between">
+                <div className="col-lg-7">
+                  <div className="title-area mb-2 text-center text-lg-start">
+                    <p className="">For Documents</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <NavLink className="max-w-246-px w-100" to="/onboarding">
+                  <div className="group group-item position-relative">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                      <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
+                        <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
+                          <img
+                            src="assets/images/photo/kyc.png"
+                            alt="KYC Upload"
+                            className="group-hover-item-text-invert tw-duration-500"
+                          />
+                        </span>
+                      </span>
+                      <span className="fw-semibold tw-text-4 text-dark-600">
+                        KYC Upload
+                      </span>
+                    </div>
+                  </div>
+                </NavLink>
+              </div>
+              <hr />
+              <div className="row align-items-center justify-content-center justify-content-lg-between">
+                <div className="col-lg-7">
+                  <div className="title-area mb-2 text-center text-lg-start">
+                    <p className="">For Safety</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <NavLink className="max-w-246-px w-100" to="/data-safety">
+                  <div className="group group-item position-relative">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                      <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
+                        <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
+                          <img
+                            src="assets/images/photo/data-safety.png"
+                            alt="Data Safety"
+                            className="group-hover-item-text-invert tw-duration-500"
+                          />
+                        </span>
+                      </span>
+                      <span className="fw-semibold tw-text-4 text-dark-600">
+                        Data Safety
+                      </span>
+                    </div>
+                  </div>
+                </NavLink>
+              </div>
+              <hr />
+              <div className="row align-items-center justify-content-center justify-content-lg-between">
+                <div className="col-lg-7">
+                  <div className="title-area mb-2 text-center text-lg-start">
+                    <p className="">For FAQ's</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <NavLink className="max-w-246-px w-100" to="#">
+                  <div className="group group-item position-relative">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                      <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
+                        <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
+                          <img
+                            src="assets/images/photo/onbordingfaq.png"
+                            alt="Onboarding FAQs"
+                            className="group-hover-item-text-invert tw-duration-500"
+                          />
+                        </span>
+                      </span>
+                      <span className="fw-semibold tw-text-4 text-dark-600">
+                        Onboarding FAQs
+                      </span>
+                    </div>
+                  </div>
+                </NavLink>&ensp;
+
+                <NavLink className="max-w-246-px w-100" to="#">
+                  <div className="group group-item position-relative">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                      <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
+                        <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
+                          <img
+                            src="assets/images/photo/faq.png"
+                            alt="General FAQs"
+                            className="group-hover-item-text-invert tw-duration-500"
+                          />
+                        </span>
+                      </span>
+                      <span className="fw-semibold tw-text-4 text-dark-600">
+                        General FAQs
+                      </span>
+                    </div>
+                  </div>
+                </NavLink>
+              </div>
+              <hr />
+              <div className="row align-items-center justify-content-center justify-content-lg-between">
+                <div className="col-lg-7">
+                  <div className="title-area mb-2 text-center text-lg-start">
+                    <p className="">For Any Help</p>
+                  </div>
+                </div>
+              </div>
+               <div>
+                <NavLink className="max-w-246-px w-100" to="https://api.whatsapp.com/send?phone=41779873231&text=Hello There, I would like to enquire about money transfer." target="_blank">
+                  <div className="group group-item position-relative">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                      <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
+                        <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
+                          <img
+                            src="assets/images/photo/whatsapp.png"
+                            alt="Whatsapp"
+                            className="group-hover-item-text-invert tw-duration-500"
+                          />
+                        </span>
+                      </span>
+                      <span className="fw-semibold tw-text-4 text-dark-600">
+                        Whatsapp
+                      </span>
+                    </div>
+                  </div>
+                </NavLink>&ensp;
+
+                <NavLink className="max-w-246-px w-100" to="tel:41779873231">
+                  <div className="group group-item position-relative">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                      <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
+                        <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
+                          <img
+                            src="assets/images/photo/phone.png"
+                            alt="Phone"
+                            className="group-hover-item-text-invert tw-duration-500"
+                          />
+                        </span>
+                      </span>
+                      <span className="fw-semibold tw-text-4 text-dark-600">
+                        Phone
+                      </span>
+                    </div>
+                  </div>
+                </NavLink>
+              </div>
+            </div>
+          </section>
+          {/* ==================== Help End Here ==================== */}
+
+          <Footer />
         </>
       )}
     </>

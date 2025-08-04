@@ -5,6 +5,12 @@ import ScriptsLoader from "./Hook/ScriptsLoader";
 import AppWrapper from "./Components/AppWrapper";
 import Home from "./Pages/Home/Home";
 import Error from "./Pages/Error";
+import ContactUs from "./Pages/Contact/ContactUs";
+import Help from "./Pages/Help/Help";
+import Onboarding from "./Pages/Onboarding/Onboarding";
+import Livenesscheck from "./Pages/Onboarding/Livenesscheck";
+import Finish from "./Pages/Onboarding/Finish";
+import DataSafety from "./Pages/DataSafety/DataSafety";
 
 function App() {
   useEffect(() => {
@@ -34,8 +40,17 @@ function App() {
       <ScriptsLoader />
       <AppWrapper>
         <RouterRoutes>
-          <Route path="/" element={<Home />} />
           <Route path="/*" element={<Error />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/help" element={<Help />} />
+          {/* <Route path="/general-faq" element={<GeneralFAQ />} />
+          <Route path="/onboarding-faq" element={<OnboardingFAQ />} />
+           */}
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/livenesscheck" element={<Livenesscheck />} />
+          <Route path="/finish" element={<Finish />} />
+          <Route path="/data-safety" element={<DataSafety />} />
         </RouterRoutes>
       </AppWrapper>
     </>

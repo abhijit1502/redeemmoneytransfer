@@ -8,36 +8,43 @@ const Footer = () => {
 
   return (
     <>
-   {/* ==================== Newsletter Two Section Start ====================== */}
-<div className="margin-block-end--162px z-2 overflow-hidden" data-aos="fade-up" data-aos-duration={1000}>
-  <div className="container">
-    <div className="bg-primary-400 pt-5 pb-5 rounded-2">
-      <div className="d-flex align-items-center justify-content-center tw-gap-4 flex-wrap">
-        <div className="text-center">
-          <h5 className="text-white tw-mb-3">Our app</h5>
-          <h2 className="text-white cursor-big fw-normal mb-3">Download App</h2>
-          <p className="text-white">
-            Start your money transfer journey with the Redeem app. Download from the Play Store or App Store
-          </p>
+      {/* ==================== Newsletter Two Section Start ====================== */}
+      <div
+        className="margin-block-end--162px z-2 overflow-hidden"
+        data-aos="fade-up"
+        data-aos-duration={1000}
+      >
+        <div className="container">
+          <div className="bg-primary-400 pt-5 pb-5 rounded-2">
+            <div className="d-flex align-items-center justify-content-center tw-gap-4 flex-wrap">
+              <div className="text-center">
+                <h5 className="text-white tw-mb-3">Our app</h5>
+                <h2 className="text-white cursor-big fw-normal mb-3">
+                  Download App
+                </h2>
+                <p className="text-white tw-px-10">
+                  Start your money transfer journey with the Redeem app.
+                  Download from the Play Store or App Store
+                </p>
 
-          <div className="d-flex justify-content-center align-items-center tw-gap-6 flex-wrap mt-4">
-            <div>
-              <NavLink to="#" target="_blank">
-                <img src="assets/images/Appstore.svg"/>
-              </NavLink>
-            </div>
-            <div>
-              <NavLink to="#" target="_blank">
-                <img src="assets/images/Playstore.svg"/>
-              </NavLink>
+                <div className="d-flex justify-content-center align-items-center tw-gap-6 flex-wrap mt-4">
+                  <div>
+                    <NavLink to="#" target="_blank">
+                      <img src="assets/images/Appstore.svg" />
+                    </NavLink>
+                  </div>
+                  <div>
+                    <NavLink to="#" target="_blank">
+                      <img src="assets/images/Playstore.svg" />
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-{/* ==================== Newsletter Two Section End ====================== */}
+      {/* ==================== Newsletter Two Section End ====================== */}
       {/* ==================== Footer Two Section Start Here ==================== */}
       <footer className="tw-pt-250px bg-dark-600 z-1 overflow-hidden">
         <div className="container">
@@ -88,7 +95,7 @@ const Footer = () => {
                     </li>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="#"
+                        to="/help"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Help
@@ -96,7 +103,7 @@ const Footer = () => {
                     </li>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="#"
+                        to="/contactus"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Contact Us
@@ -153,7 +160,7 @@ const Footer = () => {
                   </h4>
                   <ul>
                     <li className="tw-mb-3 group">
-                     <NavLink
+                      <NavLink
                         to="javascript:void(0)"
                         className="d-flex tw-gap-2 fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
@@ -166,7 +173,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li className="tw-mb-3 group">
-                     <NavLink
+                      <NavLink
                         to="tel:+41779873231"
                         className="d-flex tw-gap-2 fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
@@ -187,7 +194,7 @@ const Footer = () => {
                           <i className="ph ph-envelope-simple" />
                         </span>
                         <span className="fw-normal tw-text-lg text-neutral-10 group-hover-text-main-600 tw-duration-500">
-                          customercare@redeemtransfer.com 
+                          customercare@redeemtransfer.com
                         </span>
                       </NavLink>
                     </li>
@@ -219,10 +226,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <NavLink to="https://x.com/i/flow/login">
-                        <img
-                          src="assets/images/icon/twitter.png"
-                          alt="Image"
-                        />
+                        <img src="assets/images/icon/twitter.png" alt="Image" />
                       </NavLink>
                     </li>
                   </ul>
@@ -233,9 +237,19 @@ const Footer = () => {
           <div className="tw-mb-10 border-top-dark-500 tw-pt-6">
             <div className="d-flex align-items-center justify-content-center tw-gap-4 flex-wrap">
               <p className="fw-medium tw-text-lg text-white">
-               Copyright © {new Date().getFullYear()}&nbsp;
-                    <span><NavLink to="/">Redeem Money Transfer</NavLink></span> All Rights Reserved.
-                    | Powered By <span><NavLink to="https://www.calyx-solutions.com/" target="_blank">Calyx Solutions.</NavLink></span>
+                Copyright © {new Date().getFullYear()}&nbsp;
+                <span>
+                  <NavLink to="/">Redeem Money Transfer</NavLink>
+                </span>{" "}
+                All Rights Reserved. | Powered By{" "}
+                <span>
+                  <NavLink
+                    to="https://www.calyx-solutions.com/"
+                    target="_blank"
+                  >
+                    Calyx Solutions.
+                  </NavLink>
+                </span>
               </p>
             </div>
           </div>

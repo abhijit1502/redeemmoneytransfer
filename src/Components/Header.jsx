@@ -81,7 +81,7 @@ const Header = () => {
                 </li>
                 <li className="nav-menu__item">
                   <NavLink
-                    to="#"
+                    to="/help"
                     className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-white"
                   >
                     Help
@@ -89,7 +89,7 @@ const Header = () => {
                 </li>
                 <li className="nav-menu__item">
                   <NavLink
-                    to="#"
+                    to="/contactus"
                     className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-white"
                   >
                     Contact Us
@@ -215,7 +215,7 @@ const Header = () => {
                   </li>
                   <li className="nav-menu__item">
                     <NavLink
-                      to="#"
+                      to="/contactus"
                       className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-dark-600"
                     >
                       Contact Us

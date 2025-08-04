@@ -5,11 +5,11 @@
 .cardcss{
     box-shadow: rgba(0, 0, 0, 0.11) 0px 5px 40px 0px;
   margin: 0px 0px 30px;
-  border-radius: 35px;
+  border-radius: 15px;
 }
 #heading {
     text-transform: capitalize;
-    color: #f05045;
+    color: #3386ff;
     font-weight: 400;
     margin-top: 20px
 }
@@ -21,8 +21,6 @@
 }
 
     #msform .form-card .card-text {
-        font-size: 18px;
-        font-weight: 500;
         line-height: 32px;
         margin-bottom: 28px;
         text-align: left;
@@ -63,16 +61,16 @@
             -moz-box-shadow: none !important;
             -webkit-box-shadow: none !important;
             box-shadow: none !important;
-            border: 1px solid #f05045;
+            border: 1px solid #3386ff;
             outline-width: 0
         }
 
     #msform .action-button {
         width: 100px;
-        background: #f05045;
+        background: #3386ff;
         font-weight: 400;
         color: #fff;
-        border: 1px solid #f05045;
+        border: 1px solid #3386ff;
         border-radius: 10px;
         cursor: pointer;
         padding: 10px 30px;
@@ -84,7 +82,7 @@
         #msform .action-button:focus,
         #msform .action-button:hover {
             background-color: transparent;
-            border: 1px solid #f05045;
+            border: 1px solid #3386ff;
             color: #000;
             -webkit-appearance: none
         }
@@ -93,7 +91,7 @@
         padding: 17px 46px;
         font-size: 16px;
         font-weight: 600;
-        color: #f05045;
+        color: #3386ff;
         cursor: pointer;
         text-align: center;
         border: none;
@@ -116,7 +114,7 @@
             -o-transition: all .4s ease-in-out;
             -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
-            background-image: linear-gradient(to right, #f05045, #EA5900, #f05045, #EA5900);
+            background-image: linear-gradient(to right, #3386ff, #EA5900, #3386ff, #EA5900);
         }
 
 .card {
@@ -127,14 +125,14 @@
 
 .fs-title {
     font-size: 25px;
-    color: #f05045;
+    color: #3386ff;
     margin-bottom: 15px;
     font-weight: 400
 }
 
 .fs-titleh6 {
     font-size: 18px;
-    color: #f05045;
+    color: #3386ff;
     margin-bottom: 15px;
     font-weight: 400
 }
@@ -162,7 +160,7 @@
     }
 
     #progressbar .active {
-        color: #f05045
+        color: #3386ff
     }
 
     #progressbar li {
@@ -218,7 +216,7 @@
 
     #progressbar li.active:after,
     #progressbar li.active:before {
-        background: #f05045
+        background: #3386ff
     }
 
 .progress {
@@ -226,7 +224,7 @@
 }
 
 .progress-bar {
-    background-color: #f05045
+    background-color: #3386ff
 }
 
 .fit-image {
@@ -236,7 +234,7 @@
 
 .hrcss {
     margin: 20px 0;
-    color: #f05045;
+    color: #3386ff;
 }
 /*
 .panel-group .panel {
@@ -326,7 +324,7 @@
         .nav-pills.style1 .nav-item .nav-link.active {
             color: #fff !important;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 2px 1px 0 rgba(0, 0, 0, .04);
-            background: linear-gradient(100.57deg, #f05045 12.93%, #f05045 121.02%);
+            background: linear-gradient(100.57deg, #3386ff 12.93%, #3386ff 121.02%);
         }
 
         .nav-pills.style1 .nav-item .nav-link {
@@ -441,9 +439,9 @@
 }
 
     .nav-tabs.lined .nav-item .nav-link.active {
-        color: #f05045;
+        color: #3386ff;
         background: 0 0;
-        border-bottom-color: #f05045 !important
+        border-bottom-color: #3386ff !important
     }
 
     .nav-tabs.lined .nav-item .nav-link {
@@ -471,7 +469,7 @@
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     color: #495057;
-    background-color: #f05045;
+    background-color: #3386ff;
     border-color: #dee2e6 #dee2e6 #fff
 }
 
@@ -517,11 +515,11 @@
 }
 
 .service_single_content a:hover h6 {
-    color: #f05045;
+    color: #3386ff;
 }
 
 .service_single_content a h6:hover {
-    color: #f05045
+    color: #3386ff
 }
 
 .service_single_content p {
@@ -558,7 +556,7 @@ button.videoclose {
 }
 
     .inner-box:hover h6 {
-        color: #f05045;
+        color: #3386ff;
     }
 
 @media only screen and (max-width:600px) {
@@ -618,12 +616,12 @@ button.videoclose {
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(100.57deg, #f05045 12.93%, #f05045 121.02%);
+  background: linear-gradient(100.57deg, #3386ff 12.93%, #3386ff 121.02%);
     background-color: rgba(0, 0, 0, 0);
   position: absolute;
   border-radius: 40px;
   z-index: -1;
-  background-color: #f05045;
+  background-color: #3386ff;
   transition: 0.4s ease;
   top: 0px;
   left: 0px;
@@ -636,7 +634,7 @@ button.videoclose {
 
 .next-btn:hover{
   color: #ffffff;
-  border: 1px solid #f05045;
+  border: 1px solid #3386ff;
 }
 
 .prv-btn{
@@ -653,7 +651,7 @@ button.videoclose {
   border: none;
   line-height: 27px;
   transition: ease all 0.3s;
-  border: 1px solid #f05045;
+  border: 1px solid #3386ff;
   text-align: center;
 }
 
@@ -667,12 +665,12 @@ button.videoclose {
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(100.57deg, #f05045 12.93%, #f05045 121.02%);
+  background: linear-gradient(100.57deg, #3386ff 12.93%, #3386ff 121.02%);
     background-color: rgba(0, 0, 0, 0);
   position: absolute;
   border-radius: 40px;
   z-index: -1;
-  background-color: #f05045;
+  background-color: #3386ff;
   transition: 0.4s ease;
   top: 0px;
   left: 100%;

@@ -1,9 +1,10 @@
-// --- START OF CORRECTED FILE useScript.js ---
-
 import { useEffect, useState } from "react";
 
+// A simple global cache to track scripts that have successfully FINISHED loading.
+const loadedScripts = new Set();
+
 /**
- * Loads an external script dynamically and ensures it persists on the page.
+ * Loads an external script dynamically and safely handles dependencies and re-renders.
  * @param {string} src - The source URL of the script.
  * @param {boolean} waitFor - Optional flag to delay loading until a dependency is ready.
  * @returns {boolean} - A boolean state indicating if the script has loaded.
@@ -12,55 +13,61 @@ const useScript = (src, waitFor = true) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // If we're waiting for a dependency that isn't ready, do nothing.
+    // 1. If we're waiting for a dependency that isn't ready, do nothing.
     if (!waitFor) {
       return;
     }
 
-    // Check if the script tag already exists on the page.
-    const existingScript = document.querySelector(`script[src="${src}"]`);
-
-    if (existingScript) {
-      // If it exists, we assume it's loaded or will be loaded.
-      // We can set our state to true.
+    // 2. Check our reliable cache first. If it's already loaded, we're done.
+    if (loadedScripts.has(src)) {
       setLoaded(true);
       return;
     }
 
-    // If it doesn't exist, create it.
-    const script = document.createElement("script");
-    script.src = src;
-    
-    // Using `defer` is best for this use-case. It ensures scripts are
-    // executed in the order they are added to the DOM, and only after the
-    // document has been fully parsed. This is crucial for dependencies.
-    script.defer = true;
-
-    // Set up event listeners to update our state.
-    script.onload = () => {
-      // You can uncomment this for debugging to see the load order.
-      // console.log(`Script loaded successfully: ${src}`);
+    // A single handler for when any instance confirms the script is loaded.
+    const handleLoad = () => {
+      loadedScripts.add(src); // Add to our global cache *only* on successful load.
       setLoaded(true);
     };
-    script.onerror = () => {
+
+    const handleError = () => {
       console.error(`Error loading script: ${src}`);
-      setLoaded(false);
     };
 
-    // Add the script to the end of the body.
+    // 3. Check if the script tag is already on the page (added by another hook instance).
+    const existingScript = document.querySelector(`script[src="${src}"]`);
+
+    if (existingScript) {
+      // 4. *** THE FIX ***
+      // If the tag exists but isn't in our cache, it's still downloading.
+      // Do NOT assume it's loaded. Instead, attach our own listeners to wait for it.
+      existingScript.addEventListener('load', handleLoad);
+      existingScript.addEventListener('error', handleError);
+
+      // Cleanup listeners for this specific component instance.
+      return () => {
+        existingScript.removeEventListener('load', handleLoad);
+        existingScript.removeEventListener('error', handleError);
+      };
+    }
+
+    // 5. If script does not exist at all, create it.
+    const script = document.createElement("script");
+    script.src = src;
+    script.defer = true; // defer maintains execution order for dependent scripts.
+
+    script.addEventListener('load', handleLoad);
+    script.addEventListener('error', handleError);
+
     document.body.appendChild(script);
 
-    // --- CRITICAL CHANGE ---
-    // We REMOVE the cleanup function. Removing foundational scripts like jQuery
-    // or GSAP from the DOM on component unmount/re-render would break the site.
-    // These scripts should load once and stay.
-    // return () => {
-    //   if (script) {
-    //     document.body.removeChild(script);
-    //   }
-    // };
+    // Cleanup listeners for the component instance that created the script.
+    return () => {
+      script.removeEventListener('load', handleLoad);
+      script.removeEventListener('error', handleError);
+    };
 
-  }, [src, waitFor]); // The effect re-runs if the src or the waitFor condition changes.
+  }, [src, waitFor]);
 
   return loaded;
 };
