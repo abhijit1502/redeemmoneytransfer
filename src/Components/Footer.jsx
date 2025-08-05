@@ -15,14 +15,16 @@ const Footer = () => {
         data-aos-duration={1000}
       >
         <div className="container">
-          <div className="bg-primary-400 pt-5 pb-5 rounded-2">
+          <div className="pt-5 pb-5 rounded-2 cts-css" style={{
+          backgroundImage: "url(assets/images/bg/cts-img.png)",
+        }}>
             <div className="d-flex align-items-center justify-content-center tw-gap-4 flex-wrap">
               <div className="text-center">
-                <h5 className="text-white tw-mb-3">Our app</h5>
-                <h2 className="text-white cursor-big fw-normal mb-3">
+                <h5 className="tw-mb-3">Our app</h5>
+                <h2 className="cursor-big fw-normal mb-3">
                   Download App
                 </h2>
-                <p className="text-white tw-px-10">
+                <p className="tw-px-10">
                   Start your money transfer journey with the Redeem app.
                   Download from the Play Store or App Store
                 </p>

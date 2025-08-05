@@ -711,8 +711,8 @@ function Home() {
                   >
                     <h4 className="fw-normal text-dark-600 tw-mb-3">
                       Active Users Worldwide
-                    </h4>
-                    <h2 className="banner-item-title tw-text-15 text-base-two-600 tw-mb-6 cursor-big counter">
+                    </h4>text
+                    <h2 className="banner-item-title tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
                       5M+
                     </h2>
                   </div>
@@ -726,7 +726,7 @@ function Home() {
                     <h4 className="fw-normal text-dark-600 tw-mb-3">
                       Countries Supported
                     </h4>
-                    <h2 className="banner-item-title h1 tw-text-15 text-base-two-600 tw-mb-6 cursor-big counter">
+                    <h2 className="banner-item-title h1 tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
                       180+
                     </h2>
                   </div>
@@ -740,7 +740,7 @@ function Home() {
                     <h4 className="fw-normal text-dark-600 tw-mb-3">
                       Average Customer Rating
                     </h4>
-                    <h2 className="banner-item-title tw-text-15 h1 text-base-two-600 tw-mb-6 cursor-big counter">
+                    <h2 className="banner-item-title tw-text-15 h1 text-primary-500 tw-mb-6 cursor-big counter">
                       4.5/5
                     </h2>
                   </div>

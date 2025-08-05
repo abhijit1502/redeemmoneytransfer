@@ -96,29 +96,29 @@
 
 /* ========================= Variable Css Start ======================== */
 :root {
-  /* Font Family Variable */
+    /* Font Family Variable */
     --heading-font: font-family: 'Urbanist', 'Inter', sans-serif;
     --body-font: 'Inter', sans-serif;
-  /* Font Size Variable Start */
+    /* Font Size Variable Start */
     --heading-one: clamp(1.75rem, 0.5948rem + 2.4067vw, 3rem);
     --heading-two: clamp(1.5rem, 0.5758rem + 1.9254vw, 2.5rem);
     --heading-three: clamp(1.5rem, 1.0379rem + 0.9627vw, 2rem);
     --heading-four: clamp(1.25rem, 0.9518rem + 0.8565vw, 1.5rem);
     --heading-five: clamp(1.125rem, 1.0095rem + 0.2407vw, 1.25rem);
     --heading-six: clamp(1rem, 1rem + 0vw, 1rem);
-  /* Font Size End */
-  /* Font Size Variable Start */
+    /* Font Size End */
+    /* Font Size Variable Start */
     --display-one: clamp(2.5rem, -6.4095rem + 18.5615vw, 7.5rem);
     --display-two: clamp(2.25rem, -2.6502rem + 10.2088vw, 5rem);
     --display-three: clamp(1.875rem, 0.1421rem + 3.6101vw, 3.75rem);
     --display-four: clamp(1.75rem, -1.3683rem + 6.4965vw, 3.5rem);
-  /* Font Size End */
-  /* template main color */
+    /* Font Size End */
+    /* template main color */
     --main-h: 221;
     --main-s: 98%;
     --main-l: 60%;
     --main: var(--main-h) var(--main-s) var(--main-l);
-  /* White Color */
+    /* White Color */
     --white: 0 0% 100%;
     --black: 0 0% 0%;
     --body: 0 0% 43%;
@@ -268,7 +268,8 @@
     color: var(--main-600);
 }
 
-.common-accordion .accordion-button[aria-expanded=true]::after, .common-accordion .accordion-button[aria-expanded=false]::after {
+.common-accordion .accordion-button[aria-expanded=true]::after,
+.common-accordion .accordion-button[aria-expanded=false]::after {
     font-family: "Phosphor";
     font-weight: 900;
     content: "\f106";
@@ -283,7 +284,9 @@
 }
 
 @media screen and (max-width: 575px) {
-    .common-accordion .accordion-button[aria-expanded=true]::after, .common-accordion .accordion-button[aria-expanded=false]::after {
+
+    .common-accordion .accordion-button[aria-expanded=true]::after,
+    .common-accordion .accordion-button[aria-expanded=false]::after {
         inset-inline-end: 20px;
     }
 }
@@ -360,7 +363,9 @@
     transition: 0.2s linear;
 }
 
-.btn:hover, .btn:focus, .btn:focus-visible {
+.btn:hover,
+.btn:focus,
+.btn:focus-visible {
     box-shadow: none !important;
 }
 
@@ -373,11 +378,13 @@
     border-color: transparent;
 }
 
-.hover-style-one:hover, .hover-style-one:active {
+.hover-style-one:hover,
+.hover-style-one:active {
     background-color: var(--main-600);
 }
 
-.hover-style-one:hover.button--stroke::after, .hover-style-one:active.button--stroke::after {
+.hover-style-one:hover.button--stroke::after,
+.hover-style-one:active.button--stroke::after {
     border-color: transparent;
 }
 
@@ -385,11 +392,13 @@
     background-color: red;
 }
 
-.hover-style-two:hover, .hover-style-two:active {
+.hover-style-two:hover,
+.hover-style-two:active {
     color: var(--main-two-600) !important;
 }
 
-.hover-style-two:hover.button--stroke::after, .hover-style-two:active.button--stroke::after {
+.hover-style-two:hover.button--stroke::after,
+.hover-style-two:active.button--stroke::after {
     border-color: transparent;
 }
 
@@ -426,13 +435,24 @@
 
 /* input File End */
 /* Autofill Css */
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active,
-textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:active {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill {
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px transparent inset;
     -webkit-text-fill-color: hsl(var(--heading-color)) !important;
     caret-color: hsl(var(--heading-color));
@@ -599,7 +619,7 @@ input[type=number] {
 
 /* ================================= Tab Css End =========================== */
 /* ======================= Common Table Css Start ======================= */
-.table > :not(caption) > * > * {
+.table> :not(caption)>*>* {
     border-bottom: 0;
 }
 
@@ -611,15 +631,18 @@ input[type=number] {
     padding-inline-end: 0;
 }
 
-.table tr th, .table tr td {
+.table tr th,
+.table tr td {
     vertical-align: middle;
 }
 
-.table tr th:first-child, .table tr td:first-child {
+.table tr th:first-child,
+.table tr td:first-child {
     text-align: left;
 }
 
-.table tr th:last-child, .table tr td:last-child {
+.table tr th:last-child,
+.table tr td:last-child {
     text-align: right;
     padding-inline-end: 0;
 }
@@ -628,13 +651,13 @@ input[type=number] {
 /* Toast Message Css start  */
 :root {
     --success-600: #16A34A;
-  /* Green */
+    /* Green */
     --danger-600: #DC2626;
-  /* Red */
+    /* Red */
     --warning-600: #D97706;
-  /* Amber */
+    /* Amber */
     --info-600: #0284C7;
-  /* Sky Blue */
+    /* Sky Blue */
 }
 
 #toast-container {
@@ -808,14 +831,19 @@ input[type=number] {
 }
 
 @keyframes bounce {
-    0%, 20%, 53%, 100% {
+
+    0%,
+    20%,
+    53%,
+    100% {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
 
-    40%, 43% {
+    40%,
+    43% {
         -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
@@ -1099,7 +1127,9 @@ input[type=number] {
 }
 
 @keyframes roatation-two {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(0deg);
         transform-origin: top;
     }
@@ -1232,12 +1262,18 @@ span {
     display: inline-block;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
     margin: 0;
     font-family: var(--heading-font);
     color: hsl(var(--heading-color));
@@ -1245,36 +1281,42 @@ h6, .h6 {
     font-weight: 700;
 }
 
-h1, .h1 {
+h1,
+.h1 {
     font-size: var(--heading-one);
 }
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: var(--heading-two);
 }
 
-h3, .h3 {
+h3,
+.h3 {
     font-size: var(--heading-three);
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: var(--heading-four);
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: var(--heading-five);
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: var(--heading-six);
 }
 
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
     font-weight: inherit;
     font-size: inherit;
     color: inherit;
@@ -1282,12 +1324,12 @@ h6 > a {
     line-height: inherit;
 }
 
-h1 > a:hover,
-h2 > a:hover,
-h3 > a:hover,
-h4 > a:hover,
-h5 > a:hover,
-h6 > a:hover {
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover {
     color: var(--main-600);
 }
 
@@ -1328,7 +1370,8 @@ button:focus {
     box-shadow: none;
 }
 
-input:focus, input:focus-visible {
+input:focus,
+input:focus-visible {
     box-shadow: none;
 }
 
@@ -1410,6 +1453,10 @@ input:focus, input:focus-visible {
 
 .bg-primary-50 {
     background-color: var(--primary-50) !important;
+}
+
+.bg-green-400 {
+    background-color: #e4f5ef !important;
 }
 
 .bg-primary-100 {
@@ -3323,7 +3370,8 @@ input:focus, input:focus-visible {
     box-shadow: none;
 }
 
-.focus-outline-0:focus-visible, .focus-outline-0:focus {
+.focus-outline-0:focus-visible,
+.focus-outline-0:focus {
     outline: 0 !important;
 }
 
@@ -7038,7 +7086,7 @@ input:focus, input:focus-visible {
 /* Border Radius Css Start */
 .tw-rounded {
     border-radius: 0.25rem;
-  /* 4px */
+    /* 4px */
 }
 
 .tw-rounded-none {
@@ -7047,32 +7095,32 @@ input:focus, input:focus-visible {
 
 .tw-rounded-sm {
     border-radius: 0.125rem;
-  /* 2px */
+    /* 2px */
 }
 
 .tw-rounded-md {
     border-radius: 0.375rem;
-  /* 6px */
+    /* 6px */
 }
 
 .tw-rounded-lg {
     border-radius: 0.5rem;
-  /* 8px */
+    /* 8px */
 }
 
 .tw-rounded-xl {
     border-radius: 0.75rem;
-  /* 12px */
+    /* 12px */
 }
 
 .tw-rounded-2xl {
     border-radius: 1rem;
-  /* 16px */
+    /* 16px */
 }
 
 .tw-rounded-3xl {
     border-radius: 1.5rem;
-  /* 24px */
+    /* 24px */
 }
 
 .border-bottom-left-36-px {
@@ -7906,6 +7954,7 @@ input:focus, input:focus-visible {
         width: 50%;
     }
 }
+
 /*=============width css start=================*/
 .w-257-px {
     width: 257px;
@@ -8423,31 +8472,32 @@ input:focus, input:focus-visible {
         transform: translateY(0);
     }
 }
+
 /* Header Menu and Submenu Css Start */
-.nav-menu__item.activePage > a {
+.nav-menu__item.activePage>a {
     color: var(--main-600) !important;
 }
 
-.nav-menu__item.activePage > a::before {
+.nav-menu__item.activePage>a::before {
     color: var(--main-600);
 }
 
-.nav-menu__item:hover > a {
+.nav-menu__item:hover>a {
     color: hsl(var(--heading-color));
 }
 
 @media (min-width: 992px) {
-    .nav-menu__item:hover > a {
+    .nav-menu__item:hover>a {
         color: var(--main-600);
     }
 }
 
-.has-submenu.active > a,
-.has-submenu.active > a::before {
+.has-submenu.active>a,
+.has-submenu.active>a::before {
     color: var(--main-600);
 }
 
-.has-submenu.active > a::before {
+.has-submenu.active>a::before {
     transform: translateY(-50%) rotate(180deg) !important;
 }
 
@@ -8458,17 +8508,17 @@ input:focus, input:focus-visible {
 }
 
 @media (min-width: 992px) {
-    .has-submenu:hover > a::before {
+    .has-submenu:hover>a::before {
         color: var(--main-600);
         transform: translateY(-50%) rotate(180deg);
     }
 }
 
-.has-submenu > a {
+.has-submenu>a {
     position: relative;
 }
 
-.has-submenu > a::before {
+.has-submenu>a::before {
     position: absolute;
     content: "\e136";
     inset-inline-end: 0;
@@ -8480,12 +8530,12 @@ input:focus, input:focus-visible {
     transition: 0.2s linear;
 }
 
-.has-submenu__three.active > a,
-.has-submenu__three.active > a::before {
+.has-submenu__three.active>a,
+.has-submenu__three.active>a::before {
     color: var(--main-600);
 }
 
-.has-submenu__three.active > a::before {
+.has-submenu__three.active>a::before {
     transform: translateY(-50%) rotate(180deg) !important;
 }
 
@@ -8496,17 +8546,17 @@ input:focus, input:focus-visible {
 }
 
 @media (min-width: 992px) {
-    .has-submenu__three:hover > a::before {
+    .has-submenu__three:hover>a::before {
         color: var(--main-600);
         transform: translateY(-50%) rotate(180deg);
     }
 }
 
-.has-submenu__three > a {
+.has-submenu__three>a {
     position: relative;
 }
 
-.has-submenu__three > a::before {
+.has-submenu__three>a::before {
     position: absolute;
     content: "\e136";
     inset-inline-end: 0;
@@ -8577,9 +8627,10 @@ input:focus, input:focus-visible {
 }
 
 /*================ header three css start =====================*/
-.header-three-item-link:hover{
+.header-three-item-link:hover {
     color: #fff;
 }
+
 .header-three-item-link::before {
     position: absolute;
     content: "";
@@ -8626,13 +8677,14 @@ input:focus, input:focus-visible {
         color: #fff;
     }
 }
+
 /*=============================== top header css end =============================*/
 /* Mobile Menu Sidebar Start */
 .mobile-menu.active {
     transform: translateX(0%);
 }
 
-.nav-menu--mobile .nav-menu__item > a::before {
+.nav-menu--mobile .nav-menu__item>a::before {
     transform: translateY(-50%) rotate(0deg);
 }
 
@@ -8755,7 +8807,8 @@ input:focus, input:focus-visible {
 
 /* ===================== Scroll to Top End ================================= */
 /* Custom Cursor Css Start */
-.cursor, .dot {
+.cursor,
+.dot {
     width: 32px;
     height: 32px;
     border: 1px solid hsl(var(--white));
@@ -8907,6 +8960,7 @@ input:focus, input:focus-visible {
         margin-top: 0;
     }
 }
+
 /*==================== banner two css start =======================*/
 @media (max-width: 1399px) {
     .banner-two-title {
@@ -9049,67 +9103,71 @@ input:focus, input:focus-visible {
 /*==================== banner two css end =======================*/
 /*================banner three css section start=====================*/
 .btn-link {
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  background-color: #3386ff; /* Blue button color */
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: 0.3s;
-  z-index: 1;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: #3386ff;
+    /* Blue button color */
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1;
 }
 
 .btn-link::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 3px;
-  left: 3px;
-  background-color: hsl(224.9, 84%, 53.5%); /* Shadow color */
-  border-radius: 0.5rem;
-  z-index: -1;
-  transition: 0.3s ease;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 3px;
+    background-color: hsl(224.9, 84%, 53.5%);
+    /* Shadow color */
+    border-radius: 0.5rem;
+    z-index: -1;
+    transition: 0.3s ease;
 }
 
 .btn-link:hover::before {
-  top: -3px;
-  left: -3px;
+    top: -3px;
+    left: -3px;
 }
 
 .btn-link-pre {
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;  
-  background-color: hsl(224.9, 84%, 53.5%); /* Shadow color */
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: 0.3s;
-  z-index: 1;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: hsl(224.9, 84%, 53.5%);
+    /* Shadow color */
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1;
 }
 
 .btn-link-pre::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 3px;
-  left: 3px;  
-  background-color: #3386ff; /* Blue button color */
-  border-radius: 0.5rem;
-  z-index: -1;
-  transition: 0.3s ease;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 3px;
+    background-color: #3386ff;
+    /* Blue button color */
+    border-radius: 0.5rem;
+    z-index: -1;
+    transition: 0.3s ease;
 }
 
 .btn-link-pre:hover::before {
-  top: -3px;
-  left: -3px;
+    top: -3px;
+    left: -3px;
 }
 
 .banner-three-item-link::before {
@@ -9200,6 +9258,7 @@ input:focus, input:focus-visible {
         inset-inline-start: 18%;
     }
 }
+
 /*================banner three css section end=====================*/
 /*=================== banner four css section start ==================*/
 .banner-four-link::before {
@@ -9281,6 +9340,7 @@ input:focus, input:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
 /*=================== banner four css section end ==================*/
 .our-serbices-item-link::before {
     position: absolute;
@@ -9313,7 +9373,8 @@ input:focus, input:focus-visible {
     transition: 0.4s;
 }
 
-.circle-shape::before, .circle-shape::after {
+.circle-shape::before,
+.circle-shape::after {
     position: absolute;
     content: "";
     width: 32px;
@@ -9402,7 +9463,8 @@ input:focus, input:focus-visible {
     border-radius: 0.5rem;
 }
 
-.circle-shape-three::before, .circle-shape-three::after {
+.circle-shape-three::before,
+.circle-shape-three::after {
     position: absolute;
     content: "";
     width: 32px;
@@ -9436,7 +9498,7 @@ input:focus, input:focus-visible {
     width: auto;
     flex-shrink: 0;
     width: calc((100% - 20px) / 2);
-  /* 2 slides with 20px spaceBetween */
+    /* 2 slides with 20px spaceBetween */
 }
 
 .our-serbices-card {
@@ -9584,7 +9646,8 @@ input:focus, input:focus-visible {
     background-color: transparent !important;
 }
 
-.nav-pills .nav-link__one.active, .nav-pills .show > .nav-link__one {
+.nav-pills .nav-link__one.active,
+.nav-pills .show>.nav-link__one {
     background-color: #FFFFFF80 !important;
     color: #121212 !important;
 }
@@ -9606,6 +9669,7 @@ input:focus, input:focus-visible {
         margin-left: auto;
     }
 }
+
 /*================ testimonial css start ==================*/
 .testimonial-slider {
     max-width: 100%;
@@ -9617,7 +9681,7 @@ input:focus, input:focus-visible {
     width: auto;
     flex-shrink: 0;
     width: calc((100% - 20px) / 2);
-  /* 2 slides with 20px spaceBetween */
+    /* 2 slides with 20px spaceBetween */
 }
 
 /*================ testimonial two css start ==================*/
@@ -9631,7 +9695,7 @@ input:focus, input:focus-visible {
     width: auto;
     flex-shrink: 0;
     width: calc((100% - 20px) / 2);
-  /* 2 slides with 20px spaceBetween */
+    /* 2 slides with 20px spaceBetween */
 }
 
 /*================= Psylox One Css Start======================*/
@@ -9765,6 +9829,7 @@ input:focus, input:focus-visible {
         height: 100%;
     }
 }
+
 /*================= Psylox One Css End======================*/
 /*================= Psylox Two Css Start ======================*/
 .payone-two-link::before {
@@ -9926,7 +9991,8 @@ input:focus, input:focus-visible {
     border-radius: 12px;
 }
 
-.nav-pills .nav-link-three.active, .nav-pills .show > .nav-link-three {
+.nav-pills .nav-link-three.active,
+.nav-pills .show>.nav-link-three {
     background-color: #3386ff !important;
     color: #FFFFFF !important;
     border-bottom: 3px solid #AEFF1C;
@@ -9934,11 +10000,13 @@ input:focus, input:focus-visible {
     transition: 0.5s;
 }
 
-.nav-pills .nav-link-three.active .faq-img, .nav-pills .show > .nav-link-three {
+.nav-pills .nav-link-three.active .faq-img,
+.nav-pills .show>.nav-link-three {
     filter: invert(1);
 }
 
-.nav-pills .nav-link-three.active .faq-text, .nav-pills .show > .nav-link-three {
+.nav-pills .nav-link-three.active .faq-text,
+.nav-pills .show>.nav-link-three {
     color: #fff;
 }
 
@@ -10037,6 +10105,7 @@ input:focus, input:focus-visible {
         width: 100%;
     }
 }
+
 /*======================= articles two css start =========================*/
 @media (max-width: 1399px) {
     .articles-bank-card {
@@ -10061,6 +10130,7 @@ input:focus, input:focus-visible {
         max-width: 270px;
     }
 }
+
 /*======================= articles two css end =========================*/
 @media (max-width: 1199px) {
     .choose-us-two-card {
@@ -10073,6 +10143,7 @@ input:focus, input:focus-visible {
         margin-block-start: 0;
     }
 }
+
 /* ======================= why choose us three css start =========================== */
 .choose-us-three-link::after {
     position: absolute;
@@ -10141,6 +10212,7 @@ input:focus, input:focus-visible {
         margin-block-start: 0px;
     }
 }
+
 /* ========================== how it work four css start ====================== */
 .how-it-work-four__link::before {
     position: absolute;
@@ -10194,6 +10266,7 @@ input:focus, input:focus-visible {
         margin-bottom: 144px;
     }
 }
+
 /* ========================== how it work four css end ====================== */
 .nav-link {
     color: #121212;
@@ -10208,7 +10281,8 @@ input:focus, input:focus-visible {
     border-radius: 14px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     background-color: #3386ff !important;
     color: #fff !important;
 }
@@ -10297,85 +10371,85 @@ input:focus, input:focus-visible {
 
 /* Responsive CSS for Payment Solutions Section */
 .payment-solutions__button {
-  width: 72px;
-  position: relative;
+    width: 72px;
+    position: relative;
 }
 
 .payment-solutions__button h5 {
-  position: absolute;
-  white-space: nowrap;
-  left: 50%;
-  bottom: 295px;
-  transform: rotate(-90deg) translateX(-50%);
-  transform-origin: left center;
-  width: 420px;
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    bottom: 295px;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left center;
+    width: 420px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1199.98px) {
-  .payment-solutions__button h5 {
-    width: 380px;
-    bottom: 40px;
-  }
+    .payment-solutions__button h5 {
+        width: 380px;
+        bottom: 40px;
+    }
 }
 
 @media (max-width: 991.98px) {
-  .payment-solutions__button {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: auto !important;
-    padding: 10px;
-  }
-  
-  .payment-solutions__button h5 {
-    position: static;
-    transform: none;
-    width: 100%;
-    text-align: center;
-    white-space: normal;
-  }
-  
-  .choose-us__icon {
-    position: static !important;
-    transform: none !important;
-    margin: 0 auto !important;
-  }
-    
-  .payment-solutions__content {
-    margin-top: 15px !important;
-  }
+    .payment-solutions__button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto !important;
+        padding: 10px;
+    }
+
+    .payment-solutions__button h5 {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .choose-us__icon {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto !important;
+    }
+
+    .payment-solutions__content {
+        margin-top: 15px !important;
+    }
 }
 
 @media (max-width: 767.98px) {
-  .one-platform__title {
-    flex-direction: column;
-  }
-  
-  .payment-solutions__item {
-    width: 100%;
-  }
+    .one-platform__title {
+        flex-direction: column;
+    }
+
+    .payment-solutions__item {
+        width: 100%;
+    }
 }
 
 /* Maintain existing styles */
 .payment-solutions__button.bg-base-two-10 {
-  background-color: var(--base-two-10);
+    background-color: var(--base-two-10);
 }
 
 .payment-solutions__content.bg-danger-700 {
-  background-color: var(--danger-700);
+    background-color: var(--danger-700);
 }
 
 .tw-h-420-px {
-  height: 420px;
+    height: 420px;
 }
 
 .tw-rounded-md {
-  border-radius: 0.375rem;
+    border-radius: 0.375rem;
 }
 
 .tw-rounded-xl {
-  border-radius: 1rem;
+    border-radius: 1rem;
 }
 
 .payment-solutions__item.active .payment-solutions__button {
@@ -10566,7 +10640,7 @@ input:focus, input:focus-visible {
 }
 
 /* Marquee 2---------------------------------- */
-.table > :not(caption) > * > * {
+.table> :not(caption)>*>* {
     padding: 0;
 }
 
@@ -10590,7 +10664,7 @@ input:focus, input:focus-visible {
     display: none;
 }
 
-.avatar-upload .avatar-edit input + label {
+.avatar-upload .avatar-edit input+label {
     display: inline-block;
     width: 34px;
     height: 34px;
@@ -10612,7 +10686,7 @@ input:focus, input:focus-visible {
     border: 6px solid #F8F8F8;
 }
 
-.avatar-upload .avatar-preview > div {
+.avatar-upload .avatar-preview>div {
     width: 100%;
     height: 100%;
     border-radius: 100%;
@@ -10633,7 +10707,8 @@ input:focus, input:focus-visible {
     z-index: 1;
 }
 
-.alarm-notify::before, .alarm-notify::after {
+.alarm-notify::before,
+.alarm-notify::after {
     position: absolute;
     content: "";
     background-color: inherit;
@@ -10870,6 +10945,7 @@ button.show {
         max-width: 276px;
     }
 }
+
 /*==================== blog grid css end ==========================*/
 /*=================== blog list css start ========================*/
 @media (max-width: 992px) {
@@ -10883,6 +10959,7 @@ button.show {
         max-width: 100%;
     }
 }
+
 /*=================== blog list css end ========================*/
 .team-members-link::before {
     position: absolute;
@@ -11125,6 +11202,7 @@ button.show {
         transform: rotate(360deg);
     }
 }
+
 /* ========================== Settings panel css end =========================== */
 [dir=rtl] .banner-clip__path-rtl {
     clip-path: polygon(49% 24%, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 48%);
@@ -11399,21 +11477,22 @@ button.show {
     left: 0 !important;
     right: auto !important;
 }
+
 /*# sourceMappingURL=main.css.map */
 
-.flags-size{
+.flags-size {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-.footer-social-media a img{
- -webkit-filter: brightness(10%) invert(100%);
+.footer-social-media a img {
+    -webkit-filter: brightness(10%) invert(100%);
     filter: brightness(10%) invert(100%);
 }
 
-.footer-social-media a:hover img{
- -webkit-filter: none;
+.footer-social-media a:hover img {
+    -webkit-filter: none;
     filter: none;
 }
 
@@ -11425,130 +11504,130 @@ button.show {
 
 /* Calculator Css */
 .calculator {
-  padding: 25px;
-  border-radius: 30px;
-  border: 0 !important;
-  flex-direction: column;
-  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
-  background: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(24.9px);
-  backdrop-filter: blur(24.9px);
+    padding: 25px;
+    border-radius: 30px;
+    border: 0 !important;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(24.9px);
+    backdrop-filter: blur(24.9px);
 }
 
 .calculator label {
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  text-align: left;
-  width: 100%;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-align: left;
+    width: 100%;
 }
 
 .send-money-input {
-  /* This input will grow to fill all available space */
-  flex-grow: 1;
-  /* This prevents it from overflowing when the screen is narrow */
-  min-width: 0;
+    /* This input will grow to fill all available space */
+    flex-grow: 1;
+    /* This prevents it from overflowing when the screen is narrow */
+    min-width: 0;
 
-  /* Your original styling */
-  font-weight: 600;
-  font-size: 24px !important;
-  color: #000;
-  padding: 12px 10px 12px 0;
-  border: none;
-  border-bottom: 1px solid #000 !important;
-  background-color: transparent;
-  margin-bottom: 10px;
+    /* Your original styling */
+    font-weight: 600;
+    font-size: 24px !important;
+    color: #000;
+    padding: 12px 10px 12px 0;
+    border: none;
+    border-bottom: 1px solid #000 !important;
+    background-color: transparent;
+    margin-bottom: 10px;
 }
 
 /* --- KEY FIX IS HERE --- */
 /* Target the wrapper div that you are using */
 .form-group {
-  /* This tells the wrapper div NOT to shrink, protecting the selector inside */
-  flex-shrink: 0;
+    /* This tells the wrapper div NOT to shrink, protecting the selector inside */
+    flex-shrink: 0;
 }
 
 /* The currency selector box */
 .send-money-side {
-  /* This is CRUCIAL to prevent text like "GBP" from wrapping to "G BP" */
-  white-space: nowrap;
+    /* This is CRUCIAL to prevent text like "GBP" from wrapping to "G BP" */
+    white-space: nowrap;
 
-  /* Your original styling for the selector */
-  display: flex !important;
-  align-items: center;
-  gap: 8px !important;
-  outline: 1px solid #000 !important;
-  padding: 12px !important;
-  border-radius: 8px !important;
-  cursor: pointer;
-  font-size: 16px !important;
-  font-weight: 600;
-  height: fit-content;
+    /* Your original styling for the selector */
+    display: flex !important;
+    align-items: center;
+    gap: 8px !important;
+    outline: 1px solid #000 !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    font-size: 16px !important;
+    font-weight: 600;
+    height: fit-content;
 }
 
 /* --- The rest of your styles --- */
 .dropdown-clc {
-  padding: 13px;
-  position: absolute !important;
-  max-width: 500px;
-  right: 20px;
-  z-index: 999;
-  border-radius: 10px;
+    padding: 13px;
+    position: absolute !important;
+    max-width: 500px;
+    right: 20px;
+    z-index: 999;
+    border-radius: 10px;
 }
 
 .dropdown-clc input[type="text"] {
-  border-radius: 8px !important;
-  font-weight: 600;
-  font-size: 18px !important;
-  color: #000;
-  width: 100% !important;
-  padding: 15px 24px 15px 20px;
-  background-color: transparent;
+    border-radius: 8px !important;
+    font-weight: 600;
+    font-size: 18px !important;
+    color: #000;
+    width: 100% !important;
+    padding: 15px 24px 15px 20px;
+    background-color: transparent;
 }
 
 .dropdown-clc ul,
 .dropdown-clc ul.currency-list {
-  overflow-y: auto !important;
-  height: 25vh;
-  padding: 0;
+    overflow-y: auto !important;
+    height: 25vh;
+    padding: 0;
 }
 
 .common-img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .list-group-item.active {
-  z-index: 2;
-  color: #000000 !important;
-  background-color: #e3e3e3 !important;
+    z-index: 2;
+    color: #000000 !important;
+    background-color: #e3e3e3 !important;
 }
 
 .countryNamecss {
-  font-size: 16px;
-  font-weight: 500;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .currencycodecss {
-  font-size: 18px;
-  font-weight: 700;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .payment-icon img {
-  max-width: 70%;
+    max-width: 70%;
 }
 
 .cursor-pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.error-text{
-    color:red;
+.error-text {
+    color: red;
 }
 
 
 /* Help  */
-.help-for-faq{
+.help-for-faq {
     display: flex;
     gap: 3;
 }
@@ -11556,19 +11635,20 @@ button.show {
 
 /* Add this in your main CSS file */
 .wrapper-cookie {
-  position: fixed !important;
-  bottom: 30px;
-  left: 50px;
-  max-width: 365px;
-  background: var(--primary-color); /* Fallback color if --primary-color isn't defined */
-  padding: 25px 25px 30px 25px;
-  border-radius: 15px;
-  box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
-  z-index: 9999 !important;
+    position: fixed !important;
+    bottom: 30px;
+    left: 50px;
+    max-width: 365px;
+    background: var(--primary-color);
+    /* Fallback color if --primary-color isn't defined */
+    padding: 25px 25px 30px 25px;
+    border-radius: 15px;
+    box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
+    z-index: 9999 !important;
 }
 
-.wrapper-cookie a{
-color:#e3e3e3
+.wrapper-cookie a {
+    color: #e3e3e3
 }
 
 .wrapper-cookie.hide {
@@ -11609,14 +11689,28 @@ color:#e3e3e3
     }
 }
 
-.ul2, .ul3 {
-  line-height: 30px;
-  margin-left: 15px;
-  color: var(--dark-700);
-  font-weight: 400 !important;
+.ul2,
+.ul3 {
+    line-height: 30px;
+    margin-left: 15px;
+    color: var(--dark-700);
+    font-weight: 400 !important;
 }
 
 .white-image {
-  filter: brightness(0) invert(1);
-  -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.cts-css {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    /* Safari and Chrome */
+    -moz-background-size: cover;
+    /* Firefox */
+    -o-background-size: cover;
+    /* Opera */
 }
