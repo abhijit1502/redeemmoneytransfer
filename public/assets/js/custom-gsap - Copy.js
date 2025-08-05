@@ -1,4 +1,4 @@
-// --- START OF FILE: custom-gsap.js (Corrected for React & Mobile Cursor) ---
+// --- START OF FILE: custom-gsap.js (Corrected for React) ---
 
 // This part MUST run immediately when the script is loaded to prepare GSAP.
 // It should be at the top level, outside any function.
@@ -10,35 +10,31 @@ function initGsapScripts() {
 
   // Use a small timeout to be extra sure the DOM is ready.
   setTimeout(() => {
-    // =================================== Custom Cursor Js Start (Desktop Only) =====================================
-    // This logic is wrapped in matchMedia to run only on desktops (screens wider than 991px).
-    // This prevents the "magnify" effect and other cursor behaviors on mobile/touch devices.
-    const cursorMatcher = gsap.matchMedia();
+    // =================================== Custom Cursor Js Start =====================================
+    // This code attaches listeners to the body, so it's generally safe,
+    // but wrapping it ensures it doesn't run multiple times unnecessarily if we add guards.
+    const body = document.body;
+    const cursor = document.querySelector(".cursor");
+    const dot = document.querySelector(".dot");
+    const cursorSmalls = document.querySelectorAll(".cursor-small");
+    const cursorBigs = document.querySelectorAll(".cursor-big");
 
-    cursorMatcher.add("(min-width: 992px)", () => {
-        const body = document.body;
-        const cursor = document.querySelector(".cursor");
-        const dot = document.querySelector(".dot");
-        const cursorSmalls = document.querySelectorAll(".cursor-small");
-        const cursorBigs = document.querySelectorAll(".cursor-big");
-
-        if (cursor && dot) {
-            body.addEventListener("mousemove", function (event) {
-                gsap.to(cursor, { x: event.x, y: event.y, duration: 2, delay: 0.1, visibility: "visible", ease: "expo.out" });
-            });
-            body.addEventListener("mousemove", function (event) {
-                gsap.to(dot, { x: event.x, y: event.y, duration: 1.5, visibility: "visible", ease: "expo.out" });
-            });
-            cursorSmalls.forEach((cursorSmall) => {
-                cursorSmall.addEventListener("mouseenter", function () { gsap.to(dot, { scale: 8, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "hidden", opacity: 0 }); });
-                cursorSmall.addEventListener("mouseleave", function () { gsap.to(dot, { scale: 1, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "visible", opacity: 1 }); });
-            });
-            cursorBigs.forEach((cursorBig) => {
-                cursorBig.addEventListener("mouseenter", function () { gsap.to(dot, { scale: 36, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "hidden", opacity: 0 }); });
-                cursorBig.addEventListener("mouseleave", function () { gsap.to(dot, { scale: 1, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "visible", opacity: 1 }); });
-            });
-        }
-    });
+    if (cursor && dot) {
+        body.addEventListener("mousemove", function (event) {
+            gsap.to(cursor, { x: event.x, y: event.y, duration: 2, delay: 0.1, visibility: "visible", ease: "expo.out" });
+        });
+        body.addEventListener("mousemove", function (event) {
+            gsap.to(dot, { x: event.x, y: event.y, duration: 1.5, visibility: "visible", ease: "expo.out" });
+        });
+        cursorSmalls.forEach((cursorSmall) => {
+            cursorSmall.addEventListener("mouseenter", function () { gsap.to(dot, { scale: 8, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "hidden", opacity: 0 }); });
+            cursorSmall.addEventListener("mouseleave", function () { gsap.to(dot, { scale: 1, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "visible", opacity: 1 }); });
+        });
+        cursorBigs.forEach((cursorBig) => {
+            cursorBig.addEventListener("mouseenter", function () { gsap.to(dot, { scale: 36, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "hidden", opacity: 0 }); });
+            cursorBig.addEventListener("mouseleave", function () { gsap.to(dot, { scale: 1, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "visible", opacity: 1 }); });
+        });
+    }
     // =================================== Custom Cursor Js End =====================================
 
     // **************************** Mobile Menu js Start ****************************

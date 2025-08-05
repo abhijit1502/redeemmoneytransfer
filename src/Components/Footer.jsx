@@ -136,7 +136,7 @@ const Footer = () => {
                     </li>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="javascript:void(0)"
+                        to="/complaint-policy"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Complaint Policy
@@ -144,7 +144,7 @@ const Footer = () => {
                     </li>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="javascript:void(0)"
+                        to="/cookie-policy"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Cookie Policy

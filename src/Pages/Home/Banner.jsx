@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Marquee from "../../Components/Marquee";
 // import Calculator from "../../Components/Calculator";
 
 function Banner() {
@@ -163,8 +162,6 @@ function Banner() {
               </div>
             </div>
           </div>
-          {/* ================================= Marquee Section Start =============================== */}
-         <Marquee/>
         </div>
       </section>
       {/* ==================== Banner Three Section End ================== */}

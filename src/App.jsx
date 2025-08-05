@@ -11,6 +11,10 @@ import Onboarding from "./Pages/Onboarding/Onboarding";
 import Livenesscheck from "./Pages/Onboarding/Livenesscheck";
 import Finish from "./Pages/Onboarding/Finish";
 import DataSafety from "./Pages/DataSafety/DataSafety";
+import GeneralFAQ from "./Pages/FAQ/GeneralFAQ";
+import OnboardingFAQ from "./Pages/FAQ/OnboardingFAQ";
+import CookiePolicy from "./Pages/CookiePolicy/CookiePolicy";
+import ComplaintPolicy from "./Pages/ComplaintPolicy/ComplaintPolicy";
 
 function App() {
   useEffect(() => {
@@ -44,13 +48,19 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/help" element={<Help />} />
-          {/* <Route path="/general-faq" element={<GeneralFAQ />} />
           <Route path="/onboarding-faq" element={<OnboardingFAQ />} />
-           */}
+          <Route path="/general-faq" element={<GeneralFAQ />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/livenesscheck" element={<Livenesscheck />} />
           <Route path="/finish" element={<Finish />} />
           <Route path="/data-safety" element={<DataSafety />} />
+
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/complaint-policy" element={<ComplaintPolicy />} />
+          {/* 
+          <Route path="/terms-and-conditions" element={<TermsandConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/money-transfer" element={<MoneyTransfer />} />  */}
         </RouterRoutes>
       </AppWrapper>
     </>

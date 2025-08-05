@@ -91,14 +91,14 @@
     * Why Choose Us
 ============================ CSS table of contents and Scss Indexing ================================ */
 /* Font Family*/
-@import url("https://fonts.googleapis.com/css2?family=Wendy+One&amp;family=Zen+Maru+Gothic&amp;display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Work+Sans:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
 
 /* ========================= Variable Css Start ======================== */
 :root {
   /* Font Family Variable */
-    --heading-font: 'Work Sans', sans-serif;
-    --body-font: 'Nunito', sans-serif;
+    --heading-font: font-family: 'Urbanist', 'Inter', sans-serif;
+    --body-font: 'Inter', sans-serif;
   /* Font Size Variable Start */
     --heading-one: clamp(1.75rem, 0.5948rem + 2.4067vw, 3rem);
     --heading-two: clamp(1.5rem, 0.5758rem + 1.9254vw, 2.5rem);
@@ -166,11 +166,11 @@
     --main-700: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.1));
     --main-800: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.2));
     --main-900: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.3));
-    --base-two-10: #1040421A;
+    --base-two-10: #3386ff1A;
     --base-two-100: #12121299;
     --base-two-200: #00998B0D;
-    --base-two-300: #10404299;
-    --base-two-600: #104042;
+    --base-two-300: #3386ff99;
+    --base-two-600: #3386ff;
     --primary-05: #5D69F40D;
     --primary-50: #101010;
     --primary-100: #4A91A7;
@@ -564,7 +564,7 @@ input[type=number] {
 }
 
 .form-switch .form-check-input:checked {
-    background-color: #104042;
+    background-color: #3386ff;
 }
 
 .form-switch .form-check-input:checked::before {
@@ -2630,11 +2630,11 @@ input:focus, input:focus-visible {
 }
 
 .tw-border-base-two-600-dashed {
-    border: 1px dashed #104042;
+    border: 1px dashed #3386ff;
 }
 
 .tw-hover-border-bottom-base-two-600:hover {
-    border-bottom: 3px solid #104042;
+    border-bottom: 3px solid #3386ff;
 }
 
 .tw-hover-border-black:hover {
@@ -2666,11 +2666,11 @@ input:focus, input:focus-visible {
 }
 
 .border-base-two-100 {
-    border: 2px dashed #104042;
+    border: 2px dashed #3386ff;
 }
 
 .border-bottom-base-two-600 {
-    border-bottom: 3px solid #104042;
+    border-bottom: 3px solid #3386ff;
 }
 
 .border-neutral-1px-solid {
@@ -2707,6 +2707,10 @@ input:focus, input:focus-visible {
 
 .border-bottom-black-2px {
     border-bottom: 2px solid #000000;
+}
+
+.border-primary-400-1 {
+    border: 1px solid #3386ff;
 }
 
 .border-primary-600 {
@@ -3270,7 +3274,7 @@ input:focus, input:focus-visible {
 }
 
 .hover-bg-base-two-600:hover {
-    background: #104042;
+    background: #3386ff;
 }
 
 .hover-border-bottom:hover {
@@ -3310,7 +3314,7 @@ input:focus, input:focus-visible {
 }
 
 .focus-visible-border-main-600:focus-visible {
-    border: 1px solid #104042 !important;
+    border: 1px solid #3386ff !important;
     outline: 0;
 }
 
@@ -4000,7 +4004,7 @@ input:focus, input:focus-visible {
 }
 
 .group:hover .group-hover-border-base-two-600 {
-    border-bottom: 2px solid #104042 !important;
+    border-bottom: 2px solid #3386ff !important;
 }
 
 .group-hover-text-transition {
@@ -8579,7 +8583,7 @@ input:focus, input:focus-visible {
 .header-three-item-link::before {
     position: absolute;
     content: "";
-    background-color: #104042;
+    background-color: #3386ff;
     top: 5px;
     left: 3px;
     width: 77px;
@@ -8592,7 +8596,7 @@ input:focus, input:focus-visible {
 .header-three-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #104042;
+    background-color: #3386ff;
     top: -5px;
     left: -4px;
     width: 77px;
@@ -9051,7 +9055,7 @@ input:focus, input:focus-visible {
   font-size: 16px;
   font-weight: 500;
   color: white;
-  background-color: #104042; /* Blue button color */
+  background-color: #3386ff; /* Blue button color */
   border-radius: 0.5rem;
   text-decoration: none;
   transition: 0.3s;
@@ -9097,7 +9101,7 @@ input:focus, input:focus-visible {
   height: 100%;
   top: 3px;
   left: 3px;  
-  background-color: #104042; /* Blue button color */
+  background-color: #3386ff; /* Blue button color */
   border-radius: 0.5rem;
   z-index: -1;
   transition: 0.3s ease;
@@ -9114,7 +9118,7 @@ input:focus, input:focus-visible {
     width: 185px;
     height: 55px;
     z-index: -1;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 0.5rem;
     top: 3px;
     left: 3px;
@@ -9127,7 +9131,7 @@ input:focus, input:focus-visible {
     width: 185px;
     height: 55px;
     z-index: -1;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 0.5rem;
     top: -3px;
     left: -3px;
@@ -9139,7 +9143,7 @@ input:focus, input:focus-visible {
     width: 131px;
     height: 55px;
     z-index: -1;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 0.5rem;
     top: 3px;
     left: 3px;
@@ -9152,7 +9156,7 @@ input:focus, input:focus-visible {
     width: 131px;
     height: 55px;
     z-index: -1;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 0.5rem;
     top: -3px;
     left: -3px;
@@ -9203,7 +9207,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -9216,7 +9220,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -9281,7 +9285,7 @@ input:focus, input:focus-visible {
 .our-serbices-item-link::before {
     position: absolute;
     content: "";
-    background-color: #104042;
+    background-color: #3386ff;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -9294,7 +9298,7 @@ input:focus, input:focus-visible {
 .our-serbices-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #104042;
+    background-color: #3386ff;
     top: -4px;
     left: -4px;
     width: 100%;
@@ -9342,7 +9346,7 @@ input:focus, input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #104042;
+    background: #3386ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9355,7 +9359,7 @@ input:focus, input:focus-visible {
     top: -4px;
     left: -3px;
     z-index: -1;
-    background: #104042;
+    background: #3386ff;
     border-radius: 0.5rem;
 }
 
@@ -9364,7 +9368,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 12px;
     top: 4px;
     left: 4px;
@@ -9381,7 +9385,7 @@ input:focus, input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #104042;
+    background: #3386ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9394,7 +9398,7 @@ input:focus, input:focus-visible {
     top: -4px;
     left: -4px;
     z-index: -1;
-    background: #104042;
+    background: #3386ff;
     border-radius: 0.5rem;
 }
 
@@ -9442,7 +9446,7 @@ input:focus, input:focus-visible {
 .our-services-three::before {
     position: absolute;
     content: "";
-    background-color: #104042;
+    background-color: #3386ff;
     max-width: 948px;
     width: 100%;
     height: 100%;
@@ -9537,7 +9541,7 @@ input:focus, input:focus-visible {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #104042;
+    background-color: #3386ff;
 }
 
 /*==================== our services three css end =======================*/
@@ -9768,7 +9772,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -9781,7 +9785,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -9857,7 +9861,7 @@ input:focus, input:focus-visible {
 
 @media (max-width: 532px) {
     .our-peature__item {
-        max-width: 242px;
+        max-width: 325px;
     }
 }
 
@@ -9923,7 +9927,7 @@ input:focus, input:focus-visible {
 }
 
 .nav-pills .nav-link-three.active, .nav-pills .show > .nav-link-three {
-    background-color: #104042 !important;
+    background-color: #3386ff !important;
     color: #FFFFFF !important;
     border-bottom: 3px solid #AEFF1C;
     border-radius: 12px;
@@ -9963,7 +9967,7 @@ input:focus, input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background: #104042;
+    background: #3386ff;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -9976,7 +9980,7 @@ input:focus, input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background: #104042;
+    background: #3386ff;
     border-radius: 10px;
 }
 
@@ -9988,7 +9992,7 @@ input:focus, input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10001,7 +10005,7 @@ input:focus, input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10078,7 +10082,7 @@ input:focus, input:focus-visible {
     top: 3px;
     left: 3px;
     z-index: -1;
-    background: #104042;
+    background: #3386ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -10091,7 +10095,7 @@ input:focus, input:focus-visible {
     top: -3px;
     left: -3px;
     z-index: -1;
-    background: #104042;
+    background: #3386ff;
     border-radius: 0.5rem;
 }
 
@@ -10101,7 +10105,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10114,7 +10118,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -10143,7 +10147,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10156,7 +10160,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10205,7 +10209,7 @@ input:focus, input:focus-visible {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: #104042 !important;
+    background-color: #3386ff !important;
     color: #fff !important;
 }
 
@@ -10246,7 +10250,7 @@ input:focus, input:focus-visible {
     top: 4px;
     left: 4px;
     border-radius: 0.5rem;
-    background: #104042;
+    background: #3386ff;
     transition: 0.4s;
 }
 
@@ -10259,7 +10263,7 @@ input:focus, input:focus-visible {
     top: -4px;
     left: -4px;
     border-radius: 0.5rem;
-    background: #104042;
+    background: #3386ff;
 }
 
 .platform-two-link::before {
@@ -10394,7 +10398,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10407,7 +10411,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     top: -4px;
     left: -3px;
@@ -10425,7 +10429,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10438,7 +10442,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     top: -4px;
     left: -4px;
     z-index: -1;
@@ -10473,7 +10477,7 @@ input:focus, input:focus-visible {
 .our-pricing-plan-three-link::before {
     position: absolute;
     content: "";
-    background-color: #104042;
+    background-color: #3386ff;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -10488,7 +10492,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10501,7 +10505,7 @@ input:focus, input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10567,7 +10571,7 @@ input:focus, input:focus-visible {
 }
 
 .header-nav-menu__item .activePage .header-nav-submenu__link {
-    background-color: #104042 !important;
+    background-color: #3386ff !important;
     color: #FFFFFF;
     border-radius: 12px;
 }
@@ -10791,7 +10795,7 @@ button.show {
     top: 4px;
     left: 4px;
     border-radius: 8px;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
     transition: 0.4s;
 }
@@ -10804,7 +10808,7 @@ button.show {
     top: -3px;
     left: -3px;
     border-radius: 8px;
-    background-color: #104042;
+    background-color: #3386ff;
     z-index: -1;
 }
 
@@ -10885,7 +10889,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10898,7 +10902,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     top: -3px;
     left: -3px;
     z-index: -1;
@@ -10912,7 +10916,7 @@ button.show {
     height: 100%;
     top: 5px;
     left: 4px;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     z-index: -1;
     transition: 0.4s;
@@ -10925,7 +10929,7 @@ button.show {
     height: 100%;
     top: -5px;
     left: -4px;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     z-index: -1;
 }
@@ -10990,7 +10994,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: 4px;
     left: 4px;
@@ -11003,7 +11007,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     top: -4px;
     left: -4px;
@@ -11046,7 +11050,7 @@ button.show {
     height: 100%;
     top: 4px;
     left: 4px;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     z-index: -1;
     transition: 0.5s;
@@ -11059,7 +11063,7 @@ button.show {
     height: 100%;
     top: -4px;
     left: -4px;
-    background-color: #104042;
+    background-color: #3386ff;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11612,3 +11616,7 @@ color:#e3e3e3
   font-weight: 400 !important;
 }
 
+.white-image {
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+}

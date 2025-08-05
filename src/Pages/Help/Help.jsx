@@ -85,7 +85,7 @@ function Help() {
               <div>
                 <NavLink className="max-w-246-px w-100" to="/onboarding">
                   <div className="group group-item position-relative">
-                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500  tw-transition-05-secend">
                       <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
                         <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
                           <img
@@ -113,7 +113,7 @@ function Help() {
               <div>
                 <NavLink className="max-w-246-px w-100" to="/data-safety">
                   <div className="group group-item position-relative">
-                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500  tw-transition-05-secend">
                       <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
                         <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
                           <img
@@ -139,9 +139,9 @@ function Help() {
                 </div>
               </div>
               <div>
-                <NavLink className="max-w-246-px w-100" to="#">
+                <NavLink className="max-w-246-px w-100" to="/onboarding-faq">
                   <div className="group group-item position-relative">
-                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500  tw-transition-05-secend">
                       <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
                         <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
                           <img
@@ -156,11 +156,11 @@ function Help() {
                       </span>
                     </div>
                   </div>
-                </NavLink>&ensp;
+                </NavLink>&ensp;&ensp;
 
-                <NavLink className="max-w-246-px w-100" to="#">
+                <NavLink className="max-w-246-px w-100" to="/general-faq">
                   <div className="group group-item position-relative">
-                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500  tw-transition-05-secend">
                       <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
                         <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
                           <img
@@ -188,7 +188,7 @@ function Help() {
                <div>
                 <NavLink className="max-w-246-px w-100" to="https://api.whatsapp.com/send?phone=41779873231&text=Hello There, I would like to enquire about money transfer." target="_blank">
                   <div className="group group-item position-relative">
-                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500  tw-transition-05-secend">
                       <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
                         <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
                           <img
@@ -203,11 +203,11 @@ function Help() {
                       </span>
                     </div>
                   </div>
-                </NavLink>&ensp;
+                </NavLink>&ensp;&ensp;
 
                 <NavLink className="max-w-246-px w-100" to="tel:41779873231">
                   <div className="group group-item position-relative">
-                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500 tw-hover-border-black tw-transition-05-secend">
+                    <div className="our-services-slider-card tw-px-8 tw-py-8 tw-rounded-xl border-base-two-600 border-bottom text-center group-hover-bg-main-600 tw-duration-500  tw-transition-05-secend">
                       <span className="tw-w-80-px tw-h-80-px tw-border-base-two-600-dashed d-block d-flex align-items-center justify-content-center tw-mb-6 tw-rounded-xl mx-auto">
                         <span className="tw-w-17 tw-h-17 bg-base-two-10 d-flex align-items-center justify-content-center group-hover-bg-base-two-600 tw-rounded-md tw-duration-500">
                           <img
