@@ -201,7 +201,7 @@ const Footer = () => {
                   </ul>
                   <ul className="d-flex align-items-center tw-gap-5 mt-4 footer-social-media">
                     <li>
-                      <NavLink to="https://www.facebook.com/">
+                      <NavLink to="#">
                         <img
                           src="assets/images/icon/facebook.png"
                           alt="Image"
@@ -209,7 +209,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="https://medium.com/">
+                      <NavLink to="#">
                         <img
                           src="assets/images/icon/instagram.png"
                           alt="Image"
@@ -217,7 +217,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="https://youtube.com/">
+                      <NavLink to="#">
                         <img
                           src="assets/images/icon/linkedin.png"
                           alt="Image"
@@ -225,7 +225,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="https://x.com/i/flow/login">
+                      <NavLink to="#">
                         <img src="assets/images/icon/twitter.png" alt="Image" />
                       </NavLink>
                     </li>

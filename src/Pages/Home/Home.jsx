@@ -767,7 +767,7 @@ function Home() {
                       />
                     </span>
                     <h5 className="fw-normal text-primary-600 cursor-big">
-                      Our Faq
+                      Our FAQs
                     </h5>
                   </div>
                   <div className="max-w-560 text-center justify-content-center align-items-center mx-auto">
