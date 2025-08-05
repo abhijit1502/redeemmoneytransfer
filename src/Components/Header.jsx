@@ -169,7 +169,7 @@ const Header = () => {
                 <img
                   src="assets/images/logo/logo.png"
                   alt="img"
-                  className="tw-h-16"
+                  className="tw-h-80-px"
                 />
               </NavLink>
             </div>
