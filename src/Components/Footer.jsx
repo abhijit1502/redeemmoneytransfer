@@ -20,7 +20,7 @@ const Footer = () => {
         }}>
             <div className="d-flex align-items-center justify-content-center tw-gap-4 flex-wrap">
               <div className="text-center">
-                <h5 className="tw-mb-3">Our app</h5>
+                <h5 className="tw-mb-3">Our App</h5>
                 <h2 className="cursor-big fw-normal mb-3">
                   Download App
                 </h2>

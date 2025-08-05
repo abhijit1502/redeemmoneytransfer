@@ -711,7 +711,7 @@ function Home() {
                   >
                     <h4 className="fw-normal text-dark-600 tw-mb-3">
                       Active Users Worldwide
-                    </h4>text
+                    </h4>
                     <h2 className="banner-item-title tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
                       5M+
                     </h2>
