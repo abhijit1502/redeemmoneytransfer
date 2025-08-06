@@ -923,7 +923,7 @@ function Home() {
                     className="accordion d-flex justify-content-center tw-gap-6 flex-wrap"
                     id="accordionExample"
                   >
-                    <div className="max-w-885-px w-100">
+                <div className="w-100">
                       <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
@@ -1052,6 +1052,139 @@ function Home() {
                               culpa impedit quasi! Minima nemo architecto
                               voluptas atque libero pariatur accusamus
                               perspiciatis aut quas minus! Veniam, voluptatum?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                       <div
+                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
+                        data-aos="fade-up"
+                        data-aos-duration={600}
+                      >
+                        <h2 className="accordion-header cursor-big">
+                          <button
+                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive"
+                            aria-expanded="false"
+                            aria-controls="collapseFive"
+                          >
+                            Question
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseFive"
+                          className="accordion-collapse collapse"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            <p className="fw-normal tw-text-lg text-dark-600">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Et perspiciatis perferendis
+                              recusandae adipisci quaerat rem, consequatur
+                              aspernatur delectus qui, neque veritatis ipsum
+                              illum odio facere dolores eligendi illo voluptatem
+                              dicta.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
+                        data-aos="fade-up"
+                        data-aos-duration={800}
+                      >
+                        <h2 className="accordion-header cursor-big">
+                          <button
+                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix"
+                            aria-expanded="false"
+                            aria-controls="collapseSix"
+                          >
+                            Question
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseSix"
+                          className="accordion-collapse collapse"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            <p className="fw-normal tw-text-lg text-dark-600">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Quia optio reiciendis culpa ab consequuntur
+                              sunt? Autem est aliquid itaque ad expedita rem
+                              blanditiis. Consequuntur aperiam nulla saepe at
+                              nostrum numquam.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
+                        data-aos="fade-up"
+                        data-aos-duration={1000}
+                      >
+                        <h2 className="accordion-header cursor-big">
+                          <button
+                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven"
+                            aria-expanded="false"
+                            aria-controls="collapseSeven"
+                          >
+                            Question
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseSeven"
+                          className="accordion-collapse collapse"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            <p className="fw-normal tw-text-lg text-dark-600">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Ex asperiores impedit cumque debitis ipsam,
+                              provident consectetur nostrum. Hic minus aliquam
+                              blanditiis veritatis officiis, inventore fugit
+                              vitae illo, temporibus, excepturi consequuntur.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
+                        data-aos="fade-up"
+                        data-aos-duration={1200}
+                      >
+                        <h2 className="accordion-header cursor-big">
+                          <button
+                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight"
+                            aria-expanded="false"
+                            aria-controls="collapseEight"
+                          >
+                            Question
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseEight"
+                          className="accordion-collapse collapse"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            <p className="fw-normal tw-text-lg text-dark-600">
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Debitis, tenetur. Recusandae
+                              officia, iste est eveniet quos ipsam debitis error
+                              incidunt iusto explicabo alias ea? Quasi fugiat
+                              excepturi libero animi vel.
                             </p>
                           </div>
                         </div>
