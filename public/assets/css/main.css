@@ -114,9 +114,9 @@
     --display-four: clamp(1.75rem, -1.3683rem + 6.4965vw, 3.5rem);
     /* Font Size End */
     /* template main color */
-    --main-h: 221;
-    --main-s: 98%;
-    --main-l: 60%;
+    --main-h: 222;
+    --main-s: 89%;
+    --main-l: 55%;
     --main: var(--main-h) var(--main-s) var(--main-l);
     /* White Color */
     --white: 0 0% 100%;
@@ -166,16 +166,16 @@
     --main-700: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.1));
     --main-800: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.2));
     --main-900: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.3));
-    --base-two-10: #3386ff1A;
+    --base-two-10: #2663F21A;
     --base-two-100: #12121299;
     --base-two-200: #00998B0D;
-    --base-two-300: #3386ff99;
-    --base-two-600: #3386ff;
+    --base-two-300: #2663F299;
+    --base-two-600: #2663F2;
     --primary-05: #5D69F40D;
     --primary-50: #101010;
     --primary-100: #4A91A7;
-    --primary-400: #3386ff;
-    --primary-500: #3574FD;
+    --primary-400: #2663F2;
+    --primary-500: #2663F2;
     --primary-600: #0000DF;
     --dark-100: #9d99990f;
     --dark-500: #242424;
@@ -204,7 +204,7 @@
     --warning-400: #74CDFF;
     --warning-500: #36A2DF;
     --warning-600: #FF9F29;
-    --warning-700: #3574FD;
+    --warning-700: #2663F2;
     --warning-800: #353F90;
     --warning-900: #0000FF;
     --danger-05: #FF61610D;
@@ -216,7 +216,7 @@
     --danger-400: #74CDFF;
     --danger-500: #36A2DF;
     --danger-600: #ED0000;
-    --danger-700: #3574FD;
+    --danger-700: #2663F2;
     --danger-800: #353F90;
     --danger-900: #0000FF;
     --font-xs: 0.75rem;
@@ -584,7 +584,7 @@ input[type=number] {
 }
 
 .form-switch .form-check-input:checked {
-    background-color: #3386ff;
+    background-color: #2663F2;
 }
 
 .form-switch .form-check-input:checked::before {
@@ -2677,11 +2677,11 @@ input:focus-visible {
 }
 
 .tw-border-base-two-600-dashed {
-    border: 1px dashed #3386ff;
+    border: 1px dashed #2663F2;
 }
 
 .tw-hover-border-bottom-base-two-600:hover {
-    border-bottom: 3px solid #3386ff;
+    border-bottom: 3px solid #2663F2;
 }
 
 .tw-hover-border-black:hover {
@@ -2713,11 +2713,11 @@ input:focus-visible {
 }
 
 .border-base-two-100 {
-    border: 2px dashed #3386ff;
+    border: 2px dashed #2663F2;
 }
 
 .border-bottom-base-two-600 {
-    border-bottom: 3px solid #3386ff;
+    border-bottom: 3px solid #2663F2;
 }
 
 .border-neutral-1px-solid {
@@ -2757,7 +2757,7 @@ input:focus-visible {
 }
 
 .border-primary-400-1 {
-    border: 1px solid #3386ff;
+    border: 1px solid #2663F2;
 }
 
 .border-primary-600 {
@@ -3321,7 +3321,7 @@ input:focus-visible {
 }
 
 .hover-bg-base-two-600:hover {
-    background: #3386ff;
+    background: #2663F2;
 }
 
 .hover-border-bottom:hover {
@@ -3361,7 +3361,7 @@ input:focus-visible {
 }
 
 .focus-visible-border-main-600:focus-visible {
-    border: 1px solid #3386ff !important;
+    border: 1px solid #2663F2 !important;
     outline: 0;
 }
 
@@ -4052,7 +4052,7 @@ input:focus-visible {
 }
 
 .group:hover .group-hover-border-base-two-600 {
-    border-bottom: 2px solid #3386ff !important;
+    border-bottom: 2px solid #2663F2 !important;
 }
 
 .group-hover-text-transition {
@@ -9214,7 +9214,7 @@ input:focus-visible {
     width: 131px;
     height: 55px;
     z-index: -1;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 0.5rem;
     top: -3px;
     left: -3px;
@@ -9266,7 +9266,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -9279,7 +9279,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -9345,7 +9345,7 @@ input:focus-visible {
 .our-serbices-item-link::before {
     position: absolute;
     content: "";
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -9358,7 +9358,7 @@ input:focus-visible {
 .our-serbices-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: -4px;
     left: -4px;
     width: 100%;
@@ -9407,7 +9407,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9420,7 +9420,7 @@ input:focus-visible {
     top: -4px;
     left: -3px;
     z-index: -1;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 0.5rem;
 }
 
@@ -9429,7 +9429,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 12px;
     top: 4px;
     left: 4px;
@@ -9446,7 +9446,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9459,7 +9459,7 @@ input:focus-visible {
     top: -4px;
     left: -4px;
     z-index: -1;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 0.5rem;
 }
 
@@ -9508,7 +9508,7 @@ input:focus-visible {
 .our-services-three::before {
     position: absolute;
     content: "";
-    background-color: #3386ff;
+    background-color: #2663F2;
     max-width: 948px;
     width: 100%;
     height: 100%;
@@ -9603,7 +9603,7 @@ input:focus-visible {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #3386ff;
+    background-color: #2663F2;
 }
 
 /*==================== our services three css end =======================*/
@@ -9635,7 +9635,7 @@ input:focus-visible {
 .fast-safe::before {
     position: absolute;
     content: "";
-    background: linear-gradient(0deg, #3574FD 0%, rgba(37, 87, 236, 0) 100%);
+    background: linear-gradient(0deg, #2663F2 0%, rgba(37, 87, 236, 0) 100%);
     width: 3px;
     height: 201px;
     animation: upDown 24s linear infinite;
@@ -9837,7 +9837,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -9850,7 +9850,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -9956,7 +9956,7 @@ input:focus-visible {
     font-family: "Phosphor";
     width: 40px;
     height: 40px;
-    background-color: #3574FD;
+    background-color: #2663F2;
     border-radius: 8px;
     color: #fff;
     display: flex;
@@ -9993,7 +9993,7 @@ input:focus-visible {
 
 .nav-pills .nav-link-three.active,
 .nav-pills .show>.nav-link-three {
-    background-color: #3386ff !important;
+    background-color: #2663F2 !important;
     color: #FFFFFF !important;
     border-bottom: 3px solid #AEFF1C;
     border-radius: 12px;
@@ -10035,7 +10035,7 @@ input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10048,7 +10048,7 @@ input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 10px;
 }
 
@@ -10060,7 +10060,7 @@ input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10073,7 +10073,7 @@ input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10153,7 +10153,7 @@ input:focus-visible {
     top: 3px;
     left: 3px;
     z-index: -1;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -10166,7 +10166,7 @@ input:focus-visible {
     top: -3px;
     left: -3px;
     z-index: -1;
-    background: #3386ff;
+    background: #2663F2;
     border-radius: 0.5rem;
 }
 
@@ -10176,7 +10176,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10189,7 +10189,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -10219,7 +10219,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10232,7 +10232,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10283,7 +10283,7 @@ input:focus-visible {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background-color: #3386ff !important;
+    background-color: #2663F2 !important;
     color: #fff !important;
 }
 
@@ -10324,7 +10324,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     border-radius: 0.5rem;
-    background: #3386ff;
+    background: #2663F2;
     transition: 0.4s;
 }
 
@@ -10337,7 +10337,7 @@ input:focus-visible {
     top: -4px;
     left: -4px;
     border-radius: 0.5rem;
-    background: #3386ff;
+    background: #2663F2;
 }
 
 .platform-two-link::before {
@@ -10472,7 +10472,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10485,7 +10485,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     top: -4px;
     left: -3px;
@@ -10503,7 +10503,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10516,7 +10516,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: -4px;
     left: -4px;
     z-index: -1;
@@ -10551,7 +10551,7 @@ input:focus-visible {
 .our-pricing-plan-three-link::before {
     position: absolute;
     content: "";
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -10566,7 +10566,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10579,7 +10579,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10645,7 +10645,7 @@ input:focus-visible {
 }
 
 .header-nav-menu__item .activePage .header-nav-submenu__link {
-    background-color: #3386ff !important;
+    background-color: #2663F2 !important;
     color: #FFFFFF;
     border-radius: 12px;
 }
@@ -10870,7 +10870,7 @@ button.show {
     top: 4px;
     left: 4px;
     border-radius: 8px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
     transition: 0.4s;
 }
@@ -10883,7 +10883,7 @@ button.show {
     top: -3px;
     left: -3px;
     border-radius: 8px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     z-index: -1;
 }
 
@@ -10966,7 +10966,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10979,7 +10979,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     top: -3px;
     left: -3px;
     z-index: -1;
@@ -10993,7 +10993,7 @@ button.show {
     height: 100%;
     top: 5px;
     left: 4px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     z-index: -1;
     transition: 0.4s;
@@ -11006,7 +11006,7 @@ button.show {
     height: 100%;
     top: -5px;
     left: -4px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11071,7 +11071,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: 4px;
     left: 4px;
@@ -11084,7 +11084,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     top: -4px;
     left: -4px;
@@ -11127,7 +11127,7 @@ button.show {
     height: 100%;
     top: 4px;
     left: 4px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     z-index: -1;
     transition: 0.5s;
@@ -11140,7 +11140,7 @@ button.show {
     height: 100%;
     top: -4px;
     left: -4px;
-    background-color: #3386ff;
+    background-color: #2663F2;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11714,3 +11714,67 @@ button.show {
     -o-background-size: cover;
     /* Opera */
 }
+
+ /* Animated line styles */
+  .fast-safe-my {
+    z-index: 1;
+    padding: 0 12%; /* Adjusted padding to match step icons */
+  }
+  
+  .fast-safe-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(38, 99, 242, 0.1) 0%, #dcddd99d 50%, rgba(38, 99, 242, 0.1) 100%);
+    overflow: hidden;
+  }
+  
+  .fast-safe-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(38, 99, 242, 0) 0%, #2663F2 100%);
+    animation: movingLine 3s linear infinite;
+  }
+  
+  /* Step number styles */
+  .step-number {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  /* Animation */
+  @keyframes movingLine {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    .fast-safe-my {
+      display: none !important;
+    }
+    
+    .col-md-6:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .fast-safe-my {
+      padding: 0 7%; /* Fine-tuned padding for larger screens */
+    }
+  }
+
+
+
+

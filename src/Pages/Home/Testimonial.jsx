@@ -32,7 +32,7 @@ const TestimonialCard = ({ name, location, message, imgSrc }) => {
                     width: 50,
                     height: 50,
                     borderRadius: "50%",
-                    backgroundColor: "#3386ff",
+                    backgroundColor: "#2663F2",
                     color: "#fff",
                     display: "flex",
                     alignItems: "center",
@@ -129,7 +129,7 @@ function Testimonial() {
               <h5 className="text-primary-600 fw-normal">Our Testimonials</h5>
             </div>
             <h2
-              className="fw-normal h1 cursor-big"
+              className="fw-semibold h1 cursor-big"
               data-aos="fade-up"
               data-aos-duration={800}
             >

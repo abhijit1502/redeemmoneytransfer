@@ -60,7 +60,7 @@ function Home() {
                     </h5>
                   </div>
                   <h2
-                    className="fw-normal text-dark-700 cursor-big"
+                    className="fw-semibold text-dark-700 cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
@@ -306,7 +306,7 @@ function Home() {
                     </h5>
                   </div>
                   <h3
-                    className="fw-normal tw-mb-3 cursor-big"
+                    className="fw-semibold tw-mb-3 cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
@@ -487,7 +487,7 @@ function Home() {
           {/* =================== why choose us section end ======================= */}
 
           {/* ================== Working Section Start ===================== */}
-          <section className="py-80 z-1 bg-neutral-10 overflow-hidden">
+          <section className="py-80 z-1 bg-neutral-10 overflow-hidden d-none">
             <div className="container">
               <div className="">
                 <div className="max-w-856 mx-auto justify-content-center overflow-hidden">
@@ -506,7 +506,7 @@ function Home() {
                       </h5>
                     </div>
                     <h3
-                      className="fw-normal tw-mb-3 cursor-big"
+                      className="fw-semibold tw-mb-3 cursor-big"
                       data-aos="fade-up"
                       data-aos-duration={800}
                     >
@@ -612,6 +612,161 @@ function Home() {
               </div>
             </div>
           </section>
+
+          <section className="py-80 z-1 bg-neutral-10 overflow-hidden">
+            <div className="container">
+              <div className="">
+                <div className="mx-auto justify-content-center overflow-hidden">
+                  <div className="tw-mb-80-px mx-auto text-center align-items-center justify-content-center">
+                    <div
+                      className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
+                      data-aos="fade-up"
+                      data-aos-duration={600}
+                    >
+                      <img
+                        src="assets/images/icon/star-icon2.png"
+                        alt="Image"
+                      />
+                      <h5 className="fw-normal text-primary-500">
+                        How Redeem Work?
+                      </h5>
+                    </div>
+                    <h3
+                      className="fw-semibold tw-mb-3 cursor-big"
+                      data-aos="fade-up"
+                      data-aos-duration={800}
+                    >
+                      How Redeem Work?
+                    </h3>
+                    <p
+                      className="tw-text-lg text-dark-500 fw-normal"
+                      data-aos="fade-up"
+                      data-aos-duration={1000}
+                    >
+                      Send money internationally in just four simple steps -
+                      it's fast, secure, and straightforward.
+                    </p>
+                  </div>
+
+                  <div className="position-relative">
+                    {/* Adjusted Animated connecting line */}
+                    <div
+                      className="fast-safe-my position-absolute top-50 start-0 w-100 h-2 d-none d-lg-block"
+                      style={{ transform: "translateY(-150%)" }}
+                    >
+                      <div
+                        className="position-relative w-100 h-100 mx-auto"
+                      >
+                        <div className="fast-safe-line"></div>
+                      </div>
+                    </div>
+
+                    <div className="row gx-3 gx-lg-4 justify-content-center position-relative">
+                      {/* Step 1 */}
+                      <div
+                        className="col-lg-3 col-md-6 mb-4 mb-lg-0"
+                        data-aos="fade-up"
+                        data-aos-duration={1000}
+                      >
+                        <div className="text-center p-4 h-100">
+                          <span className="tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
+                            <i className="fa-solid fa-circle-user"></i>
+                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                              1
+                            </span>
+                          </span>
+                          <div className="max-w-400 mx-auto">
+                            <h4 className="fw-normal tw-mb-3 cursor-big">
+                              Create an Account
+                            </h4>
+                            <p className="fw-normal tw-text-lg text-dark-500">
+                              Sign up in minutes with a simple verification
+                              process.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Step 2 */}
+                      <div
+                        className="col-lg-3 col-md-6 mb-4 mb-lg-0"
+                        data-aos="fade-up"
+                        data-aos-duration={1000}
+                      >
+                        <div className="text-center p-4 h-100">
+                          <span className="payment-method tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
+                            <i className="fa-solid fa-globe"></i>
+                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                              2
+                            </span>
+                          </span>
+                          <div className="max-w-400 mx-auto">
+                            <h4 className="fw-normal tw-mb-3 cursor-big">
+                              Select Destination
+                            </h4>
+                            <p className="fw-normal tw-text-lg text-dark-500">
+                              Choose from 180+ countries and select your
+                              preferred delivery method.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Step 3 */}
+                      <div
+                        className="col-lg-3 col-md-6 mb-4 mb-lg-0"
+                        data-aos="fade-up"
+                        data-aos-duration={1000}
+                      >
+                        <div className="text-center p-4 h-100">
+                          <span className="tw-w-100px tw-h-100-px bg-base-two-10 tw-text-13 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
+                            <i className="fa-solid fa-paper-plane"></i>
+                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                              3
+                            </span>
+                          </span>
+                          <div className="max-w-400 mx-auto">
+                            <h4 className="fw-normal tw-mb-3 cursor-big">
+                              Fund Your Transfer
+                            </h4>
+                            <p className="fw-normal tw-text-lg text-dark-500">
+                              Add funds via bank transfer, debit card, or
+                              digital wallet.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Step 4 */}
+                      <div
+                        className="col-lg-3 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-duration={1000}
+                      >
+                        <div className="text-center p-4 h-100">
+                          <span className="payment-method tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
+                            <i className="fa-solid fa-thumbs-up"></i>
+                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                              4
+                            </span>
+                          </span>
+                          <div className="max-w-400 mx-auto">
+                            <h4 className="fw-normal tw-mb-3 cursor-big">
+                              Complete Transfer
+                            </h4>
+                            <p className="fw-normal tw-text-lg text-dark-500">
+                              Confirm details and track your money as it's
+                              delivered securely.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           {/* ================== Working Section End ===================== */}
 
           {/* =============== Calculator Two Section Start ================= */}
@@ -628,7 +783,7 @@ function Home() {
                     <h5 className="fw-normal text-primary-500">Send Money</h5>
                   </div>
                   <h3
-                    className="fw-normal tw-mb-3 cursor-big"
+                    className="fw-semibold tw-mb-3 cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
@@ -755,7 +910,7 @@ function Home() {
                 <div className="tw-mb-80-px">
                   <div className="max-w-560 text-center justify-content-center align-items-center mx-auto">
                     <h2
-                      className="fw-normal text-dark-600 cursor-big"
+                      className="fw-semibold text-dark-600 cursor-big"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -768,7 +923,7 @@ function Home() {
                     className="accordion d-flex justify-content-center tw-gap-6 flex-wrap"
                     id="accordionExample"
                   >
-                    <div className="w-100 max-w-885-px">
+                    <div className="max-w-885-px w-100">
                       <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
@@ -897,139 +1052,6 @@ function Home() {
                               culpa impedit quasi! Minima nemo architecto
                               voluptas atque libero pariatur accusamus
                               perspiciatis aut quas minus! Veniam, voluptatum?
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
-                        data-aos="fade-up"
-                        data-aos-duration={600}
-                      >
-                        <h2 className="accordion-header cursor-big">
-                          <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive"
-                            aria-expanded="false"
-                            aria-controls="collapseFive"
-                          >
-                            Question
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseFive"
-                          className="accordion-collapse collapse"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit. Et perspiciatis perferendis
-                              recusandae adipisci quaerat rem, consequatur
-                              aspernatur delectus qui, neque veritatis ipsum
-                              illum odio facere dolores eligendi illo voluptatem
-                              dicta.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
-                        data-aos="fade-up"
-                        data-aos-duration={800}
-                      >
-                        <h2 className="accordion-header cursor-big">
-                          <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSix"
-                            aria-expanded="false"
-                            aria-controls="collapseSix"
-                          >
-                            Question
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSix"
-                          className="accordion-collapse collapse"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Quia optio reiciendis culpa ab consequuntur
-                              sunt? Autem est aliquid itaque ad expedita rem
-                              blanditiis. Consequuntur aperiam nulla saepe at
-                              nostrum numquam.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
-                        data-aos="fade-up"
-                        data-aos-duration={1000}
-                      >
-                        <h2 className="accordion-header cursor-big">
-                          <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSeven"
-                            aria-expanded="false"
-                            aria-controls="collapseSeven"
-                          >
-                            Question
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSeven"
-                          className="accordion-collapse collapse"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Ex asperiores impedit cumque debitis ipsam,
-                              provident consectetur nostrum. Hic minus aliquam
-                              blanditiis veritatis officiis, inventore fugit
-                              vitae illo, temporibus, excepturi consequuntur.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
-                        data-aos="fade-up"
-                        data-aos-duration={1200}
-                      >
-                        <h2 className="accordion-header cursor-big">
-                          <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseEight"
-                            aria-expanded="false"
-                            aria-controls="collapseEight"
-                          >
-                            Question
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseEight"
-                          className="accordion-collapse collapse"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur,
-                              adipisicing elit. Debitis, tenetur. Recusandae
-                              officia, iste est eveniet quos ipsam debitis error
-                              incidunt iusto explicabo alias ea? Quasi fugiat
-                              excepturi libero animi vel.
                             </p>
                           </div>
                         </div>
