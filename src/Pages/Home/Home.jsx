@@ -55,7 +55,7 @@ function Home() {
                     data-aos-duration={600}
                   >
                     <img src="assets/images/icon/star-icon2.png" alt="Image" />
-                    <h5 className="fw-normal text-primary-600">
+                    <h5 className="fw-normal text-primary-500">
                       Why Choose Us
                     </h5>
                   </div>
@@ -296,12 +296,14 @@ function Home() {
               <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap">
                 <div className="tw-mb-80-px mx-auto text-center align-items-center justify-content-center">
                   <div
-                    className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3"
+                    className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
                     <img src="assets/images/icon/star-icon2.png" alt="Image" />
-                    <h5 className="fw-normal text-primary-600">Why Choose Us?</h5>
+                    <h5 className="fw-normal text-primary-500">
+                      Why Choose Us?
+                    </h5>
                   </div>
                   <h3
                     className="fw-normal tw-mb-3 cursor-big"
@@ -316,8 +318,8 @@ function Home() {
                     data-aos-duration={1000}
                   >
                     Our platform is designed to make cross-border payments and
-                  remittances faster, safer, and more affordable than
-                  traditional banks.
+                    remittances faster, safer, and more affordable than
+                    traditional banks.
                   </p>
                 </div>
               </div>
@@ -331,9 +333,9 @@ function Home() {
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
                       <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
                         <img
-                        className="white-image"
-                           src="assets/images/icon/Fast-Global-Transfers.png"
-                            alt="Fast Global Transfers"
+                          className="white-image"
+                          src="assets/images/icon/Fast-Global-Transfers.png"
+                          alt="Fast Global Transfers"
                         />
                       </span>
                     </span>
@@ -343,12 +345,12 @@ function Home() {
                       </h4>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Send money to over 180 countries with delivery in as
-                          little as minutes.
+                        little as minutes.
                       </p>
                     </div>
                   </div>
-                </div>                
-                 <div className="col-lg-4 col-md-6">
+                </div>
+                <div className="col-lg-4 col-md-6">
                   <div
                     className="bg-neutral-10 tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
                     data-aos="fade-up"
@@ -357,9 +359,9 @@ function Home() {
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
                       <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
                         <img
-                        className="white-image"
-                           src="assets/images/icon/Multi-Currency-Wallet.png"
-                            alt="Multi-Currency Wallet"
+                          className="white-image"
+                          src="assets/images/icon/Multi-Currency-Wallet.png"
+                          alt="Multi-Currency Wallet"
                         />
                       </span>
                     </span>
@@ -368,8 +370,8 @@ function Home() {
                         Multi-Currency Wallet
                       </h4>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
-                       Hold and manage multiple currencies in one place with
-                          our digital wallet.
+                        Hold and manage multiple currencies in one place with
+                        our digital wallet.
                       </p>
                     </div>
                   </div>
@@ -383,9 +385,9 @@ function Home() {
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
                       <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
                         <img
-                        className="white-image"
-                         src="assets/images/icon/Instant-Notifications.png"
-                            alt="Instant Notifications"
+                          className="white-image"
+                          src="assets/images/icon/Instant-Notifications.png"
+                          alt="Instant Notifications"
                         />
                       </span>
                     </span>
@@ -394,8 +396,8 @@ function Home() {
                         Instant Notifications
                       </h4>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
-                        Real-time tracking and alerts for all your
-                          international money transfers.
+                        Real-time tracking and alerts for all your international
+                        money transfers.
                       </p>
                     </div>
                   </div>
@@ -409,9 +411,9 @@ function Home() {
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
                       <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
                         <img
-                        className="white-image"
+                          className="white-image"
                           src="assets/images/icon/Exchange-Rates.png"
-                            alt="Competitive Exchange Rates"
+                          alt="Competitive Exchange Rates"
                         />
                       </span>
                     </span>
@@ -421,7 +423,7 @@ function Home() {
                       </h4>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Get market-leading exchange rates with transparent
-                          pricing and no hidden fees.
+                        pricing and no hidden fees.
                       </p>
                     </div>
                   </div>
@@ -435,9 +437,9 @@ function Home() {
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
                       <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
                         <img
-                        className="white-image"
+                          className="white-image"
                           src="assets/images/icon/Secure-Transactions.png"
-                            alt="Secure Transactions"
+                          alt="Secure Transactions"
                         />
                       </span>
                     </span>
@@ -446,8 +448,8 @@ function Home() {
                         Secure Transactions
                       </h4>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
-                        Bank-level encryption and security protocols to
-                          protect your money and data.
+                        Bank-level encryption and security protocols to protect
+                        your money and data.
                       </p>
                     </div>
                   </div>
@@ -461,9 +463,9 @@ function Home() {
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
                       <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
                         <img
-                        className="white-image"
-                           src="assets/images/icon/Multiple-Payout-Options.png"
-                            alt="Multiple Payout Options"
+                          className="white-image"
+                          src="assets/images/icon/Multiple-Payout-Options.png"
+                          alt="Multiple Payout Options"
                         />
                       </span>
                     </span>
@@ -473,7 +475,7 @@ function Home() {
                       </h4>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Bank deposits, mobile money, cash pickup, and home
-                          delivery options available.
+                        delivery options available.
                       </p>
                     </div>
                   </div>
@@ -491,7 +493,7 @@ function Home() {
                 <div className="max-w-856 mx-auto justify-content-center overflow-hidden">
                   <div className="tw-mb-80-px mx-auto text-center align-items-center  justify-content-center">
                     <div
-                      className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3"
+                      className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
                       data-aos="fade-up"
                       data-aos-duration={600}
                     >
@@ -499,8 +501,8 @@ function Home() {
                         src="assets/images/icon/star-icon2.png"
                         alt="Image"
                       />
-                      <h5 className="fw-normal text-primary-600">
-                        How We Work?
+                      <h5 className="fw-normal text-primary-500">
+                        How Redeem Work?
                       </h5>
                     </div>
                     <h3
@@ -508,7 +510,7 @@ function Home() {
                       data-aos="fade-up"
                       data-aos-duration={800}
                     >
-                      You Can Send Money With Four Easy Steps
+                      How Redeem Work?
                     </h3>
                     <p
                       className="tw-text-lg text-dark-500 fw-normal"
@@ -530,7 +532,7 @@ function Home() {
                         <i class="fa-solid fa-circle-user"></i>
                       </span>
                       <div className="max-w-400 tw-px-10">
-                        <span className="fw-bold tw-text-lg text-primary-600 tw-mb-3">
+                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
                           STEP_01{" "}
                         </span>
                         <h4 className="fw-normal tw-mb-3 cursor-big">
@@ -547,7 +549,7 @@ function Home() {
                       data-aos-duration={1000}
                     >
                       <div className="max-w-400 tw-px-10 working-process__text">
-                        <span className="fw-bold tw-text-lg text-primary-600 tw-mb-3">
+                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
                           STEP_02
                         </span>
                         <h4 className="fw-normal tw-mb-3 cursor-big">
@@ -571,7 +573,7 @@ function Home() {
                         <i class="fa-solid fa-paper-plane"></i>
                       </span>
                       <div className="max-w-400 tw-px-10">
-                        <span className="fw-bold tw-text-lg text-primary-600 tw-mb-3">
+                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
                           STEP_03{" "}
                         </span>
                         <h4 className="fw-normal tw-mb-3 cursor-big">
@@ -589,7 +591,7 @@ function Home() {
                       data-aos-duration={1000}
                     >
                       <div className="max-w-400 tw-px-10 working-process__text">
-                        <span className="fw-bold tw-text-lg text-primary-600 tw-mb-3">
+                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
                           STEP_04
                         </span>
                         <h4 className="fw-normal tw-mb-3 cursor-big">
@@ -616,14 +618,14 @@ function Home() {
           <section className="py-80 z- overflow-hidden">
             <div className="container">
               <div className="d-flex tw-gap-5 justify-content-between flex-wrap">
-  <div className="tw-mb-80-px mx-auto text-center align-items-center justify-content-center">
+                <div className="tw-mb-80-px mx-auto text-center align-items-center justify-content-center">
                   <div
-                    className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3"
+                    className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
                     <img src="assets/images/icon/star-icon2.png" alt="Image" />
-                    <h5 className="fw-normal text-primary-600">Send Money</h5>
+                    <h5 className="fw-normal text-primary-500">Send Money</h5>
                   </div>
                   <h3
                     className="fw-normal tw-mb-3 cursor-big"
@@ -655,9 +657,7 @@ function Home() {
                           <img src="assets/images/icon/1.png" alt="Image" />
                         </span>
                         <div className="our-peature__item">
-                          <h5 className="fw-normal">
-                            No Registration Fees
-                          </h5>
+                          <h5 className="fw-normal">No Registration Fees</h5>
                           <p className="fw-medium tw-text-lg">
                             Create your account for free in minutes
                           </p>
@@ -672,9 +672,7 @@ function Home() {
                           <img src="assets/images/icon/2.png" alt="Image" />
                         </span>
                         <div className="our-peature__item">
-                          <h5 className="fw-normal">
-                            Transparent Pricing
-                          </h5>
+                          <h5 className="fw-normal">Transparent Pricing</h5>
                           <p className="fw-medium tw-text-lg">
                             See exactly what you'll pay before confirming
                           </p>
@@ -755,21 +753,6 @@ function Home() {
             <div className="container">
               <div className="justify-content-center mx-auto">
                 <div className="tw-mb-80-px">
-                  <div
-                    className="d-flex align-items-center justify-content-center text-center tw-mb-3"
-                    data-aos="fade-up"
-                    data-aos-duration={800}
-                  >
-                    <span>
-                      <img
-                        src="assets/images/icon/star-icon2.png"
-                        alt="Image"
-                      />
-                    </span>
-                    <h5 className="fw-normal text-primary-600 cursor-big">
-                      Our FAQs
-                    </h5>
-                  </div>
                   <div className="max-w-560 text-center justify-content-center align-items-center mx-auto">
                     <h2
                       className="fw-normal text-dark-600 cursor-big"

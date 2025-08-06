@@ -175,7 +175,7 @@
     --primary-50: #101010;
     --primary-100: #4A91A7;
     --primary-400: #3386ff;
-    --primary-500: #2557EC;
+    --primary-500: #3574FD;
     --primary-600: #0000DF;
     --dark-100: #9d99990f;
     --dark-500: #242424;
@@ -204,7 +204,7 @@
     --warning-400: #74CDFF;
     --warning-500: #36A2DF;
     --warning-600: #FF9F29;
-    --warning-700: #2557EC;
+    --warning-700: #3574FD;
     --warning-800: #353F90;
     --warning-900: #0000FF;
     --danger-05: #FF61610D;
@@ -216,7 +216,7 @@
     --danger-400: #74CDFF;
     --danger-500: #36A2DF;
     --danger-600: #ED0000;
-    --danger-700: #2557EC;
+    --danger-700: #3574FD;
     --danger-800: #353F90;
     --danger-900: #0000FF;
     --font-xs: 0.75rem;
@@ -1341,7 +1341,7 @@ a {
 }
 
 a:hover {
-    color: #2557EC;
+    color: var(--main-600);
 }
 
 img {
@@ -8634,7 +8634,7 @@ input:focus-visible {
 .header-three-item-link::before {
     position: absolute;
     content: "";
-    background-color: #3386ff;
+    background-color: #000000;
     top: 5px;
     left: 3px;
     width: 77px;
@@ -8647,7 +8647,7 @@ input:focus-visible {
 .header-three-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #3386ff;
+    background-color: #000000;
     top: -5px;
     left: -4px;
     width: 77px;
@@ -9109,7 +9109,7 @@ input:focus-visible {
     font-size: 16px;
     font-weight: 500;
     color: white;
-    background-color: #3386ff;
+    background-color: #000000;
     /* Blue button color */
     border-radius: 0.5rem;
     text-decoration: none;
@@ -9124,7 +9124,7 @@ input:focus-visible {
     height: 100%;
     top: 3px;
     left: 3px;
-    background-color: hsl(224.9, 84%, 53.5%);
+    background-color: var(--main-600);
     /* Shadow color */
     border-radius: 0.5rem;
     z-index: -1;
@@ -9158,7 +9158,7 @@ input:focus-visible {
     height: 100%;
     top: 3px;
     left: 3px;
-    background-color: #3386ff;
+    background-color: #000000;
     /* Blue button color */
     border-radius: 0.5rem;
     z-index: -1;
@@ -9176,7 +9176,7 @@ input:focus-visible {
     width: 185px;
     height: 55px;
     z-index: -1;
-    background-color: #3386ff;
+    background-color: #000000;
     border-radius: 0.5rem;
     top: 3px;
     left: 3px;
@@ -9189,7 +9189,7 @@ input:focus-visible {
     width: 185px;
     height: 55px;
     z-index: -1;
-    background-color: #3386ff;
+    background-color: #000000;
     border-radius: 0.5rem;
     top: -3px;
     left: -3px;
@@ -9201,7 +9201,7 @@ input:focus-visible {
     width: 131px;
     height: 55px;
     z-index: -1;
-    background-color: #3386ff;
+    background-color: #000000;
     border-radius: 0.5rem;
     top: 3px;
     left: 3px;
@@ -9635,7 +9635,7 @@ input:focus-visible {
 .fast-safe::before {
     position: absolute;
     content: "";
-    background: linear-gradient(0deg, #2557ec 0%, rgba(37, 87, 236, 0) 100%);
+    background: linear-gradient(0deg, #3574FD 0%, rgba(37, 87, 236, 0) 100%);
     width: 3px;
     height: 201px;
     animation: upDown 24s linear infinite;
@@ -9956,7 +9956,7 @@ input:focus-visible {
     font-family: "Phosphor";
     width: 40px;
     height: 40px;
-    background-color: #2557ec;
+    background-color: #3574FD;
     border-radius: 8px;
     color: #fff;
     display: flex;

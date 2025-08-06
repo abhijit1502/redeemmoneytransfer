@@ -113,10 +113,10 @@ function Testimonial() {
   return (
     <section className="py-80 z-1 overflow-hidden">
       <div className="container">
-        <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
+        <div className="d-flex tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
           <div className="max-w-522">
             <div
-              className="d-flex align-items-center tw-gap-1 tw-mb-3"
+              className="d-flex align-items-center tw-gap-1 tw-mb-3 d-none"
               data-aos="fade-up"
               data-aos-duration={600}
             >

@@ -222,7 +222,7 @@ const Header = () => {
                       <div className="position-relative z-1">
                         <NavLink
                           to="#"
-                          className="header-three-item-link text-white fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-warning-700 border-two-px-solid rounded-2"
+                          className="header-three-item-link text-white fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-600 border-two-px-solid rounded-2"
                         >
                           Login
                         </NavLink>
