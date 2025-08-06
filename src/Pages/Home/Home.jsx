@@ -340,9 +340,9 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h4 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
                         Fast Global Transfers
-                      </h4>
+                      </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Send money to over 180 countries with delivery in as
                         little as minutes.
@@ -366,9 +366,9 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h4 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
                         Multi-Currency Wallet
-                      </h4>
+                      </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Hold and manage multiple currencies in one place with
                         our digital wallet.
@@ -392,9 +392,9 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h4 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
                         Instant Notifications
-                      </h4>
+                      </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Real-time tracking and alerts for all your international
                         money transfers.
@@ -418,9 +418,9 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h4 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
                         Competitive Exchange Rates
-                      </h4>
+                      </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Get market-leading exchange rates with transparent
                         pricing and no hidden fees.
@@ -444,9 +444,9 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h4 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
                         Secure Transactions
-                      </h4>
+                      </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Bank-level encryption and security protocols to protect
                         your money and data.
@@ -470,9 +470,9 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h4 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
                         Multiple Payout Options
-                      </h4>
+                      </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
                         Bank deposits, mobile money, cash pickup, and home
                         delivery options available.
@@ -768,7 +768,7 @@ function Home() {
                     className="accordion d-flex justify-content-center tw-gap-6 flex-wrap"
                     id="accordionExample"
                   >
-                    <div className="max-w-636 w-100">
+                    <div className="w-100 max-w-885-px">
                       <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
@@ -901,8 +901,6 @@ function Home() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="max-w-636 w-100">
                       <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
