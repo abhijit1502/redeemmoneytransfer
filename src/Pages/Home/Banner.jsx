@@ -1,10 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Banner() {
-  const flagsContainerRef = useRef(null);
-  const animationFrame = useRef(null);
-  
   // The full list of country flags you provided
   const flags = [
     // African countries
@@ -51,64 +48,9 @@ function Banner() {
     "assets/images/flags/try.png", // Turkey
     "assets/images/flags/gbp.png"  // United Kingdom
   ];
-
-  useEffect(() => {
-    const container = flagsContainerRef.current;
-    if (!container) return;
-
-    // ========================================================
-    // --- CONTROL SCROLL SPEED HERE ---
-    // Adjust this value to change the speed.
-    // Higher number = Faster scroll (e.g., 2)
-    // Lower number = Slower scroll (e.g., 0.5)
-    const scrollSpeed = 0.7; 
-    // ========================================================
-
-    // Create flag elements with duplication for seamless looping
-    const renderFlags = () => {
-      container.innerHTML = '';
-      
-      // Triple the flags for a smooth, buffered loop
-      [...flags, ...flags, ...flags].forEach((flag) => {
-        const img = document.createElement('img');
-        img.src = flag;
-        img.alt = "Country flag";
-        img.className = 'tw-h-7 tw-rounded-3xl tw-hover-z-2 tw-duration-400 -tw-ml-3';
-        container.appendChild(img);
-      });
-    };
-
-    // Smooth infinite scroll animation
-    const animate = () => {
-      if (!container) return;
-
-      // Use the scrollSpeed variable here
-      container.scrollLeft += scrollSpeed;
-      
-      // Relative reset logic
-      if (container.scrollLeft >= (container.scrollWidth / 3) * 2) {
-        container.scrollLeft -= container.scrollWidth / 3;
-      }
-      
-      animationFrame.current = requestAnimationFrame(animate);
-    };
-
-    // Initialize the scroller
-    const initialize = () => {
-      renderFlags();
-      container.scrollLeft = container.scrollWidth / 3;
-      animationFrame.current = requestAnimationFrame(animate);
-    };
-
-    setTimeout(initialize, 0);
-
-    // Cleanup on component unmount
-    return () => {
-      if (animationFrame.current) {
-        cancelAnimationFrame(animationFrame.current);
-      }
-    };
-  }, []); // Empty dependency array ensures this runs only once.
+  
+  // For a seamless CSS loop, we render the list of flags twice.
+  const doubledFlags = [...flags, ...flags];
 
   return (
     <>
@@ -185,32 +127,27 @@ function Banner() {
                       />
                     </div>
                     
-                    {/* Flag Scroller Section */}
-                    <div className="d-flex align-items-center tw-gap-12 tw-mb-15 flex-wrap">
-                      <div 
-                        data-aos="fade-up" 
-                        data-aos-duration={1400}
-                        style={{ display: 'flex', flexDirection: 'column' }}
-                      >
-                        <div 
-                          ref={flagsContainerRef}
-                          style={{
-                            display: 'flex',
-                            overflow: 'hidden',
-                            marginBottom: '0.5rem',
-                            width: '100%',
-                            paddingLeft: '12px'
-                          }}
-                        >
-                          {/* Flags are injected here by the useEffect hook */}
+                    {/* --- FINAL FLAG SCROLLER SECTION --- */}
+                    <div className="d-flex flex-column" data-aos="fade-up" data-aos-duration={1400}>
+                      <div className="scroller">
+                        <div className="scroller-track">
+                          {/* We map over the doubled list of flags */}
+                          {doubledFlags.map((flag, index) => (
+                            <img
+                              key={index}
+                              src={flag}
+                              alt="Country flag"
+                              className="flag-image"
+                            />
+                          ))}
                         </div>
-                        <span className="tw-text-lg text-dark-500">
-                          180+&nbsp;
-                          <span className="fw-semibold border-bottom-dark-500">
-                            countries supported worldwide
-                          </span>
-                        </span>
                       </div>
+                      <span className="tw-text-lg text-dark-500 mt-2">
+                        180+&nbsp;
+                        <span className="fw-semibold border-bottom-dark-500">
+                          countries supported worldwide
+                        </span>
+                      </span>
                     </div>
                     
                   </div>
@@ -229,36 +166,20 @@ function Banner() {
                 <div className="col-xl-3 col-lg-6">
                   <div className="banner-three-item margin-left-100px d-xl-block d-none">
                     <div className="max-w-185 tw-mb-12">
-                      <h5 className="cursor-big tw-mb-1 counter">
-                        Send Money
-                      </h5>
-                      <span className="tw-text-lg text-dark-500">
-                        180+ destinations
-                      </span>
+                      <h5 className="cursor-big tw-mb-1 counter">Send Money</h5>
+                      <span className="tw-text-lg text-dark-500">180+ destinations</span>
                     </div>
                     <div className="max-w-185 tw-mb-12">
-                      <h5 className="cursor-big tw-mb-1 counter">
-                        Exchange Rates
-                      </h5>
-                      <span className="tw-text-lg text-dark-500">
-                        Real-time updates
-                      </span>
+                      <h5 className="cursor-big tw-mb-1 counter">Exchange Rates</h5>
+                      <span className="tw-text-lg text-dark-500">Real-time updates</span>
                     </div>
                     <div className="max-w-185 tw-mb-12">
-                      <h5 className="cursor-big tw-mb-1 counter">
-                        Digital Wallet
-                      </h5>
-                      <span className="tw-text-lg text-dark-500">
-                       Multi-currency
-                      </span>
+                      <h5 className="cursor-big tw-mb-1 counter">Digital Wallet</h5>
+                      <span className="tw-text-lg text-dark-500">Multi-currency</span>
                     </div>
                     <div className="max-w-185 tw-mb-12">
-                      <h5 className="cursor-big tw-mb-1 counter">
-                        Instant Transfers
-                      </h5>
-                      <span className="tw-text-lg text-dark-500">
-                        24/7 availability
-                      </span>
+                      <h5 className="cursor-big tw-mb-1 counter">Instant Transfers</h5>
+                      <span className="tw-text-lg text-dark-500">24/7 availability</span>
                     </div>
                   </div>
                 </div>
