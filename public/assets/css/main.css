@@ -11842,9 +11842,6 @@ button.show {
   height: 28px; /* Tailwind's tw-h-7 */
   border-radius: 9999px; /* Tailwind's tw-rounded-3xl */
   flex-shrink: 0; /* Prevents flags from shrinking */
-  
-  /* Create the overlap effect by applying a consistent negative margin to all flags */
-  margin-left: -12px; 
 }
 
 /* The very first flag should not have the negative margin, so it's not clipped */
