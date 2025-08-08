@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^api/(.*) https://qfremit.com/pilot/$1 [P,L]
+  RewriteRule ^api/(.*) https://redeemtransfer.com/pilot/$1 [P,L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
