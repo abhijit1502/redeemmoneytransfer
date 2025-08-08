@@ -61,7 +61,7 @@ function Banner() {
     // Adjust this value to change the speed.
     // Higher number = Faster scroll (e.g., 2)
     // Lower number = Slower scroll (e.g., 0.5)
-    const scrollSpeed = 0.5; 
+    const scrollSpeed = 0.7; 
     // ========================================================
 
     // Create flag elements with duplication for seamless looping
