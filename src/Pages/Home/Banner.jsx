@@ -128,7 +128,7 @@ function Banner() {
                     </div>
                     
                     {/* --- FINAL FLAG SCROLLER SECTION --- */}
-                    <div className="d-flex flex-column" data-aos="fade-up" data-aos-duration={1400}>
+                    <div className="d-flex flex-column tw-mb-15" data-aos="fade-up" data-aos-duration={1400}>
                       <div className="scroller">
                         <div className="scroller-track">
                           {/* We map over the doubled list of flags */}
