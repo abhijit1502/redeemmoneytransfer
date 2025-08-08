@@ -1,11 +1,117 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-// import Calculator from "../../Components/Calculator";
 
 function Banner() {
+  const flagsContainerRef = useRef(null);
+  const animationFrame = useRef(null);
+  
+  // The full list of country flags you provided
+  const flags = [
+    // African countries
+    "assets/images/flags/ngn.png", // Nigeria
+    "assets/images/flags/ghs.png", // Ghana
+    "assets/images/flags/zar.png", // South Africa
+    "assets/images/flags/lrd.png", // Liberia
+    "assets/images/flags/kes.png", // Kenya
+    "assets/images/flags/ugx.png", // Uganda
+    "assets/images/flags/zmw.png", // Zambia
+    "assets/images/flags/etb.png", // Ethiopia
+    "assets/images/flags/egp.png", // Egypt
+    "assets/images/flags/tnd.png", // Tunisia
+    "assets/images/flags/mad.png", // Morocco
+    
+    // Asian countries
+    "assets/images/flags/bdt.png", // Bangladesh
+    "assets/images/flags/khr.png", // Cambodia
+    "assets/images/flags/cny.png", // China
+    "assets/images/flags/inr.png", // India
+    "assets/images/flags/mnt.png", // Mongolia
+    "assets/images/flags/npr.png", // Nepal
+    "assets/images/flags/pkr.png", // Pakistan
+    "assets/images/flags/php.png", // Philippines
+    "assets/images/flags/lkr.png", // Sri Lanka
+    "assets/images/flags/thb.png", // Thailand
+    "assets/images/flags/vnd.png", // Vietnam
+    
+    // American countries
+    "assets/images/flags/brl.png", // Brazil
+    "assets/images/flags/clp.png", // Chile
+    "assets/images/flags/crc.png", // Costa Rica
+    "assets/images/flags/dop.png", // Dominican Republic
+    "assets/images/flags/usd.png", // Ecuador
+    "assets/images/flags/htg.png", // Haiti
+    "assets/images/flags/jmd.png", // Jamaica
+    "assets/images/flags/pyg.png", // Paraguay
+    "assets/images/flags/pen.png", // Peru
+    
+    // Middle East/Europe
+    "assets/images/flags/kwd.png", // Kuwait
+    "assets/images/flags/qar.png", // Qatar
+    "assets/images/flags/aed.png", // UAE
+    "assets/images/flags/try.png", // Turkey
+    "assets/images/flags/gbp.png"  // United Kingdom
+  ];
+
+  useEffect(() => {
+    const container = flagsContainerRef.current;
+    if (!container) return;
+
+    // ========================================================
+    // --- CONTROL SCROLL SPEED HERE ---
+    // Adjust this value to change the speed.
+    // Higher number = Faster scroll (e.g., 2)
+    // Lower number = Slower scroll (e.g., 0.5)
+    const scrollSpeed = 0.5; 
+    // ========================================================
+
+    // Create flag elements with duplication for seamless looping
+    const renderFlags = () => {
+      container.innerHTML = '';
+      
+      // Triple the flags for a smooth, buffered loop
+      [...flags, ...flags, ...flags].forEach((flag) => {
+        const img = document.createElement('img');
+        img.src = flag;
+        img.alt = "Country flag";
+        img.className = 'tw-h-7 tw-rounded-3xl tw-hover-z-2 tw-duration-400 -tw-ml-3';
+        container.appendChild(img);
+      });
+    };
+
+    // Smooth infinite scroll animation
+    const animate = () => {
+      if (!container) return;
+
+      // Use the scrollSpeed variable here
+      container.scrollLeft += scrollSpeed;
+      
+      // Relative reset logic
+      if (container.scrollLeft >= (container.scrollWidth / 3) * 2) {
+        container.scrollLeft -= container.scrollWidth / 3;
+      }
+      
+      animationFrame.current = requestAnimationFrame(animate);
+    };
+
+    // Initialize the scroller
+    const initialize = () => {
+      renderFlags();
+      container.scrollLeft = container.scrollWidth / 3;
+      animationFrame.current = requestAnimationFrame(animate);
+    };
+
+    setTimeout(initialize, 0);
+
+    // Cleanup on component unmount
+    return () => {
+      if (animationFrame.current) {
+        cancelAnimationFrame(animationFrame.current);
+      }
+    };
+  }, []); // Empty dependency array ensures this runs only once.
+
   return (
     <>
-      {/* ==================== Banner Three Section Start ================== */}
       <section
         className="pt-120 z-1 position-relative overflow-hidden"
         style={{
@@ -65,7 +171,7 @@ function Banner() {
                           <div className="position-relative">
                             <NavLink
                               to="#"
-                              className="banner-three-item-link bg-main-600 text-white fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-white"
+                              className="banner-three-item-link bg-main-600 text-white fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-dark-900"
                             >
                               Send Money Now
                             </NavLink>
@@ -78,29 +184,25 @@ function Banner() {
                         className="position-absolute bottom-0 tw-end-100-px tw-mb--30px z-n1 d-xl-block d-none animation-rotation__two"
                       />
                     </div>
+                    
+                    {/* Flag Scroller Section */}
                     <div className="d-flex align-items-center tw-gap-12 tw-mb-15 flex-wrap">
-                      <div data-aos="fade-up" data-aos-duration={1400}>
-                        <div className="d-flex align-items-center tw-mb-2">
-                          <img
-                            src="assets/images/flags/aoa.png"
-                            alt="Image"
-                            className="tw-hover-z-2 tw-h-7 tw-rounded-3xl tw-duration-400"
-                          />
-                          <img
-                            src="assets/images/flags/usd.png"
-                            alt="Image"
-                            className="margin-left--12px tw-h-7 tw-rounded-3xl tw-hover-z-2 tw-duration-400"
-                          />
-                          <img
-                            src="assets/images/flags/brl.png"
-                            alt="Image"
-                            className="margin-left--12px tw-h-7 tw-rounded-3xl tw-hover-z-2 tw-duration-400"
-                          />
-                          <img
-                            src="assets/images/flags/eur.png"
-                            alt="Image"
-                            className="margin-left--12px tw-h-7 tw-rounded-3xl"
-                          />
+                      <div 
+                        data-aos="fade-up" 
+                        data-aos-duration={1400}
+                        style={{ display: 'flex', flexDirection: 'column' }}
+                      >
+                        <div 
+                          ref={flagsContainerRef}
+                          style={{
+                            display: 'flex',
+                            overflow: 'hidden',
+                            marginBottom: '0.5rem',
+                            width: '100%',
+                            paddingLeft: '12px'
+                          }}
+                        >
+                          {/* Flags are injected here by the useEffect hook */}
                         </div>
                         <span className="tw-text-lg text-dark-500">
                           180+&nbsp;
@@ -110,6 +212,7 @@ function Banner() {
                         </span>
                       </div>
                     </div>
+                    
                   </div>
                 </div>
                 <div className="col-xl-3 col-lg-6">
@@ -141,7 +244,7 @@ function Banner() {
                         Real-time updates
                       </span>
                     </div>
-                     <div className="max-w-185 tw-mb-12">
+                    <div className="max-w-185 tw-mb-12">
                       <h5 className="cursor-big tw-mb-1 counter">
                         Digital Wallet
                       </h5>
@@ -149,7 +252,7 @@ function Banner() {
                        Multi-currency
                       </span>
                     </div>
-                     <div className="max-w-185 tw-mb-12">
+                    <div className="max-w-185 tw-mb-12">
                       <h5 className="cursor-big tw-mb-1 counter">
                         Instant Transfers
                       </h5>
@@ -164,7 +267,6 @@ function Banner() {
           </div>
         </div>
       </section>
-      {/* ==================== Banner Three Section End ================== */}
     </>
   );
 }

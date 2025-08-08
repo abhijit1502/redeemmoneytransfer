@@ -1012,6 +1012,8 @@ function Calculator() {
 
               <div className="col-lg-12 col-md-12">
                 <div className="text-center">
+
+                  
                   <button
                     type="button"
                     className="btn-link w-100 tw-py-3 text-white rounded-3 fw-semibold mt-3"
