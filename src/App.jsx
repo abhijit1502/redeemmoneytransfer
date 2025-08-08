@@ -15,6 +15,8 @@ import GeneralFAQ from "./Pages/FAQ/GeneralFAQ";
 import OnboardingFAQ from "./Pages/FAQ/OnboardingFAQ";
 import CookiePolicy from "./Pages/CookiePolicy/CookiePolicy";
 import ComplaintPolicy from "./Pages/ComplaintPolicy/ComplaintPolicy";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+import TermsandConditions from "./Pages/TermsandConditions/TermsandConditions";
 
 function App() {
   useEffect(() => {
@@ -36,7 +38,7 @@ function App() {
           }
           window.location.reload(true);
         }
-      });
+      }); 
   }, []);
 
   return (
@@ -54,12 +56,12 @@ function App() {
           <Route path="/livenesscheck" element={<Livenesscheck />} />
           <Route path="/finish" element={<Finish />} />
           <Route path="/data-safety" element={<DataSafety />} />
-
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/complaint-policy" element={<ComplaintPolicy />} />
-          {/* 
-          <Route path="/terms-and-conditions" element={<TermsandConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+           <Route path="/terms-and-conditions" element={<TermsandConditions />} />
+          {/* 
+         
           <Route path="/money-transfer" element={<MoneyTransfer />} />  */}
         </RouterRoutes>
       </AppWrapper>

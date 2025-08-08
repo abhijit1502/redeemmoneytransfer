@@ -129,7 +129,7 @@ function Testimonial() {
               <h5 className="text-primary-600 fw-normal">Our Testimonials</h5>
             </div>
             <h2
-              className="fw-semibold h1 cursor-big"
+              className="fw-bold h1 cursor-big"
               data-aos="fade-up"
               data-aos-duration={800}
             >

@@ -20,7 +20,7 @@ const Footer = () => {
         }}>
             <div className="d-flex align-items-center justify-content-center tw-gap-4 flex-wrap">
               <div className="text-center">
-                <h2 className="cursor-big fw-semibold mb-3">
+                <h2 className="cursor-big fw-bold mb-3">
                   Download Our App
                 </h2>
                 <p className="tw-px-10">
@@ -121,7 +121,7 @@ const Footer = () => {
                   <ul>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="javascript:void(0)"
+                        to="/terms-and-conditions"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Teams & Conditions
@@ -129,7 +129,7 @@ const Footer = () => {
                     </li>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="javascript:void(0)"
+                        to="/privacy-policy"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Privacy Policy

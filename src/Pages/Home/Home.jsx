@@ -60,7 +60,7 @@ function Home() {
                     </h5>
                   </div>
                   <h2
-                    className="fw-semibold text-dark-700 cursor-big"
+                    className="fw-bold text-dark-700 cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
@@ -305,13 +305,13 @@ function Home() {
                       Why Choose Us?
                     </h5>
                   </div>
-                  <h3
-                    className="fw-semibold tw-mb-3 cursor-big"
+                  <h2
+                    className="fw-bold tw-mb-3 cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
                     Why Choose Redeem for International Transfers
-                  </h3>
+                  </h2>
                   <p
                     className="tw-text-lg text-dark-500 fw-normal"
                     data-aos="fade-up"
@@ -505,13 +505,13 @@ function Home() {
                         How Redeem Work?
                       </h5>
                     </div>
-                    <h3
-                      className="fw-semibold tw-mb-3 cursor-big"
+                    <h2
+                      className="fw-bold tw-mb-3 cursor-big"
                       data-aos="fade-up"
                       data-aos-duration={800}
                     >
                       How Redeem Work?
-                    </h3>
+                    </h2>
                     <p
                       className="tw-text-lg text-dark-500 fw-normal"
                       data-aos="fade-up"
@@ -631,20 +631,19 @@ function Home() {
                         How Redeem Work?
                       </h5>
                     </div>
-                    <h3
-                      className="fw-semibold tw-mb-3 cursor-big"
+                    <h2
+                      className="fw-bold tw-mb-3 cursor-big"
                       data-aos="fade-up"
                       data-aos-duration={800}
                     >
-                      How Redeem Work?
-                    </h3>
+                      How Redeem Works
+                    </h2>
                     <p
                       className="tw-text-lg text-dark-500 fw-normal"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
-                      Send money internationally in just four simple steps -
-                      it's fast, secure, and straightforward.
+                      Send money internationally in just four simple steps - it's fast, secure, and straightforward.
                     </p>
                   </div>
 
@@ -652,7 +651,7 @@ function Home() {
                     {/* Adjusted Animated connecting line */}
                     <div
                       className="fast-safe-my position-absolute top-50 start-0 w-100 h-2 d-none d-lg-block"
-                      style={{ transform: "translateY(-150%)" }}
+                      style={{ transform: "translateY(-300%)" }}
                     >
                       <div
                         className="position-relative w-100 h-100 mx-auto"
@@ -782,13 +781,13 @@ function Home() {
                     <img src="assets/images/icon/star-icon2.png" alt="Image" />
                     <h5 className="fw-normal text-primary-500">Send Money</h5>
                   </div>
-                  <h3
-                    className="fw-semibold tw-mb-3 cursor-big"
+                  <h2
+                    className="fw-bold tw-mb-3 cursor-big"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
                     Ready to Send Your First Transfer?
-                  </h3>
+                  </h2>
                   <p
                     className="tw-text-lg text-dark-500 fw-normal"
                     data-aos="fade-up"
@@ -910,7 +909,7 @@ function Home() {
                 <div className="tw-mb-80-px">
                   <div className="max-w-560 text-center justify-content-center align-items-center mx-auto">
                     <h2
-                      className="fw-semibold text-dark-600 cursor-big"
+                      className="fw-bold text-dark-600 cursor-big"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >

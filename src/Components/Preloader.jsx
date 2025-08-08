@@ -9,7 +9,7 @@ function Preloader() {
           <img
             src="assets/images/icon/preloder-img1.png"
             alt="Img"
-            className="tw-w-8"
+            className="tw-w-9"
           />
           <div className="preloder__exchange__img w-100 h-100">
             <img

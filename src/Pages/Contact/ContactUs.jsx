@@ -72,7 +72,7 @@ function ContactUs() {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "https://qfremit.com/prod/api/contactus/savecontactdetails",
+          "https://redeemtransfer.com/prod/api/contactus/savecontactdetails",
           { ...formData, captchaToken }
         );
         console.log("Form submitted successfully:", response.data);
