@@ -1,149 +1,187 @@
-// TestimonialSection.jsx
-import React, { useRef } from "react";
-import Slider from "react-slick";
+import React, { useState } from "react";
 
-const TestimonialSection = () => {
-  const sliderRef = useRef(null);
+// Helper to extract initials
+const getInitials = (name) => {
+  const nameParts = name.trim().split(" ");
+  const firstInitial = nameParts[0]?.[0] || "";
+  const lastInitial = nameParts[nameParts.length - 1]?.[0] || "";
+  return (firstInitial + lastInitial).toUpperCase();
+};
 
-  const next = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const prev = () => {
-    sliderRef.current.slickPrev();
-  };
-
-  const settings = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false, // Hide default arrows
-    autoplay: true,
-    autoplaySpeed: 5000,
-    dots: false,
-  };
+// Testimonial card component
+const TestimonialCard = ({ name, location, message, imgSrc }) => {
+  const [imageError, setImageError] = useState(false);
+  const initials = getInitials(name);
 
   return (
-    <section className="testimonial-sb pt-55 pb-80">
-      <div className="container">
-        <div className="row align-items-end">
-          <div className="col-md-8">
-            <div className="section-title mb-60">
-              <span className="sub-heading">Our Testimonials</span>
-              <h2 className="text-anm">
-                <span className="font-200">We Have 1530+ Reviews</span>
-                <br />
-                Let’s Explore Clients Feedback
-              </h2>
+    <div className="swiper-slide">
+      <div className="bg-neutral-10 tw-px-8 tw-py-8 rounded-3">
+        <div>
+          <div className="d-flex align-items-center justify-content-between tw-gap-3 flex-wrap tw-mb-6">
+            <div className="d-flex align-items-center tw-gap-3">
+              {!imageError ? (
+                <img
+                  src={imgSrc}
+                  alt={name}
+                  onError={() => setImageError(true)}
+                  style={{ width: 50, height: 50, borderRadius: "50%", objectFit: "cover" }}
+                />
+              ) : (
+                <div
+                  style={{
+                    width: 50,
+                    height: 50,
+                    borderRadius: "50%",
+                    backgroundColor: "#36A2DF",
+                    color: "#fff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontWeight: "bold",
+                    fontSize: "16px"
+                  }}
+                >
+                  {initials}
+                </div>
+              )}
+              <div>
+                <h5 className="fw-medium text-dark-600 tw-mb-05">{name}</h5>
+                <span className="fw-normal text-dark-500 tw-text-lg">
+                  {location}
+                </span>
+              </div>
             </div>
+            <img
+              src="assets/images/icon/testimonial-icon1.png"
+              alt="Quote Icon"
+            />
           </div>
-          <div className="col-md-4">
-            <div className="testimonial-arrows mb-50">
-              <button onClick={prev} className="prev slick-arrow slick-prev">
-                <i className="fas fa-angle-left" />
+        </div>
+        <p className="fw-normal text-dark-500 tw-text-lg tw-mb-6">"{message}"</p>
+        <span className="w-100 bg-neutral-05 h-005 d-block" />
+      </div>
+    </div>
+  );
+};
+
+function Testimonial() {
+  const testimonials = [
+    {
+      name: "Maria Rodriguez",
+      location: "California, USA",
+      message:
+        "I've been sending money to my family in Mexico for years, and Redeem is by far the fastest and most affordable service I've used.",
+      imgSrc: "",
+    },
+    {
+      name: "Rajiv Patel",
+      location: "Toronto, Canada",
+      message:
+        "The exchange rates are significantly better than my bank offers. I save over $30 every time I send money to my parents in India.",
+      imgSrc: "",
+    },
+    {
+      name: "Lisa Wong",
+      location: "Sydney, Australia",
+      message:
+        "The app is so easy to use, and I love being able to track my transfer every step of the way. It gives me peace of mind.",
+      imgSrc: "",
+    },
+    {
+      name: "James Santos",
+      location: "Dubai, UAE",
+      message:
+        "Redeem has the best rates for sending money to the Philippines. The money is always there within minutes of my transfer.",
+      imgSrc: "",
+    },
+    {
+      name: "Emma Wilson",
+      location: "London, UK",
+      message:
+        "I was skeptical at first, but Redeem has been a game-changer for my business. We use it for all our international payments now.",
+      imgSrc: "",
+    },
+    {
+      name: "Mohammed Al-Farsi",
+      location: "Doha, Qatar",
+      message:
+        "Customer service was exceptional when I had an issue with my first transfer. They resolved it immediately and I've been a loyal customer since.",
+      imgSrc: "",
+    },
+  ];
+
+  return (
+    <section className="py-80 z-1 overflow-hidden">
+      <div className="container">
+        <div className="d-flex tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
+          <div className="max-w-522">
+            <div
+              className="d-flex align-items-center tw-gap-1 tw-mb-3 d-none"
+              data-aos="fade-up"
+              data-aos-duration={600}
+            >
+              <span>
+                <img
+                  src="assets/images/icon/star-icon2.png"
+                  alt="Image"
+                />
+              </span>
+              <h5 className="text-primary-600 fw-normal">Our Testimonials</h5>
+            </div>
+            <h2
+              className="fw-bold h1 cursor-big"
+              data-aos="fade-up"
+              data-aos-duration={800}
+            >
+              What Our Clients Say About us
+            </h2>
+          </div>
+          <div className="max-w-340">
+            <p
+              className="fw-normal tw-text-lg text-dark-500 tw-mb-8"
+              data-aos="fade-up"
+              data-aos-duration={1000}
+            >
+              See why people around the globe choose Redeem for their
+              international money transfers.
+            </p>
+            <div className="d-flex align-items-center tw-gap-1">
+              <button
+                type="button"
+                className="testimonial-button-prev w-12 h-12 border-base-two-600 border rounded-circle d-flex align-items-center justify-content-center tw-text-6 hover-bg-primary-400 tw-duration-400 hover-text-white"
+                data-aos="fade-right"
+                data-aos-duration={800}
+              >
+                <i className="ph ph-caret-left" />
               </button>
-              <button onClick={next} className="next slick-arrow slick-next">
-                <i className="fas fa-angle-right" />
+              <button
+                type="button"
+                className="testimonial-button-next w-12 h-12 border-base-two-600 border rounded-circle d-flex align-items-center justify-content-center tw-text-6 hover-bg-primary-400 tw-duration-400 hover-text-white"
+                data-aos="fade-left"
+                data-aos-duration={800}
+              >
+                <i className="ph ph-caret-right" />
               </button>
             </div>
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-xl-4 col-lg-6 order-lg-1 order-2">
-            <div className="sasly-rating-box mb-50">
-              <div className="text-box">
-                <div className="rating-point">4.8</div>
-                {/* <p>
-                  <a href="#">(563k+ Reviews)</a>
-                </p> */}
-                <ul className="ratings mt-5">
-                  <li><i className="fas fa-star" /></li>
-                  <li><i className="fas fa-star" /></li>
-                  <li><i className="fas fa-star" /></li>
-                  <li><i className="fas fa-star" /></li>
-                  <li><i className="fas fa-star" /></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-xl-8 col-lg-6 order-lg-2 order-1">
-            <Slider ref={sliderRef} {...settings} className="testimonial-slider mb-50">
-              {/* Testimonial 1 */}
-              <div className="sasly-testimonial-item style-one">
-                <div
-                  className="dot-bg bg_cover"
-                  style={{
-                    backgroundImage: "url(assets/images/testimonial/dot-bg.png)",
-                  }}
-                />
-                <div className="testimonial-content">
-                  <div className="author-thumb-company d-flex mb-30">
-                    <div className="author-thumb">
-                      <img
-                        src="assets/images/testimonial/author5.png"
-                        alt="Author"
-                      />
-                    </div>
-                    {/* <div className="author-company">
-                      <img
-                        src="assets/images/testimonial/client.png"
-                        alt="Client"
-                      />
-                    </div> */}
-                  </div>
-                  <p>                    
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatibus! Architecto vitae, dignissimos exercitationem accusamus nihil minus similique sunt! Amet at earum laborum inventore unde delectus blanditiis mollitia deleniti consectetur?"
-                  </p>
-                  <div className="author-info-box">
-                    <div className="author-info">
-                      <h4>Ricardo F. Bowers</h4>
-                      <span className="position">CEO &amp; Founder</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonial 2 */}
-              <div className="sasly-testimonial-item style-one">
-                <div
-                  className="dot-bg bg_cover"
-                  style={{
-                    backgroundImage: "url(assets/images/testimonial/dot-bg.png)",
-                  }}
-                />
-                <div className="testimonial-content">
-                  <div className="author-thumb-company d-flex mb-30">
-                    <div className="author-thumb">
-                      <img
-                        src="assets/images/testimonial/author5.png"
-                        alt="Author"
-                      />
-                    </div>
-                    {/* <div className="author-company">
-                      <img
-                        src="assets/images/testimonial/client.png"
-                        alt="Client"
-                      />
-                    </div> */}
-                  </div>
-                  <p>
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatibus! Architecto vitae, dignissimos exercitationem accusamus nihil minus similique sunt! Amet at earum laborum inventore unde delectus blanditiis mollitia deleniti consectetur?"
-                  </p>
-                  <div className="author-info-box">
-                    <div className="author-info">
-                      <h4>Sarah L. Allen</h4>
-                      <span className="position">Marketing Manager</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Slider>
+        <div className="swiper testimonial-two-slider">
+          <div className="swiper-wrapper d-flex">
+            {testimonials.map((item, index) => (
+              <TestimonialCard
+                key={index}
+                name={item.name}
+                location={item.location}
+                message={item.message}
+                imgSrc={item.imgSrc}
+              />
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default TestimonialSection;
+export default Testimonial;

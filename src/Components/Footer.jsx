@@ -58,7 +58,7 @@ const Footer = () => {
                   data-aos-duration={600}
                 >
                   <div className="tw-mb-15">
-                    <NavLink to="index-2.html">
+                    <NavLink to="/">
                       <img
                         src="assets/images/logo/footer-logo.png"
                         alt="Image"
@@ -80,7 +80,7 @@ const Footer = () => {
                   <ul>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="#"
+                        to="/aboutus"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         About Us
@@ -88,7 +88,7 @@ const Footer = () => {
                     </li>
                     <li className="tw-mb-4">
                       <NavLink
-                        to="javascript:void(0)"
+                        to="/money-transfer"
                         className="fw-normal tw-text-lg text-neutral-10 hover-text-main-600"
                       >
                         Money Transfer
@@ -202,7 +202,7 @@ const Footer = () => {
                   </ul>
                   <ul className="d-flex align-items-center tw-gap-5 mt-4 footer-social-media">
                     <li>
-                      <NavLink to="#">
+                      <NavLink to="https://www.facebook.com/RedeemTransfer" target="_blank">
                         <img
                           src="assets/images/icon/facebook.png"
                           alt="Image"
@@ -210,7 +210,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="#">
+                      <NavLink to="https://www.instagram.com/redeemtransfer/" target="_blank">
                         <img
                           src="assets/images/icon/instagram.png"
                           alt="Image"
@@ -218,7 +218,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="#">
+                      <NavLink to="#" target="_blank">
                         <img
                           src="assets/images/icon/linkedin.png"
                           alt="Image"
@@ -226,7 +226,7 @@ const Footer = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="#">
+                      <NavLink to="https://x.com/RedeemTransfer" target="_blank">
                         <img src="assets/images/icon/twitter.png" alt="Image" />
                       </NavLink>
                     </li>

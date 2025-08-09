@@ -82,7 +82,7 @@ function GeneralFAQ() {
                     className="accordion d-flex justify-content-center tw-gap-6 flex-wrap"
                     id="accordionExample"
                   >
-                    <div className="w-100">
+                   <div className="w-100">
                       <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
@@ -90,14 +90,14 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseOne"
                             aria-expanded="true"
                             aria-controls="collapseOne"
                           >
-                            Question
+                            Is Redeem LLC Regulated?
                           </button>
                         </h2>
                         <div
@@ -107,11 +107,11 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Ab laboriosam, unde asperiores ea veniam,
-                              dolorum, reprehenderit nihil assumenda itaque nemo
-                              praesentium dolorem et quasi voluptate quo ipsa
-                              non. Eveniet, doloremque.
+                              Yes, Redeem LLC (RMT) is regulated by the SRO
+                              PolyReg in Switzerland. We conform to the rules
+                              and regulations in the countries we remit to
+                              through our trusted and reliable distributors and
+                              Payout Partners.
                             </p>
                           </div>
                         </div>
@@ -123,14 +123,15 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo"
                             aria-expanded="false"
                             aria-controls="collapseTwo"
                           >
-                            Question
+                            Do you have a Physical location or is RMT an online
+                            business?
                           </button>
                         </h2>
                         <div
@@ -140,11 +141,15 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Mollitia accusamus cumque alias
-                              minus rem libero praesentium corporis consequatur
-                              voluptatem magni dolorem, repellat sapiente sint
-                              ex nihil, expedita nesciunt, unde vel!
+                              With the lockdowns and social distancing policies
+                              in most countries, We are currently providing
+                              online services with the partners in the countries
+                              we service. However, in the future, we intend to
+                              have a physical presence in some major locations.
+                              Our current online business operational model
+                              allows RMT users to send money from the comfort of
+                              their homes with highly competitive rates using
+                              our secure and fast interface.
                             </p>
                           </div>
                         </div>
@@ -156,14 +161,14 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseThree"
                             aria-expanded="false"
                             aria-controls="collapseThree"
                           >
-                            Question
+                            Is your Money Safe with Us?
                           </button>
                         </h2>
                         <div
@@ -173,11 +178,13 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Minima neque quibusdam quas corrupti facere
-                              nulla modi dolorum perspiciatis numquam vero eum
-                              in, natus reiciendis sint placeat officiis
-                              consectetur nesciunt sequi.
+                              Yes, We hold customer money in a dedicated
+                              business account, independent of our business
+                              operational account. All Remit requests are
+                              matched with a corresponding transaction id and
+                              leaves our account shortly after the request is
+                              initiated, thereby reducing financial risk or loss
+                              to customer money.
                             </p>
                           </div>
                         </div>
@@ -189,14 +196,14 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseFour"
                             aria-expanded="false"
                             aria-controls="collapseFour"
                           >
-                            Question
+                            How much money can I transfer?
                           </button>
                         </h2>
                         <div
@@ -206,30 +213,33 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Omnis rerum ex voluptatem esse
-                              culpa impedit quasi! Minima nemo architecto
-                              voluptas atque libero pariatur accusamus
-                              perspiciatis aut quas minus! Veniam, voluptatum?
+                              We are providing transaction daily limits up to
+                              CHF 1’000.00 and a Monthly limit up to 5’000.00
+                              CHF. For amounts higher than the monthly limit,
+                              please contact us. Irrespective of these
+                              thresholds, RMT can at any time request further
+                              documents from each customer in compliance with
+                              the SRO AML policies.
                             </p>
                           </div>
                         </div>
                       </div>
-                       <div
+                      <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
                         data-aos-duration={600}
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseFive"
                             aria-expanded="false"
                             aria-controls="collapseFive"
                           >
-                            Question
+                            How long does it take to deliver funds to the
+                            receiver?
                           </button>
                         </h2>
                         <div
@@ -239,12 +249,11 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit. Et perspiciatis perferendis
-                              recusandae adipisci quaerat rem, consequatur
-                              aspernatur delectus qui, neque veritatis ipsum
-                              illum odio facere dolores eligendi illo voluptatem
-                              dicta.
+                              We aim to get the remittance to the receiver
+                              within 1 working day; in exceptional cases where
+                              we cannot get it to the receiver within 48hrs, we
+                              will contact you to provide an explanation and
+                              revised time of delivery.
                             </p>
                           </div>
                         </div>
@@ -256,14 +265,14 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseSix"
                             aria-expanded="false"
                             aria-controls="collapseSix"
                           >
-                            Question
+                            How do I open a Redeem LLC account?
                           </button>
                         </h2>
                         <div
@@ -273,11 +282,11 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Quia optio reiciendis culpa ab consequuntur
-                              sunt? Autem est aliquid itaque ad expedita rem
-                              blanditiis. Consequuntur aperiam nulla saepe at
-                              nostrum numquam.
+                              Use the 'Sign-up' button on our website and follow
+                              the instructions. On successful verification of
+                              your details and documents by our registration
+                              team, we will activate your account to make
+                              remittances.
                             </p>
                           </div>
                         </div>
@@ -289,14 +298,14 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseSeven"
                             aria-expanded="false"
                             aria-controls="collapseSeven"
                           >
-                            Question
+                            Is my Data Safe with Redeem LLC?
                           </button>
                         </h2>
                         <div
@@ -306,11 +315,9 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Ex asperiores impedit cumque debitis ipsam,
-                              provident consectetur nostrum. Hic minus aliquam
-                              blanditiis veritatis officiis, inventore fugit
-                              vitae illo, temporibus, excepturi consequuntur.
+                              Redeem LLC is secured in line with the Switzerland
+                              Data Protection, hence we ensure any data you
+                              provide to us is confidential and held securely.
                             </p>
                           </div>
                         </div>
@@ -322,14 +329,15 @@ function GeneralFAQ() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseEight"
                             aria-expanded="false"
                             aria-controls="collapseEight"
                           >
-                            Question
+                            Does Redeem LLC need my bank details for remittance
+                            request?
                           </button>
                         </h2>
                         <div
@@ -339,11 +347,54 @@ function GeneralFAQ() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur,
-                              adipisicing elit. Debitis, tenetur. Recusandae
-                              officia, iste est eveniet quos ipsam debitis error
-                              incidunt iusto explicabo alias ea? Quasi fugiat
-                              excepturi libero animi vel.
+                              <strong>Yes and No.</strong>
+                            </p>
+                            <p className="fw-normal tw-text-lg text-dark-600">
+                              <strong>Yes</strong>
+                              <br />
+                              if during a transaction you use our{" "}
+                              <strong>e-Check</strong> which is a recognized
+                              payment processor/interface to make online
+                              payments, We require customer bank details for
+                              remittance request;{" "}
+                              <strong>
+                                the customer bank details must match the name(s)
+                                used during opening of your Redeem LLC Account.
+                              </strong>{" "}
+                              The money will be booked directly from your bank
+                              account. You (Customer) will be solely responsible
+                              for any charges from using this payment processor.
+                              The charges will be made clear to you and
+                              separated from the amount RMT will send to your
+                              receiver. Anyone with a savings account can pay by
+                              eCheck.
+                            </p>
+                            <p className="fw-normal tw-text-lg text-dark-600 mt-3">
+                              To make a payment with an e-Check, you simply
+                              provide the following information:
+                              <ul>
+                                <li>Your IBAN number *</li>
+                                <li>Your bank account number *</li>
+                                <li>The name of your Bank *</li>
+                                <li>The name on your bank account *</li>
+                              </ul>
+                              <em>
+                                <strong>
+                                  * This information is printed on your EC
+                                  cards.
+                                </strong>
+                              </em>
+                            </p>
+
+                            <p className="fw-normal tw-text-lg text-dark-600 mt-3">
+                              <strong>No</strong>
+                              <br />
+                              If you decide to manually transfer the money
+                              directly to Our Bank account. <strong>The bank details
+                              from which the transfer is initiated must match
+                              the name(s) used during opening of your Redeem LLC
+                              Account.</strong><br/>Our customers can choose either of both
+                              options.
                             </p>
                           </div>
                         </div>

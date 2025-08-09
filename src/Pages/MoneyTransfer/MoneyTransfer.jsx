@@ -1,94 +1,36 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import CorridorsSlider from "../../Components/CorridorsSlider";
-import Testimonial from "./Testimonial";
-import CookieConsent from "../../Components/CookieConsent";
 import Money_Transfer_Seo from "../../SEO/Money_Transfer_Seo";
 import Calculator from "../../Components/Calculator";
 
 function MoneyTransfer() {
-  const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const smootherRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 300);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    const gsap = window.gsap;
-    const ScrollTrigger = window.ScrollTrigger;
-    const ScrollSmoother = window.ScrollSmoother;
-    const SplitText = window.SplitText;
-
-    let smoother;
-
-    const initializeSmoother = () => {
-      // Register plugins
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
-      // Kill existing instance
-      if (ScrollSmoother.get()) {
-        ScrollSmoother.get().kill();
-      }
-
-      // Check if wrapper and content exist
-      const wrapper = document.getElementById("smooth-wrapper");
-      const content = document.getElementById("smooth-content");
-
-      if (!wrapper || !content) return;
-
-      // Recreate smoother
-      smoother = ScrollSmoother.create({
-        wrapper: wrapper,
-        content: content,
-        smooth: 1.2,
-        effects: true,
-      });
-
-      // SplitText animation
-      const split = new SplitText(".headline", { type: "words,chars" });
-      gsap.from(split.chars, {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        stagger: 0.05,
-        ease: "power2.out",
-      });
-
-      // Scroll animation
-      gsap.to(".line_item_one", {
-        scrollTrigger: {
-          trigger: ".line_item_one",
-          start: "top 80%",
-          end: "bottom top",
-          scrub: true,
-        },
-        x: 200,
-      });
-    };
-
     if (!isLoading) {
-      // Wait for DOM + React hydration
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          initializeSmoother();
-        }, 100); // delay ensures DOM is ready
-      });
-    }
-
-    // Clean up on unmount/route change
-    return () => {
-      if (ScrollSmoother.get()) {
-        ScrollSmoother.get().kill();
+      if (window.initThemeScripts) {
+        window.initThemeScripts();
       }
-    };
-  }, [isLoading, location.pathname]);
+      if (window.initGsapScripts) {
+        window.initGsapScripts();
+      }
+
+      // ✅ Re-init testimonial slider after navigation
+      if (typeof window.testimonialTwoSliderInit === "function") {
+        window.testimonialTwoSliderInit();
+      }
+    }
+  }, [isLoading]);
 
   return (
     <>
@@ -98,288 +40,217 @@ function MoneyTransfer() {
       ) : (
         <>
           <Header />
-          <div id="smooth-wrapper">
-            <div id="smooth-content">
-              <div className="line_wrap">
-                <div className="line_item_one" />
-                <div className="line_item" />
-                <div className="line_item" />
-                <div className="line_item" />
-                <div className="line_item" />
-              </div>
-              <main>
-                {/*======  Start Page Hero Section  ======*/}
-                <section className="page-hero-ss">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className="page-content text-center">
-                          <h1 className="page-title">Money Transfer</h1>
-                          <ul className="breadcrumb-link">
-                            <li>
-                              <NavLink to="/">Home</NavLink>
-                            </li>
-                            <li className="active">Money Transfer</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                {/*======  End Page Hero Section  ======*/}
-
-                {/*====== Start  Section ======*/}
-                <section className="team-details-page pb-80">
-                  <div className="container">
-                    {/*===   Wrapper ===*/}
-                    <div className="team-details-wrapper">
-                      <div className="row align-items-center">
-                        <div className="col-xl-5">
-                          <div
-                            className="team-item mb-50"
-                            data-aos="fade-up"
-                            data-aos-duration={800}
-                          >
-                            <div className="member-image">
-                              <Calculator />
-                            </div>
-                            <div className="text-center">
-                              <h6 className="mb-3">Download Our App</h6>
-                              <div className="row">
-                                <div className="col-xl-12 col-md-12 gap-3">
-                                  {/*=== Iconic Box ===*/}
-                                  <NavLink
-                                    to="#"
-                                    target="_blank"
-                                    className="mb-3"
-                                  >
-                                    <img src="assets/images/icons/Play-store.png" />
-                                  </NavLink>
-                                  &emsp;
-                                  <NavLink
-                                    to="#"
-                                    target="_blank"
-                                    className="mb-3"
-                                  >
-                                    <img src="assets/images/icons/Appstore.png" />
-                                  </NavLink>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-7">
-                          <div className="member-info-content mb-10">
-                            <div
-                              className="content-box"
-                              data-aos="fade-up"
-                              data-aos-duration={900}
-                            >
-                              <div className="mb-3">
-                                <span className="sub-heading">
-                                  Money Transfer
-                                </span>
-                                <h2 className="text-anm">
-                                  <span className="font-200">
-                                    Super Fast & Secure
-                                  </span>
-                                  Money Transfer Services
-                                </h2>
-                              </div>
-                              <p>
-                                Pelmax Money Transfer Service, sending money to
-                                UAE, UK, Australia, Japan, Switzerland,
-                                Singapore, Hong Kong, France, Spain, Canada, and
-                                the USA has never been easier. Our secure
-                                electronic funds transfer system, competitive
-                                exchange rates, and real-time tracking ensure
-                                every transaction is efficient and reliable.
-                              </p>
-                              <div className="sasly-item mb-30">
-                                <div className="icon">
-                                   <img
-                                  src="assets/images/icon/Global-Payments.svg"
-                                  alt="Global Payments"
-                                />
-                                </div>
-                                <div className="content">
-                                  <h5 className="title">Global Payments</h5>
-                                  <p>
-                                   Send money worldwide with seamless, secure transactions to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong, and beyond.
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="sasly-item mb-30">
-                                <div className="icon">
-                                  <img
-                                  src="assets/images/icon/Competitive-Rates.svg"
-                                  alt="Competitive Rates"
-                                />
-                                </div>
-                                <div className="content">
-                                  <h5 className="title">Competitive Rates</h5>
-                                  <p>
-                                    Enjoy transparent pricing with industry-leading exchange rates for secure and affordable money transfers across international borders. No hidden fees, just reliable transactions.
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="sasly-item mb-30">
-                                <div className="icon">
-                                 <img
-                                  src="assets/images/icon/Service-2.svg"
-                                  alt="24/7 Service"
-                                />
-                                </div>
-                                <div className="content">
-                                  <h5 className="title">24/7 Service</h5>
-                                  <p>
-                                    Access secure money transfer services anytime, anywhere with round-the-clock assistance and real-time transaction tracking for complete peace of mind.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                {/*====== End  Section ======*/}
-
-                {/*====== Start corridors Section ======*/}
-                <CorridorsSlider />
-                {/*====== End corridors Section ======*/}
-
-                {/*====== Start About Section =======*/}
-                <section className="about-sb pt-130 pb-75">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        {/*=== Section Title  ===*/}
-                        <div className="section-title style-one text-center mb-60">
-                          <span className="sub-heading">
-                           Reliable Money Transfer Service 
-                          </span>
-                          <h2 className="text-anm">
-                            <span className="font-200">
-                              Money Transfer at your
-                            </span>&nbsp;Fingertips
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row align-items-center">
-                      <div className="col-xl-5">
-                        {/*=== Section Content Box ===*/}
-                        <div className="section-content-box style-one">
-                          <p className="mb-35" data-aos="fade-up">
-                           Experience hassle-free international transactions with Redeem Money Transfer. Securely send money online anytime, anywhere with instant transfers, competitive rates, and real-time tracking for complete peace of mind. Let me know if you need refinements!
-                          </p>
-                          <div className="row">
-                            <div className="col-lg-12" data-aos="fade-up">
-                              <ul className="check-list style-one">
-                                <li>
-                                  <i class="far fa-check-circle"></i>
-                                  Easy sign up
-                                </li>
-                                 <li>
-                                  <i class="far fa-check-circle"></i>
-                                  Choose your payment method
-                                </li>
-                                 <li>
-                                  <i class="far fa-check-circle"></i>
-                                  End-to-End Data Encryption
-                                </li>
-                                 <li>
-                                  <i class="far fa-check-circle"></i>
-                                  Live Exchange Rate Updates
-                                </li>
-                                 <li>
-                                  <i class="far fa-check-circle"></i>
-                                  Transaction Success Confirmation
-                                </li>
-                                 <li>
-                                  <i class="far fa-check-circle"></i>
-                                  Instant Security Alerts
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div className="about-button" data-aos="fade-up">
-                            <NavLink
-                              to="#"
-                              className="theme-btn style-two"
-                              target="_blank"
-                            >
-                              Send Money Now
-                            </NavLink>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xl-7">
-                        {/*=== Iconic Box ===*/}
-                        <div className="section-image-box mb-55">
-                          <img
-                            src="assets/images/about/Fingertips.png"
-                            className="rounded-3 translate-img"
-                            alt="Money Transfer at your Fingertips"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                {/*====== End About Section =======*/}
-
-                {/*====== Start Testimonial Section ======*/}
-                <Testimonial />
-                {/*====== End Testimonial Section ======*/}
-
-                {/*====== Start CTA Section ======*/}
-                <section
-                  className="cta-sb bg_cover p-r z-1 pt-90 pb-40"
-                  style={{
-                    backgroundImage: "url(assets/images/bg/cta-bg1.jpg)",
-                  }}
+          {/* Breadcrumb */}
+          <div className="bg-neutral-20 position-relative z-1 py-120 pb-5">
+            <img
+              src="assets/images/shape/my-profile-shape-1.png"
+              alt="Image"
+              className="shape__one position-absolute z-n1 tw-block-end-0 tw-start-0"
+            />
+            <img
+              src="assets/images/shape/my-profile-shape-2.png"
+              alt="Image"
+              className="shape__two position-absolute z-n1 tw-block-end-0 tw-end-0"
+            />
+            <div className="text-center">
+              <h1
+                className="fw-normal text-dark-600 text-uppercase cursor-big"
+                data-aos="fade-up"
+                data-aos-duration={600}
+              >
+                Money Transfer
+              </h1>
+              <div
+                className="d-flex align-items-center tw-gap-105 justify-content-center"
+                data-aos="fade-up"
+                data-aos-duration={800}
+              >
+                <NavLink
+                  to="/"
+                  className="fw-semibold tw-text-base text-dark-500 text-uppercase"
                 >
-                  <div className="container">
-                    <div className="row align-items-center">
-                      <div className="col-xl-12">
-                        {/*=== Section Content Box ===*/}
-                        <div className="section-content-box mb-50 text-center">
-                          <div className="section-title text-white mb-55">
-                            <h2 className="text-anm">
-                              <span className="font-200">Download</span> Our
-                              Mobile App
-                            </h2>
-                          </div>
-                        </div>
-                        <div className="section-content-box mb-40 text-center">
-                          <div className="row justify-content-center">
-                            <div className="col-xl-2 col-md-6">
-                              {/*=== Iconic Box ===*/}
-                              <NavLink to="#" target="_blank" className="mb-3">
-                                <img src="assets/images/icons/Play-store.png" />
-                              </NavLink>
-                            </div>
-                            <div className="col-xl-2 col-md-6">
-                              {/*=== Iconic Box ===*/}
-                              <NavLink to="#" target="_blank" className="mb-3">
-                                <img src="assets/images/icons/Appstore.png" />
-                              </NavLink>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                {/*====== End CTA Section ======*/}
-              </main>
-              <Footer />
+                  Home
+                </NavLink>
+                <span className="tw-text-6 text-main-600">
+                  <i className="ph ph-caret-double-right" />
+                </span>
+                <span className="fw-semibold tw-text-base text-main-600 text-uppercase">
+                  Money Transfer
+                </span>
+              </div>
             </div>
           </div>
-          <CookieConsent />
+
+          {/* ======================= Our Feature Section Start ================ */}
+          <section className="py-80 z-1 overflow-hidden">
+            <div className="container">
+              <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
+                <div className="max-w-526">
+                  <div
+                    className="d-flex align-items-center tw-gap-1 tw-mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                  >
+                    <img src="assets/images/icon/star-icon2.png" alt="Image" />
+                    <h5 className="text-primary-500 fw-normal">
+                      {" "}
+                     Send Money
+                    </h5>
+                  </div>
+                  <h2
+                    className="fw-bold text-dark-600 h1 cursor-big"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    Super Fast & SecureMoney Transfer Services
+                  </h2>
+                </div>
+                <div className="max-w-400">
+                  <p
+                    className="fw-normal tw-text-lg text-dark-500"
+                    data-aos="fade-up"
+                    data-aos-duration={1200}
+                  >
+                    Reliable, secure, fast, global, convenient, trusted,
+                    seamless, innovative.
+                  </p>
+                </div>
+              </div>
+              <div className="row gy-4 align-items-center">
+                <div className="col-lg-7">
+                  <div >
+                    <div
+                      className="tw-mb-7"
+                      data-aos="fade-up"
+                      data-aos-duration={800}
+                    >
+                      <span className="tw-w-72px tw-h-72-px border-base-two-600 d-flex align-items-center justify-content-center rounded-3 tw-mb-6">
+                        <span className="w-15 h-15 bg-base-two-10 rounded-3 d-flex align-items-center justify-content-center">
+                          <img
+                            src="assets/images/icon/our-feature-icon1.png"
+                            alt="Image"
+                          />
+                        </span>
+                      </span>
+                      <h5 className="fw-normal text-dark-600 tw-mb-2 cursor-big">
+                        Global Money Transfers
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500">
+                        Send and receive payments worldwide with ease, speed,
+                        and top-tier security.
+                      </p>
+                    </div>
+                    <div
+                      className="tw-mb-7"
+                      data-aos="fade-up"
+                      data-aos-duration={1000}
+                    >
+                      <span className="tw-w-72px tw-h-72-px border-base-two-600 d-flex align-items-center justify-content-center rounded-3 tw-mb-6">
+                        <span className="w-15 h-15 bg-base-two-10 rounded-3 d-flex align-items-center justify-content-center">
+                          <img
+                            src="assets/images/icon/our-feature-icon2.png"
+                            alt="Image"
+                          />
+                        </span>
+                      </span>
+                      <h5 className="fw-normal text-dark-600 tw-mb-2 cursor-big">
+                        Robust Data Protection
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500">
+                        Your data is encrypted, ensuring secure transactions and
+                        absolute privacy protection.
+                      </p>
+                    </div>
+                    <div className data-aos="fade-up" data-aos-duration={1200}>
+                      <span className="tw-w-72px tw-h-72-px border-base-two-600 d-flex align-items-center justify-content-center rounded-3 tw-mb-6">
+                        <span className="w-15 h-15 bg-base-two-10 rounded-3 d-flex align-items-center justify-content-center">
+                          <img
+                            src="assets/images/icon/our-feature-icon3.png"
+                            alt="Image"
+                          />
+                        </span>
+                      </span>
+                      <h5 className="fw-normal text-dark-600 tw-mb-2 cursor-big">
+                        Fair &amp; Honest Transactions
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500">
+                        Enjoy fully transparent transactions with no hidden fees
+                        or unexpected extra charges.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-5">
+                  <Calculator/>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* ======================= Our Feature Section End ================ */}
+
+          {/* About Us Section */}
+          <section className="py-80 z-1 overflow-hidden">
+            <div className="container">
+              <div className="row gy-4 align-items-center">
+                <div className="col-lg-6">
+                  <div data-aos="zoom-in" data-aos-duration={1500}>
+                    <img
+                      className="rounded-2"
+                      src="assets/images/thumbs/money-transfer-at-your-fingertips.jpg"
+                      alt="Money Transfer at your Fingertips"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div>
+                    <h2
+                      className="fw-bold cursor-big tw-mb-5"
+                      data-aos="fade-up"
+                      data-aos-duration={800}
+                    >
+                      Money Transfer at your Fingertips
+                    </h2>
+                    <p
+                      className="fw-normal text-dark-500 tw-text-lg tw-mb-8"
+                      data-aos="fade-up"
+                      data-aos-duration={1000}
+                    >
+                      Experience hassle-free international transactions with
+                      Redeem. Securely send money online anytime, anywhere with
+                      instant transfers, competitive rates, and real-time
+                      tracking for complete peace of mind.
+                    </p>
+                    <div className="tw-mb-7">
+                      {[
+                        "Easy sign up",
+                        "Choose your payment method",
+                        "End-to-End Data Encryption",
+                        "Live Exchange Rate Updates",
+                        "Transaction Success Confirmation",
+                        "Instant Security Alerts",
+                      ].map((text, idx) => (
+                        <div
+                          key={idx}
+                          className="d-flex align-items-center tw-gap-2 tw-mb-4"
+                          data-aos="fade-up"
+                          data-aos-duration={1100 + idx * 100}
+                        >
+                          <span className="tw-text-xl text-dark-500">
+                            <i className="ph ph-check-circle" />
+                          </span>
+                          <span className="text-dark-500 fw-semibold tw-text-lg">
+                            {text}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <Footer />
         </>
       )}
     </>

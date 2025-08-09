@@ -64,7 +64,7 @@ const Header = () => {
             <ul className="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8">
               <li className="nav-menu__item">
                 <NavLink
-                  to="#"
+                  to="/aboutus"
                   className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-white"
                 >
                   About Us
@@ -72,7 +72,7 @@ const Header = () => {
               </li>
               <li className="nav-menu__item">
                 <NavLink
-                  to="#"
+                  to="/money-transfer"
                   className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-white"
                 >
                   Money Transfer
@@ -133,22 +133,22 @@ const Header = () => {
               <div>
                 <ul className="d-flex align-items-center tw-gap-5 flex-wrap">
                   <li>
-                    <NavLink to="#" className="tw-text-xl text--white">
+                    <NavLink to="https://x.com/RedeemTransfer" className="tw-text-xl text--white" target="_blank">
                       <i class="fa-brands fa-x-twitter"></i>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="#" className="tw-text-xl text--white">
+                    <NavLink to="https://www.facebook.com/RedeemTransfer" className="tw-text-xl text--white" target="_blank">
                       <i class="fa-brands fa-facebook-f"></i>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="#" className="tw-text-xl text--white">
+                    <NavLink to="#" className="tw-text-xl text--white" target="_blank">
                       <i class="fa-brands fa-linkedin-in"></i>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="#" className="tw-text-xl text--white">
+                    <NavLink to="https://www.instagram.com/redeemtransfer/" className="tw-text-xl text--white" target="_blank">
                       <i class="fa-brands fa-instagram"></i>
                     </NavLink>
                   </li>
@@ -180,7 +180,7 @@ const Header = () => {
               <ul className="nav-menu d-lg-flex align-items-center tw-gap-6 d-none">
                 <li className="nav-menu__item">
                   <NavLink
-                    to="/"
+                    to="/aboutus"
                     className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-dark-600"
                   >
                     About Us
@@ -188,7 +188,7 @@ const Header = () => {
                 </li>
                 <li className="nav-menu__item">
                   <NavLink
-                    to="/"
+                    to="/money-transfer"
                     className="nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-dark-600"
                   >
                     Money Transfer

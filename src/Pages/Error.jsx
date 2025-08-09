@@ -4,85 +4,21 @@ import Preloader from "../Components/Preloader";
 import Error_Seo from "../SEO/Error_Seo";
 
 function Error() {
-  const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const smootherRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 300);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    const gsap = window.gsap;
-    const ScrollTrigger = window.ScrollTrigger;
-    const ScrollSmoother = window.ScrollSmoother;
-    const SplitText = window.SplitText;
-
-    let smoother;
-
-    const initializeSmoother = () => {
-      // Register plugins
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
-      // Kill existing instance
-      if (ScrollSmoother.get()) {
-        ScrollSmoother.get().kill();
-      }
-
-      // Check if wrapper and content exist
-      const wrapper = document.getElementById("smooth-wrapper");
-      const content = document.getElementById("smooth-content");
-
-      if (!wrapper || !content) return;
-
-      // Recreate smoother
-      smoother = ScrollSmoother.create({
-        wrapper: wrapper,
-        content: content,
-        smooth: 1.2,
-        effects: true,
-      });
-
-      // SplitText animation
-      const split = new SplitText(".headline", { type: "words,chars" });
-      gsap.from(split.chars, {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        stagger: 0.05,
-        ease: "power2.out",
-      });
-
-      // Scroll animation
-      gsap.to(".line_item_one", {
-        scrollTrigger: {
-          trigger: ".line_item_one",
-          start: "top 80%",
-          end: "bottom top",
-          scrub: true,
-        },
-        x: 200,
-      });
-    };
-
     if (!isLoading) {
-      // Wait for DOM + React hydration
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          initializeSmoother();
-        }, 100); // delay ensures DOM is ready
-      });
+      if (window.initThemeScripts) window.initThemeScripts();
+      if (window.initGsapScripts) window.initGsapScripts();
     }
-
-    // Clean up on unmount/route change
-    return () => {
-      if (ScrollSmoother.get()) {
-        ScrollSmoother.get().kill();
-      }
-    };
-  }, [isLoading, location.pathname]);
+  }, [isLoading]);
 
   return (
     <>
@@ -91,58 +27,35 @@ function Error() {
         <Preloader />
       ) : (
         <>
-          <div id="smooth-wrapper">
-            <div id="smooth-content">
-              <div className="line_wrap">
-                <div className="line_item_one" />
-                <div className="line_item" />
-                <div className="line_item" />
-                <div className="line_item" />
-                <div className="line_item" />
-              </div>
-              <main>
-                <section className="error-page">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        {/*===  Section Content Box  ===*/}
-                        <div className="section-content-box text-center">
-                          <div className="error-image">
-                            <img
-                              src="assets/images/404/error.png"
-                              alt="404 Error"
-                            />
-                          </div>
-                          <h1
-                            data-aos="fade-down"
-                            data-aos-duration={1200}
-                            className="aos-init"
-                          >
-                            OPPS! Page Are Can’t Be Found
-                          </h1>
-                          <h5
-                            data-aos="fade-up"
-                            data-aos-duration={1300}
-                            className="aos-init"
-                          >
-                            We're sorry, the page you have looked for does not exist in our database! Maybe go to our home page or try to use a search?
-                          </h5>
-                          <a
-                            href="index.html"
-                            className="theme-btn style-one aos-init"
-                            data-aos="fade-up"
-                            data-aos-duration={1400}
-                          >
-                            Go to Home{" "}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+          {/* ============================ 404 section start ============================== */}
+          <section className="py-80 bg-neutral-10">
+            <div className="container">
+              <div className="max-w-610-px w-100 mx-auto">
+                <img
+                  src="assets/images/thumbs/go-to-back-img1.png"
+                  alt="Image"
+                  className="tw-mb-5"
+                />
+                <div className="text-center ">
+                  <h2 className="cursor-big fw-normal text-dark-600 tw-mb-3">
+                    Oops! Page Not Found{" "}
+                  </h2>
+                  <p className="fw-normal tw-text-lg text-dark-500 tw-mb-10">
+                    We're sorry, the page you have looked for does not exist in our database! Maybe go to our home page or try to use a search?
+                  </p>
+                  <div className="position-relative z-1 w-100 mx-auto">
+                    <NavLink
+                      to="/"
+                      className="go-back-link bg-main-600 w-100 text-white fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-dark-900"
+                    >
+                      GO BACK TO HOME
+                    </NavLink>
                   </div>
-                </section>
-              </main>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
+          {/* ============================ 404 section end ============================== */}
         </>
       )}
     </>

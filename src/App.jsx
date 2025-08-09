@@ -17,6 +17,8 @@ import CookiePolicy from "./Pages/CookiePolicy/CookiePolicy";
 import ComplaintPolicy from "./Pages/ComplaintPolicy/ComplaintPolicy";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import TermsandConditions from "./Pages/TermsandConditions/TermsandConditions";
+import AboutUs from "./Pages/About/AboutUs";
+import MoneyTransfer from "./Pages/MoneyTransfer/MoneyTransfer";
 
 function App() {
   useEffect(() => {
@@ -50,6 +52,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/onboarding-faq" element={<OnboardingFAQ />} />
           <Route path="/general-faq" element={<GeneralFAQ />} />
           <Route path="/onboarding" element={<Onboarding />} />
@@ -59,10 +62,8 @@ function App() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/complaint-policy" element={<ComplaintPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-           <Route path="/terms-and-conditions" element={<TermsandConditions />} />
-          {/* 
-         
-          <Route path="/money-transfer" element={<MoneyTransfer />} />  */}
+          <Route path="/terms-and-conditions" element={<TermsandConditions />} />
+          <Route path="/money-transfer" element={<MoneyTransfer />} />
         </RouterRoutes>
       </AppWrapper>
     </>

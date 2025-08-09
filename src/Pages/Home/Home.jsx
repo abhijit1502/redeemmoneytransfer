@@ -45,252 +45,6 @@ function Home() {
           <Header />
           <Banner />
           {/* =================== why choose us section start ======================= */}
-          <section className="py-80 z-1 overflow-hidden d-none">
-            <div className="container">
-              <div className="d-flex align-items-center tw-gap-4 justify-content-between flex-wrap tw-mb-80-px">
-                <div className="max-w-526">
-                  <div
-                    className="d-flex align-items-center tw-gap-1 tw-mb-3"
-                    data-aos="fade-up"
-                    data-aos-duration={600}
-                  >
-                    <img src="assets/images/icon/star-icon2.png" alt="Image" />
-                    <h5 className="fw-normal text-primary-500">
-                      Why Choose Us
-                    </h5>
-                  </div>
-                  <h2
-                    className="fw-bold text-dark-700 cursor-big"
-                    data-aos="fade-up"
-                    data-aos-duration={800}
-                  >
-                    Why Choose Redeem for International Transfers
-                  </h2>
-                </div>
-                <div className="max-w-426">
-                  <p
-                    className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
-                    data-aos="fade-up"
-                    data-aos-duration={900}
-                  >
-                    Our platform is designed to make cross-border payments and
-                    remittances faster, safer, and more affordable than
-                    traditional banks.
-                  </p>
-                </div>
-              </div>
-              <div className="row gy-4">
-                <div
-                  className="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration={600}
-                >
-                  <img
-                    src="assets/images/thumbs/Why-Choose-Us.png"
-                    alt="Why-Choose-Us"
-                    className="bg-img tw-h-420-px rounded-3"
-                  />
-                </div>
-                <div className="col-xl-8">
-                  <div className="one-platform__title d-flex align-items-center tw-gap-2">
-                    <div
-                      className="payment-solutions__item cursor-pointer active"
-                      data-aos="fade-up"
-                      data-aos-duration={800}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Fast-Global-Transfers.png"
-                            alt="Fast Global Transfers"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-w-406-px">
-                          Fast Global Transfers
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Fast-Global-Transfers.png"
-                            alt="Fast Global Transfers"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Fast Global Transfers
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Send money to over 180 countries with delivery in as
-                          little as minutes.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Exchange-Rates.png"
-                            alt="Competitive Exchange Rates"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-w-406-px">
-                          Competitive Exchange Rates
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Exchange-Rates.png"
-                            alt="Competitive Exchange Rates"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Competitive Exchange Rates
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Get market-leading exchange rates with transparent
-                          pricing and no hidden fees.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1200}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Secure-Transactions.png"
-                            alt="Secure Transactions"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-w-406-px">
-                          Secure Transactions
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Secure-Transactions.png"
-                            alt="Secure Transactions"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Secure Transactions
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Bank-level encryption and security protocols to
-                          protect your money and data.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1300}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Multi-Currency-Wallet.png"
-                            alt="Multi-Currency Wallet"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-w-406-px">
-                          Multi-Currency Wallet
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Multi-Currency-Wallet.png"
-                            alt="Multi-Currency Wallet"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Multi-Currency Wallet
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Hold and manage multiple currencies in one place with
-                          our digital wallet.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1300}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Multiple-Payout-Options.png"
-                            alt="Multiple Payout Options"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-w-406-px">
-                          Multiple Payout Options
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Multiple-Payout-Options.png"
-                            alt="Multiple Payout Options"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Multiple Payout Options
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Bank deposits, mobile money, cash pickup, and home
-                          delivery options available.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="payment-solutions__item cursor-pointer"
-                      data-aos="fade-up"
-                      data-aos-duration={1300}
-                    >
-                      <div className="payment-solutions__button bg-base-two-10 tw-h-420-px tw-rounded-md tw-py-6 border-base-two-600 border-top border-bottom position-relative">
-                        <span className="choose-us__icon tw-w-13 tw-h-13 bg-base-two-10 tw-rounded-md text-base-two-600 tw-text-7 d-flex align-items-center justify-content-center position-absolute bottom-0 tw-start-0 tw-ms-50-persent  translate-middle-x tw-mb-7">
-                          <img
-                            src="assets/images/icon/Instant-Notifications.png"
-                            alt="Instant Notifications"
-                          />
-                        </span>
-                        <h5 className="choose-us__title fw-normal text-dark-600 cursor-big tw-w-406-px">
-                          Instant Notifications
-                        </h5>
-                      </div>
-                      <div className="payment-solutions__content max-w-418-px tw-w-406-px w-100 bg-primary-400 tw-rounded-xl tw-px-8 tw-py-8">
-                        <span className="tw-w-15 tw-h-15 bg-white tw-rounded-md d-flex align-items-center justify-content-center tw-mb-8">
-                          <img
-                            src="assets/images/icon/Instant-Notifications.png"
-                            alt="Instant Notifications"
-                          />
-                        </span>
-                        <h4 className="fw-normal cursor-big text-white tw-mb-3">
-                          Instant Notifications
-                        </h4>
-                        <p className="fw-normal tw-text-405 text-white tw-mb-17">
-                          Real-time tracking and alerts for all your
-                          international money transfers.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <section className="py-80">
             <div className="container">
               <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap">
@@ -483,136 +237,9 @@ function Home() {
               </div>
             </div>
           </section>
-
           {/* =================== why choose us section end ======================= */}
 
           {/* ================== Working Section Start ===================== */}
-          <section className="py-80 z-1 bg-neutral-10 overflow-hidden d-none">
-            <div className="container">
-              <div className="">
-                <div className="max-w-856 mx-auto justify-content-center overflow-hidden">
-                  <div className="tw-mb-80-px mx-auto text-center align-items-center  justify-content-center">
-                    <div
-                      className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
-                      data-aos="fade-up"
-                      data-aos-duration={600}
-                    >
-                      <img
-                        src="assets/images/icon/star-icon2.png"
-                        alt="Image"
-                      />
-                      <h5 className="fw-normal text-primary-500">
-                        How Redeem Work?
-                      </h5>
-                    </div>
-                    <h2
-                      className="fw-bold tw-mb-3 cursor-big"
-                      data-aos="fade-up"
-                      data-aos-duration={800}
-                    >
-                      How Redeem Work?
-                    </h2>
-                    <p
-                      className="tw-text-lg text-dark-500 fw-normal"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      Send money internationally in just four simple steps -
-                      it's fast, secure, and straightforward.
-                    </p>
-                  </div>
-                  <div className=" position-relative overflow-hidden">
-                    <span className="fast-safe border-neutral-100 position-absolute top-0 start-50 w-05 h-100  d-lg-block d-none" />
-                    <div
-                      className="working-process max-w-580 d-flex align-items-center tw-gap-16 tw-ms-auto pb-120 flex-wrap"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      <span className="tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0">
-                        <i class="fa-solid fa-circle-user"></i>
-                      </span>
-                      <div className="max-w-400 tw-px-10">
-                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
-                          STEP_01{" "}
-                        </span>
-                        <h4 className="fw-normal tw-mb-3 cursor-big">
-                          Create an Account
-                        </h4>
-                        <p className="fw-normal tw-text-lg text-dark-500">
-                          Sign up in minutes with a simple verification process.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className=" working-process max-w-580 d-flex align-items-center tw-gap-16 text-end pb-120 flex-wrap"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      <div className="max-w-400 tw-px-10 working-process__text">
-                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
-                          STEP_02
-                        </span>
-                        <h4 className="fw-normal tw-mb-3 cursor-big">
-                          Select Destination
-                        </h4>
-                        <p className="fw-normal tw-text-lg text-dark-500">
-                          Choose from 180+ countries and select your preferred
-                          delivery method.
-                        </p>
-                      </div>
-                      <span className="payment-method tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0">
-                        <i class="fa-solid fa-globe"></i>
-                      </span>
-                    </div>
-                    <div
-                      className="working-process max-w-580 d-flex align-items-center tw-gap-16 pb-120 flex-wrap tw-ms-auto"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      <span className="tw-w-100px tw-h-100-px bg-base-two-10 tw-text-13 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 transform-scale-09">
-                        <i class="fa-solid fa-paper-plane"></i>
-                      </span>
-                      <div className="max-w-400 tw-px-10">
-                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
-                          STEP_03{" "}
-                        </span>
-                        <h4 className="fw-normal tw-mb-3 cursor-big">
-                          Fund Your Transfer
-                        </h4>
-                        <p className="fw-normal tw-text-lg text-dark-500">
-                          Add funds via bank transfer, debit card, or digital
-                          wallet.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="working-process max-w-580 d-flex align-items-center tw-gap-16 text-end flex-wrap"
-                      data-aos="fade-up"
-                      data-aos-duration={1000}
-                    >
-                      <div className="max-w-400 tw-px-10 working-process__text">
-                        <span className="fw-bold tw-text-lg text-primary-500 tw-mb-3">
-                          STEP_04
-                        </span>
-                        <h4 className="fw-normal tw-mb-3 cursor-big">
-                          {" "}
-                          Complete Transfer
-                        </h4>
-                        <p className="fw-normal tw-text-lg text-dark-500">
-                          Confirm details and track your money as it's delivered
-                          securely.
-                        </p>
-                      </div>
-                      <span className="payment-method tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <section className="py-80 z-1 bg-neutral-10 overflow-hidden">
             <div className="container">
               <div className="">
@@ -643,7 +270,8 @@ function Home() {
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
-                      Send money internationally in just four simple steps - it's fast, secure, and straightforward.
+                      Send money internationally in just four simple steps -
+                      it's fast, secure, and straightforward.
                     </p>
                   </div>
 
@@ -653,9 +281,7 @@ function Home() {
                       className="fast-safe-my position-absolute top-50 start-0 w-100 h-2 d-none d-lg-block"
                       style={{ transform: "translateY(-300%)" }}
                     >
-                      <div
-                        className="position-relative w-100 h-100 mx-auto"
-                      >
+                      <div className="position-relative w-100 h-100 mx-auto">
                         <div className="fast-safe-line"></div>
                       </div>
                     </div>
@@ -922,7 +548,7 @@ function Home() {
                     className="accordion d-flex justify-content-center tw-gap-6 flex-wrap"
                     id="accordionExample"
                   >
-                <div className="w-100">
+                    <div className="w-100">
                       <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
@@ -930,14 +556,14 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseOne"
                             aria-expanded="true"
                             aria-controls="collapseOne"
                           >
-                            Question
+                            Is Redeem LLC Regulated?
                           </button>
                         </h2>
                         <div
@@ -947,11 +573,11 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Ab laboriosam, unde asperiores ea veniam,
-                              dolorum, reprehenderit nihil assumenda itaque nemo
-                              praesentium dolorem et quasi voluptate quo ipsa
-                              non. Eveniet, doloremque.
+                              Yes, Redeem LLC (RMT) is regulated by the SRO
+                              PolyReg in Switzerland. We conform to the rules
+                              and regulations in the countries we remit to
+                              through our trusted and reliable distributors and
+                              Payout Partners.
                             </p>
                           </div>
                         </div>
@@ -963,14 +589,15 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo"
                             aria-expanded="false"
                             aria-controls="collapseTwo"
                           >
-                            Question
+                            Do you have a Physical location or is RMT an online
+                            business?
                           </button>
                         </h2>
                         <div
@@ -980,11 +607,15 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Mollitia accusamus cumque alias
-                              minus rem libero praesentium corporis consequatur
-                              voluptatem magni dolorem, repellat sapiente sint
-                              ex nihil, expedita nesciunt, unde vel!
+                              With the lockdowns and social distancing policies
+                              in most countries, We are currently providing
+                              online services with the partners in the countries
+                              we service. However, in the future, we intend to
+                              have a physical presence in some major locations.
+                              Our current online business operational model
+                              allows RMT users to send money from the comfort of
+                              their homes with highly competitive rates using
+                              our secure and fast interface.
                             </p>
                           </div>
                         </div>
@@ -996,14 +627,14 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseThree"
                             aria-expanded="false"
                             aria-controls="collapseThree"
                           >
-                            Question
+                            Is your Money Safe with Us?
                           </button>
                         </h2>
                         <div
@@ -1013,11 +644,13 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Minima neque quibusdam quas corrupti facere
-                              nulla modi dolorum perspiciatis numquam vero eum
-                              in, natus reiciendis sint placeat officiis
-                              consectetur nesciunt sequi.
+                              Yes, We hold customer money in a dedicated
+                              business account, independent of our business
+                              operational account. All Remit requests are
+                              matched with a corresponding transaction id and
+                              leaves our account shortly after the request is
+                              initiated, thereby reducing financial risk or loss
+                              to customer money.
                             </p>
                           </div>
                         </div>
@@ -1029,14 +662,14 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseFour"
                             aria-expanded="false"
                             aria-controls="collapseFour"
                           >
-                            Question
+                            How much money can I transfer?
                           </button>
                         </h2>
                         <div
@@ -1046,30 +679,33 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Omnis rerum ex voluptatem esse
-                              culpa impedit quasi! Minima nemo architecto
-                              voluptas atque libero pariatur accusamus
-                              perspiciatis aut quas minus! Veniam, voluptatum?
+                              We are providing transaction daily limits up to
+                              CHF 1’000.00 and a Monthly limit up to 5’000.00
+                              CHF. For amounts higher than the monthly limit,
+                              please contact us. Irrespective of these
+                              thresholds, RMT can at any time request further
+                              documents from each customer in compliance with
+                              the SRO AML policies.
                             </p>
                           </div>
                         </div>
                       </div>
-                       <div
+                      <div
                         className="accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid"
                         data-aos="fade-up"
                         data-aos-duration={600}
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseFive"
                             aria-expanded="false"
                             aria-controls="collapseFive"
                           >
-                            Question
+                            How long does it take to deliver funds to the
+                            receiver?
                           </button>
                         </h2>
                         <div
@@ -1079,12 +715,11 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit. Et perspiciatis perferendis
-                              recusandae adipisci quaerat rem, consequatur
-                              aspernatur delectus qui, neque veritatis ipsum
-                              illum odio facere dolores eligendi illo voluptatem
-                              dicta.
+                              We aim to get the remittance to the receiver
+                              within 1 working day; in exceptional cases where
+                              we cannot get it to the receiver within 48hrs, we
+                              will contact you to provide an explanation and
+                              revised time of delivery.
                             </p>
                           </div>
                         </div>
@@ -1096,14 +731,14 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseSix"
                             aria-expanded="false"
                             aria-controls="collapseSix"
                           >
-                            Question
+                            How do I open a Redeem LLC account?
                           </button>
                         </h2>
                         <div
@@ -1113,11 +748,11 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Quia optio reiciendis culpa ab consequuntur
-                              sunt? Autem est aliquid itaque ad expedita rem
-                              blanditiis. Consequuntur aperiam nulla saepe at
-                              nostrum numquam.
+                              Use the 'Sign-up' button on our website and follow
+                              the instructions. On successful verification of
+                              your details and documents by our registration
+                              team, we will activate your account to make
+                              remittances.
                             </p>
                           </div>
                         </div>
@@ -1129,14 +764,14 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseSeven"
                             aria-expanded="false"
                             aria-controls="collapseSeven"
                           >
-                            Question
+                            Is my Data Safe with Redeem LLC?
                           </button>
                         </h2>
                         <div
@@ -1146,11 +781,9 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Ex asperiores impedit cumque debitis ipsam,
-                              provident consectetur nostrum. Hic minus aliquam
-                              blanditiis veritatis officiis, inventore fugit
-                              vitae illo, temporibus, excepturi consequuntur.
+                              Redeem LLC is secured in line with the Switzerland
+                              Data Protection, hence we ensure any data you
+                              provide to us is confidential and held securely.
                             </p>
                           </div>
                         </div>
@@ -1162,14 +795,15 @@ function Home() {
                       >
                         <h2 className="accordion-header cursor-big">
                           <button
-                            className="accordion-button collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
+                            className="accordion-button border-bottom-dark-500 collapsed bg-white rounded-3 tw-text-xl tw-gap-1"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseEight"
                             aria-expanded="false"
                             aria-controls="collapseEight"
                           >
-                            Question
+                            Does Redeem LLC need my bank details for remittance
+                            request?
                           </button>
                         </h2>
                         <div
@@ -1179,11 +813,54 @@ function Home() {
                         >
                           <div className="accordion-body">
                             <p className="fw-normal tw-text-lg text-dark-600">
-                              Lorem ipsum dolor sit amet consectetur,
-                              adipisicing elit. Debitis, tenetur. Recusandae
-                              officia, iste est eveniet quos ipsam debitis error
-                              incidunt iusto explicabo alias ea? Quasi fugiat
-                              excepturi libero animi vel.
+                              <strong>Yes and No.</strong>
+                            </p>
+                            <p className="fw-normal tw-text-lg text-dark-600">
+                              <strong>Yes</strong>
+                              <br />
+                              if during a transaction you use our{" "}
+                              <strong>e-Check</strong> which is a recognized
+                              payment processor/interface to make online
+                              payments, We require customer bank details for
+                              remittance request;{" "}
+                              <strong>
+                                the customer bank details must match the name(s)
+                                used during opening of your Redeem LLC Account.
+                              </strong>{" "}
+                              The money will be booked directly from your bank
+                              account. You (Customer) will be solely responsible
+                              for any charges from using this payment processor.
+                              The charges will be made clear to you and
+                              separated from the amount RMT will send to your
+                              receiver. Anyone with a savings account can pay by
+                              eCheck.
+                            </p>
+                            <p className="fw-normal tw-text-lg text-dark-600 mt-3">
+                              To make a payment with an e-Check, you simply
+                              provide the following information:
+                              <ul>
+                                <li>Your IBAN number *</li>
+                                <li>Your bank account number *</li>
+                                <li>The name of your Bank *</li>
+                                <li>The name on your bank account *</li>
+                              </ul>
+                              <em>
+                                <strong>
+                                  * This information is printed on your EC
+                                  cards.
+                                </strong>
+                              </em>
+                            </p>
+
+                            <p className="fw-normal tw-text-lg text-dark-600 mt-3">
+                              <strong>No</strong>
+                              <br />
+                              If you decide to manually transfer the money
+                              directly to Our Bank account. <strong>The bank details
+                              from which the transfer is initiated must match
+                              the name(s) used during opening of your Redeem LLC
+                              Account.</strong><br/>Our customers can choose either of both
+                              options.
                             </p>
                           </div>
                         </div>
@@ -1195,6 +872,7 @@ function Home() {
             </div>
           </section>
           {/* =============== FAQ Two Section End ================ */}
+
           {/* ==================== Testimonials Two Section Start ================ */}
           <Testimonial />
           {/* ==================== Testimonials Two Section end ================ */}
