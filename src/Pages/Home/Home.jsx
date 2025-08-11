@@ -1,5 +1,3 @@
-// --- START OF FILE: Home.jsx ---
-
 import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";

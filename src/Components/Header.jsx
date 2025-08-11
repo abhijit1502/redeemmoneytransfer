@@ -110,7 +110,7 @@ const Header = () => {
                   <span className="tw-text-xl text--white fw-medium">
                     <i className="ph-bold ph-headset" />
                   </span>
-                  <span className="text--white fw-semibold tw-text-lg">
+                  <span className="text--white fw-semibold tw-text-base">
                     24/7 hours support
                   </span>
                 </div>
@@ -121,7 +121,7 @@ const Header = () => {
                   <span className="text--white fw-semibold">
                     <NavLink
                       to="mailto:customercare@redeemtransfer.com"
-                      className="tw-text-xl text--white"
+                      className="tw-text-base text--white"
                     >
                       customercare@redeemtransfer.com{" "}
                     </NavLink>

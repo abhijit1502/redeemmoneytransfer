@@ -5,9 +5,10 @@ import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import Money_Transfer_Seo from "../../SEO/Money_Transfer_Seo";
 import Calculator from "../../Components/Calculator";
+import Testimonial from "./Testimonial";
 
 function MoneyTransfer() {
-  const [isLoading, setIsLoading] = useState(true);
+const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,21 +17,20 @@ function MoneyTransfer() {
     return () => clearTimeout(timer);
   }, []);
 
+  // This effect runs when `isLoading` becomes false.
   useEffect(() => {
     if (!isLoading) {
+      // Call the initialization function from main.js
       if (window.initThemeScripts) {
         window.initThemeScripts();
       }
+
+      // Call the initialization function from custom-gsap.js
       if (window.initGsapScripts) {
         window.initGsapScripts();
       }
-
-      // ✅ Re-init testimonial slider after navigation
-      if (typeof window.testimonialTwoSliderInit === "function") {
-        window.testimonialTwoSliderInit();
-      }
     }
-  }, [isLoading]);
+  }, [isLoading]); // This dependency array is crucial.
 
   return (
     <>
@@ -85,7 +85,7 @@ function MoneyTransfer() {
           <section className="py-80 z-1 overflow-hidden">
             <div className="container">
               <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
-                <div className="max-w-526">
+                <div className="max-w-560">
                   <div
                     className="d-flex align-items-center tw-gap-1 tw-mb-3"
                     data-aos="fade-up"
@@ -102,7 +102,7 @@ function MoneyTransfer() {
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    Super Fast & SecureMoney Transfer Services
+                    Super Fast & Secure Money Transfer Services
                   </h2>
                 </div>
                 <div className="max-w-400">
@@ -127,8 +127,8 @@ function MoneyTransfer() {
                       <span className="tw-w-72px tw-h-72-px border-base-two-600 d-flex align-items-center justify-content-center rounded-3 tw-mb-6">
                         <span className="w-15 h-15 bg-base-two-10 rounded-3 d-flex align-items-center justify-content-center">
                           <img
-                            src="assets/images/icon/our-feature-icon1.png"
-                            alt="Image"
+                            src="assets/images/icon/globe-transfer.png"
+                            alt="Global Money Transfers"
                           />
                         </span>
                       </span>
@@ -148,8 +148,8 @@ function MoneyTransfer() {
                       <span className="tw-w-72px tw-h-72-px border-base-two-600 d-flex align-items-center justify-content-center rounded-3 tw-mb-6">
                         <span className="w-15 h-15 bg-base-two-10 rounded-3 d-flex align-items-center justify-content-center">
                           <img
-                            src="assets/images/icon/our-feature-icon2.png"
-                            alt="Image"
+                            src="assets/images/icon/encrypted.png"
+                            alt="Robust Data Protection"
                           />
                         </span>
                       </span>
@@ -165,17 +165,16 @@ function MoneyTransfer() {
                       <span className="tw-w-72px tw-h-72-px border-base-two-600 d-flex align-items-center justify-content-center rounded-3 tw-mb-6">
                         <span className="w-15 h-15 bg-base-two-10 rounded-3 d-flex align-items-center justify-content-center">
                           <img
-                            src="assets/images/icon/our-feature-icon3.png"
-                            alt="Image"
+                            src="assets/images/icon/24-7.png"
+                            alt="24/7 Service"
                           />
                         </span>
                       </span>
                       <h5 className="fw-normal text-dark-600 tw-mb-2 cursor-big">
-                        Fair &amp; Honest Transactions
+                        24/7 Service
                       </h5>
                       <p className="fw-normal tw-text-lg text-dark-500">
-                        Enjoy fully transparent transactions with no hidden fees
-                        or unexpected extra charges.
+                       Secure money transfer services are available 24/7 with round-the-clock assistance and real-time transaction tracking for peace of mind.
                       </p>
                     </div>
                   </div>
@@ -249,6 +248,10 @@ function MoneyTransfer() {
               </div>
             </div>
           </section>
+
+          {/* ==================== Testimonials Two Section Start ================ */}
+          <Testimonial />
+          {/* ==================== Testimonials Two Section end ================ */}
 
           <Footer />
         </>
