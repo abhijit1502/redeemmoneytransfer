@@ -51,7 +51,7 @@ const Header = () => {
       <div className="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-dark-600 tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
         <button
           type="button"
-          className="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center bg-warning-400 hover-bg-neutral-900 hover-text-neutral-200"
+          className="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center bg-warning-400 hover-bg-neutral-900 hover-text-neutral-05"
         >
           <i className="ph ph-x" />
         </button>
@@ -222,7 +222,7 @@ const Header = () => {
                       <div className="position-relative z-1">
                         <NavLink
                           to="#"
-                          className="header-three-item-link text-white hover-text-neutral-200 fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-600 border-two-px-solid rounded-2"
+                          className="header-three-item-link text-white hover-text-neutral-05 fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-600 border-two-px-solid rounded-2"
                         >
                           Login
                         </NavLink>
