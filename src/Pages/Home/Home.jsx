@@ -222,7 +222,7 @@ function Home() {
                       </span>
                     </span>
                     <div>
-                      <h5 className="fw-normal text-dark-60 tw-mb-3 cursor-big">
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
                         Multiple Payout Options
                       </h5>
                       <p className="fw-normal tw-text-lg text-dark-500 ">
