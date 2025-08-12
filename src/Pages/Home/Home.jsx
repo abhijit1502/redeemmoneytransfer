@@ -83,9 +83,9 @@ function Home() {
                     data-aos-duration={600}
                   >
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
-                      <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
                         <img
-                          className="white-image"
+                          className=""
                           src="assets/images/icon/Fast-Global-Transfers.png"
                           alt="Fast Global Transfers"
                         />
@@ -109,9 +109,9 @@ function Home() {
                     data-aos-duration={600}
                   >
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
-                      <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
                         <img
-                          className="white-image"
+                          className=""
                           src="assets/images/icon/Multi-Currency-Wallet.png"
                           alt="Multi-Currency Wallet"
                         />
@@ -135,9 +135,9 @@ function Home() {
                     data-aos-duration={1000}
                   >
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
-                      <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
                         <img
-                          className="white-image"
+                          className=""
                           src="assets/images/icon/Instant-Notifications.png"
                           alt="Instant Notifications"
                         />
@@ -161,9 +161,9 @@ function Home() {
                     data-aos-duration={800}
                   >
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
-                      <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
                         <img
-                          className="white-image"
+                          className=""
                           src="assets/images/icon/Exchange-Rates.png"
                           alt="Competitive Exchange Rates"
                         />
@@ -187,9 +187,9 @@ function Home() {
                     data-aos-duration={1000}
                   >
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
-                      <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
                         <img
-                          className="white-image"
+                          className=""
                           src="assets/images/icon/Secure-Transactions.png"
                           alt="Secure Transactions"
                         />
@@ -213,9 +213,9 @@ function Home() {
                     data-aos-duration={800}
                   >
                     <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
-                      <span className="tw-w-15 tw-h-15 tw-rounded-md bg-base-two-600 d-flex align-items-center justify-content-center">
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
                         <img
-                          className="white-image"
+                          className=""
                           src="assets/images/icon/Multiple-Payout-Options.png"
                           alt="Multiple Payout Options"
                         />
