@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://redeemtransfer.com/pilot/:splat"
+  to = "https://redeemtransfer.net/pilot/:splat"
   status = 200
   force = true
   headers = {Host = "redeemtransfer.com"}

@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://redeemtransfer.com/pilot/$1"
+      "destination": "https://redeemtransfer.net/pilot/$1"
     },
     {
       "source": "/(.*)",
@@ -28,6 +28,6 @@
   ],
   "env": {
     "VITE_API_BASE_URL": "/api",
-    "VITE_SITE_URL": "https://redeemtransfer.com/pilot"
+    "VITE_SITE_URL": "https://redeemtransfer.net/pilot"
   }
 }
