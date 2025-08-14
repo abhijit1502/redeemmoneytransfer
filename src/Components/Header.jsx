@@ -214,14 +214,14 @@ const Header = () => {
                   <div className="d-sm-block d-none">
                     <div className="d-flex align-items-center tw-gap-605 flex-wrap ">
                       <NavLink
-                        to="#"
+                        to="https://redeemtransfer.net/app/sign-up" target="_blank"
                         className="text-dark-600 fw-semibold tw-text-lg hover-text hover-text-main-600 tw-duration-500"
                       >
                         Sign In
                       </NavLink>
                       <div className="position-relative z-1">
                         <NavLink
-                          to="#"
+                          to="https://redeemtransfer.net/app/" target="_blank"
                           className="header-three-item-link text-white hover-text-neutral-05 fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-600 border-two-px-solid rounded-2"
                         >
                           Login

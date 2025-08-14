@@ -112,7 +112,7 @@ function Banner() {
                         >
                           <div className="position-relative">
                             <NavLink
-                              to="#"
+                              to="https://redeemtransfer.net/app/" target="_blank"
                               className="banner-three-item-link bg-main-600 text-white fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-neutral-05"
                             >
                               Send Money Now

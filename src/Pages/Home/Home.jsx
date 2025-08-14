@@ -82,13 +82,9 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
+                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#3b82f61a"}}>
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <img
-                          className=""
-                          src="assets/images/icon/Fast-Global-Transfers.png"
-                          alt="Fast Global Transfers"
-                        />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"></path><path d="M6 12h16"></path></svg>
                       </span>
                     </span>
                     <div>
@@ -108,13 +104,9 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
+                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#a855f71a"}}>
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <img
-                          className=""
-                          src="assets/images/icon/Multi-Currency-Wallet.png"
-                          alt="Multi-Currency Wallet"
-                        />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-walle"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
                       </span>
                     </span>
                     <div>
@@ -134,13 +126,9 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
+                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#6366f11a"}}>
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <img
-                          className=""
-                          src="assets/images/icon/Instant-Notifications.png"
-                          alt="Instant Notifications"
-                        />
+                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
                       </span>
                     </span>
                     <div>
@@ -160,13 +148,9 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
+                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#f59e0b1a"}}>
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <img
-                          className=""
-                          src="assets/images/icon/Exchange-Rates.png"
-                          alt="Competitive Exchange Rates"
-                        />
+                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg>
                       </span>
                     </span>
                     <div>
@@ -186,13 +170,9 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
+                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#22c55e1a"}}>
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <img
-                          className=""
-                          src="assets/images/icon/Secure-Transactions.png"
-                          alt="Secure Transactions"
-                        />
+                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
                       </span>
                     </span>
                     <div>
@@ -212,13 +192,9 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto">
+                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#ef44441a"}}>
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <img
-                          className=""
-                          src="assets/images/icon/Multiple-Payout-Options.png"
-                          alt="Multiple Payout Options"
-                        />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
                       </span>
                     </span>
                     <div>

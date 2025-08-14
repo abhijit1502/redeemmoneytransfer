@@ -1,4 +1,4 @@
 const ApiConfig = {
-    baseUrl: "https://redeemtransfer.com/prod/api",
+    baseUrl: "https://redeemtransfer.net/prod/api",
 }; 
 export default ApiConfig;

@@ -6,6 +6,7 @@ import Preloader from "../../Components/Preloader";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import Contact_Us_Seo from "../../SEO/Contact_Us_Seo";
+import Swal from "sweetalert2"; // ✅ Added SweetAlert2
 
 function ContactUs() {
   const [isLoading, setIsLoading] = useState(true);
@@ -72,15 +73,32 @@ function ContactUs() {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "https://redeemtransfer.com/prod/api/contactus/savecontactdetails",
+          "https://redeemtransfer.net/prod/api/contactus/savecontactdetails",
           { ...formData, captchaToken }
         );
         console.log("Form submitted successfully:", response.data);
+
+        // ✅ SweetAlert2 Success
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Your message has been sent successfully.",
+          confirmButtonColor: "#3085d6",
+        });
+
         setFormData({ name: "", email: "", phoneno: "", msg: "" });
         setCaptchaToken("");
         if (recaptchaRef.current) recaptchaRef.current.reset();
       } catch (error) {
         console.error("Error submitting form:", error);
+
+        // ❌ SweetAlert2 Error
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong! Please try again later.",
+          confirmButtonColor: "#d33",
+        });
       }
     }
   };
@@ -324,7 +342,7 @@ function ContactUs() {
                     <div className="col-12">
                       <ReCAPTCHA
                         ref={recaptchaRef}
-                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                        sitekey="6Leu3qQrAAAAAHOqy1dWoUiRF4x4qeNGXnz59oZX"
                         onChange={handleCaptchaChange}
                       />
                       {errors.captcha && (
