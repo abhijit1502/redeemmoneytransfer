@@ -96,7 +96,7 @@
 /* ========================= Variable Css Start ======================== */
 :root {
     /* Font Family Variable */
-     --heading-font: 'SF Pro Display', -apple-system, 'Inter', sans-serif;
+    --heading-font: 'SF Pro Display', -apple-system, 'Inter', sans-serif;
     --body-font: 'Inter', sans-serif;
     /* Font Size Variable Start */
     --heading-one: clamp(1.75rem, 0.5948rem + 2.4067vw, 3rem);
@@ -113,7 +113,8 @@
     --display-four: clamp(1.75rem, -1.3683rem + 6.4965vw, 3.5rem);
     /* Font Size End */
     /* template main color */
-    /* --main-h: 222;
+    /* 
+    --main-h: 222;
     --main-s: 89%;
     --main-l: 55%; 
 
@@ -124,11 +125,14 @@
      --main-h: 233.4;
     --main-s: 46.2%;
     --main-l: 36.6%;
-    */
 
-    --main-h: 219.1;
+     --main-h: 219.1;
     --main-s: 52%;
     --main-l: 43.3%;
+    */
+    --main-h: 219;
+    --main-s: 90%;
+    --main-l: 68%;
     --main: var(--main-h) var(--main-s) var(--main-l);
     /* White Color */
     --white: 0 0% 100%;
@@ -178,17 +182,17 @@
     --main-700: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.1));
     --main-800: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.2));
     --main-900: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.3));
-    --base-two-10: #3366991A;
+    --base-two-10: #6598f71A;
     --base-two-100: #12121299;
     --base-two-200: #00998B0D;
-    --base-two-300: #33669999;
-    --base-two-600: #336699;
-    /* --base-two-600: #336699; */
+    --base-two-300: #6598f799;
+    --base-two-600: #6598f7;
+    /* --base-two-600: #6598f7; */
     --primary-05: #5D69F40D;
     --primary-50: #101010;
     --primary-100: #4A91A7;
-    --primary-400: #336699;
-    --primary-500: #336699;
+    --primary-400: #6598f7;
+    --primary-500: #6598f7;
     --primary-600: #0000DF;
     --dark-100: #9d99990f;
     --dark-500: #65758b;
@@ -215,10 +219,10 @@
     --warning-200: #FEF08A;
     --warning-300: #FDE047;
     --warning-400: #74CDFF;
-    --warning-500: #336699;
+    --warning-500: #6598f7;
     --warning-600: #FF9F29;
-    --warning-700: #336699;
-    --warning-800: #336699;
+    --warning-700: #6598f7;
+    --warning-800: #6598f7;
     --warning-900: #0000FF;
     --danger-05: #FF61610D;
     --danger-30: #F376390D;
@@ -227,10 +231,10 @@
     --danger-200: #FEF08A;
     --danger-300: #FDE047;
     --danger-400: #74CDFF;
-    --danger-500: #336699;
+    --danger-500: #6598f7;
     --danger-600: #ED0000;
-    --danger-700: #336699;
-    --danger-800: #336699;
+    --danger-700: #6598f7;
+    --danger-800: #6598f7;
     --danger-900: #0000FF;
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
@@ -597,7 +601,7 @@ input[type=number] {
 }
 
 .form-switch .form-check-input:checked {
-    background-color: #336699;
+    background-color: #6598f7;
 }
 
 .form-switch .form-check-input:checked::before {
@@ -2690,11 +2694,11 @@ input:focus-visible {
 }
 
 .tw-border-base-two-600-dashed {
-    border: 1px dashed #336699;
+    border: 1px dashed #6598f7;
 }
 
 .tw-hover-border-bottom-base-two-600:hover {
-    border-bottom: 3px solid #336699;
+    border-bottom: 3px solid #6598f7;
 }
 
 .tw-hover-border-black:hover {
@@ -2714,7 +2718,7 @@ input:focus-visible {
 }
 
 .border-bottom-two-px-solid {
-    border-bottom: 3px solid #336699;
+    border-bottom: 3px solid #6598f7;
 }
 
 .border-neutral-two-px-solid {
@@ -2726,11 +2730,11 @@ input:focus-visible {
 }
 
 .border-base-two-100 {
-    border: 2px dashed #336699;
+    border: 2px dashed #6598f7;
 }
 
 .border-bottom-base-two-600 {
-    border-bottom: 3px solid #336699;
+    border-bottom: 3px solid #6598f7;
 }
 
 .border-neutral-1px-solid {
@@ -2758,7 +2762,7 @@ input:focus-visible {
 }
 
 .border-warning-600-2px {
-    border: 2px solid #336699;
+    border: 2px solid #6598f7;
 }
 
 .border-neutral-200 {
@@ -2770,7 +2774,7 @@ input:focus-visible {
 }
 
 .border-primary-400-1 {
-    border: 1px solid #336699;
+    border: 1px solid #6598f7;
 }
 
 .border-primary-600 {
@@ -3334,7 +3338,7 @@ input:focus-visible {
 }
 
 .hover-bg-base-two-600:hover {
-    background: #336699;
+    background: #6598f7;
 }
 
 .hover-border-bottom:hover {
@@ -3374,7 +3378,7 @@ input:focus-visible {
 }
 
 .focus-visible-border-main-600:focus-visible {
-    border: 1px solid #336699 !important;
+    border: 1px solid #6598f7 !important;
     outline: 0;
 }
 
@@ -4065,7 +4069,7 @@ input:focus-visible {
 }
 
 .group:hover .group-hover-border-base-two-600 {
-    border-bottom: 2px solid #336699 !important;
+    border-bottom: 2px solid #6598f7 !important;
 }
 
 .group-hover-text-transition {
@@ -8616,7 +8620,7 @@ input:focus-visible {
 .header-item-link::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: 6px;
     left: 4px;
     width: 98px;
@@ -8629,7 +8633,7 @@ input:focus-visible {
 .header-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: -6px;
     left: -5px;
     width: 98px;
@@ -8898,7 +8902,7 @@ input:focus-visible {
 .banner-item-link::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -8911,7 +8915,7 @@ input:focus-visible {
 .banner-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: -4px;
     left: -4px;
     width: 100%;
@@ -9022,7 +9026,7 @@ input:focus-visible {
     content: "";
     width: 281px;
     height: 52px;
-    background: #336699;
+    background: #6598f7;
     z-index: -1;
     top: 6px;
     left: 7px;
@@ -9035,7 +9039,7 @@ input:focus-visible {
     content: "";
     width: 281px;
     height: 52px;
-    background: #336699;
+    background: #6598f7;
     z-index: -1;
     top: -6px;
     left: -5px;
@@ -9096,7 +9100,7 @@ input:focus-visible {
     z-index: -1;
     top: 8px;
     left: 8px;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9109,7 +9113,7 @@ input:focus-visible {
     z-index: -1;
     top: -8px;
     left: -8px;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
 }
 
@@ -9122,7 +9126,7 @@ input:focus-visible {
     font-size: 16px;
     font-weight: 500;
     color: white;
-    background-color: #336699;
+    background-color: #6598f7;
     /* Blue button color */
     border-radius: 0.5rem;
     text-decoration: none;
@@ -9150,7 +9154,7 @@ input:focus-visible {
 }
 
 .btn-link:hover {
-  color: var(--neutral-05) !important;
+    color: var(--neutral-05) !important;
 }
 
 .btn-link-pre {
@@ -9231,7 +9235,7 @@ input:focus-visible {
     width: 131px;
     height: 55px;
     z-index: -1;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 0.5rem;
     top: -3px;
     left: -3px;
@@ -9283,7 +9287,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -9296,7 +9300,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -9362,7 +9366,7 @@ input:focus-visible {
 .our-serbices-item-link::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -9375,7 +9379,7 @@ input:focus-visible {
 .our-serbices-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: -4px;
     left: -4px;
     width: 100%;
@@ -9424,7 +9428,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9437,7 +9441,7 @@ input:focus-visible {
     top: -4px;
     left: -3px;
     z-index: -1;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
 }
 
@@ -9446,7 +9450,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 12px;
     top: 4px;
     left: 4px;
@@ -9463,7 +9467,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9476,7 +9480,7 @@ input:focus-visible {
     top: -4px;
     left: -4px;
     z-index: -1;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
 }
 
@@ -9525,7 +9529,7 @@ input:focus-visible {
 .our-services-three::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     max-width: 948px;
     width: 100%;
     height: 100%;
@@ -9620,7 +9624,7 @@ input:focus-visible {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #336699;
+    background-color: #6598f7;
 }
 
 /*==================== our services three css end =======================*/
@@ -9652,7 +9656,7 @@ input:focus-visible {
 .fast-safe::before {
     position: absolute;
     content: "";
-    background: linear-gradient(0deg, #336699 0%, rgba(37, 87, 236, 0) 100%);
+    background: linear-gradient(0deg, #6598f7 0%, rgba(37, 87, 236, 0) 100%);
     width: 3px;
     height: 201px;
     animation: upDown 24s linear infinite;
@@ -9854,7 +9858,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -9867,7 +9871,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -9973,7 +9977,7 @@ input:focus-visible {
     font-family: "Phosphor";
     width: 40px;
     height: 40px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     color: #fff;
     display: flex;
@@ -10010,7 +10014,7 @@ input:focus-visible {
 
 .nav-pills .nav-link-three.active,
 .nav-pills .show>.nav-link-three {
-    background-color: #336699 !important;
+    background-color: #6598f7 !important;
     color: #FFFFFF !important;
     border-bottom: 3px solid #AEFF1C;
     border-radius: 12px;
@@ -10052,7 +10056,7 @@ input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background: #336699;
+    background: #6598f7;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10065,7 +10069,7 @@ input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background: #336699;
+    background: #6598f7;
     border-radius: 10px;
 }
 
@@ -10077,7 +10081,7 @@ input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10090,7 +10094,7 @@ input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10170,7 +10174,7 @@ input:focus-visible {
     top: 3px;
     left: 3px;
     z-index: -1;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -10183,7 +10187,7 @@ input:focus-visible {
     top: -3px;
     left: -3px;
     z-index: -1;
-    background: #336699;
+    background: #6598f7;
     border-radius: 0.5rem;
 }
 
@@ -10193,7 +10197,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10206,7 +10210,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -10236,7 +10240,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10249,7 +10253,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10300,7 +10304,7 @@ input:focus-visible {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background-color: #336699 !important;
+    background-color: #6598f7 !important;
     color: #fff !important;
 }
 
@@ -10341,7 +10345,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     border-radius: 0.5rem;
-    background: #336699;
+    background: #6598f7;
     transition: 0.4s;
 }
 
@@ -10354,7 +10358,7 @@ input:focus-visible {
     top: -4px;
     left: -4px;
     border-radius: 0.5rem;
-    background: #336699;
+    background: #6598f7;
 }
 
 .platform-two-link::before {
@@ -10362,7 +10366,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     top: 4px;
     left: 4px;
     z-index: -1;
@@ -10375,7 +10379,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     top: -4px;
     left: -4px;
     z-index: -1;
@@ -10489,7 +10493,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10502,7 +10506,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     top: -4px;
     left: -3px;
@@ -10520,7 +10524,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10533,7 +10537,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     top: -4px;
     left: -4px;
     z-index: -1;
@@ -10568,7 +10572,7 @@ input:focus-visible {
 .our-pricing-plan-three-link::before {
     position: absolute;
     content: "";
-    background-color: #336699;
+    background-color: #6598f7;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -10583,7 +10587,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10596,7 +10600,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10662,7 +10666,7 @@ input:focus-visible {
 }
 
 .header-nav-menu__item .activePage .header-nav-submenu__link {
-    background-color: #336699 !important;
+    background-color: #6598f7 !important;
     color: #FFFFFF;
     border-radius: 12px;
 }
@@ -10887,7 +10891,7 @@ button.show {
     top: 4px;
     left: 4px;
     border-radius: 8px;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
     transition: 0.4s;
 }
@@ -10900,7 +10904,7 @@ button.show {
     top: -3px;
     left: -3px;
     border-radius: 8px;
-    background-color: #336699;
+    background-color: #6598f7;
     z-index: -1;
 }
 
@@ -10983,7 +10987,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10996,7 +11000,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     top: -3px;
     left: -3px;
     z-index: -1;
@@ -11010,7 +11014,7 @@ button.show {
     height: 100%;
     top: 5px;
     left: 4px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     z-index: -1;
     transition: 0.4s;
@@ -11023,7 +11027,7 @@ button.show {
     height: 100%;
     top: -5px;
     left: -4px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11088,7 +11092,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: 4px;
     left: 4px;
@@ -11101,7 +11105,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     top: -4px;
     left: -4px;
@@ -11144,7 +11148,7 @@ button.show {
     height: 100%;
     top: 4px;
     left: 4px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     z-index: -1;
     transition: 0.5s;
@@ -11157,7 +11161,7 @@ button.show {
     height: 100%;
     top: -4px;
     left: -4px;
-    background-color: #336699;
+    background-color: #6598f7;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11715,21 +11719,21 @@ button.show {
 }
 
 .ul4 li {
-  display: table;
-  list-style: none;
-  padding-left: 0px;
+    display: table;
+    list-style: none;
+    padding-left: 0px;
     line-height: 30px;
-  color: var(--dark-700);
-  font-weight: 400 !important;
+    color: var(--dark-700);
+    font-weight: 400 !important;
 }
 
 .ul4 li span {
-  display: table-cell;
-  padding-right: .6em;
-  font-size: var(--heading-five);
-  color: hsl(var(--heading-color));
-  line-height: 1.2;
-  font-weight: 700;
+    display: table-cell;
+    padding-right: .6em;
+    font-size: var(--heading-five);
+    color: hsl(var(--heading-color));
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 .white-image {
@@ -11750,13 +11754,14 @@ button.show {
     /* Opera */
 }
 
- /* Animated line styles */
-  .fast-safe-my {
+/* Animated line styles */
+.fast-safe-my {
     z-index: 1;
-    padding: 0 12%; /* Adjusted padding to match step icons */
-  }
-  
-  .fast-safe-line {
+    padding: 0 12%;
+    /* Adjusted padding to match step icons */
+}
+
+.fast-safe-line {
     position: absolute;
     top: 0;
     left: 0;
@@ -11764,98 +11769,103 @@ button.show {
     height: 2px;
     background: linear-gradient(90deg, rgba(38, 99, 242, 0.1) 0%, #dcddd99d 50%, rgba(38, 99, 242, 0.1) 100%);
     overflow: hidden;
-  }
-  
-  .fast-safe-line::before {
+}
+
+.fast-safe-line::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(38, 99, 242, 0) 0%, #336699 100%);
+    background: linear-gradient(90deg, rgba(38, 99, 242, 0) 0%, #6598f7 100%);
     animation: movingLine 2s linear infinite;
-  }
-  
-  /* Step number styles */
-  .step-number {
+}
+
+/* Step number styles */
+.step-number {
     font-size: 14px;
     padding: 5px 10px;
-  }
-  
-  /* Animation */
-  @keyframes movingLine {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(200%);
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 991.98px) {
-    .fast-safe-my {
-      display: none !important;
-    }
-    
-    .col-md-6:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
+}
 
-  @media (min-width: 992px) {
-    .fast-safe-my {
-      padding: 0 7%; /* Fine-tuned padding for larger screens */
+/* Animation */
+@keyframes movingLine {
+    0% {
+        transform: translateX(-100%);
     }
-  }
+
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .fast-safe-my {
+        display: none !important;
+    }
+
+    .col-md-6:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .fast-safe-my {
+        padding: 0 7%;
+        /* Fine-tuned padding for larger screens */
+    }
+}
 
 /* This is the container that hides the overflowing content */
 .scroller {
-  overflow: hidden;
-  /* Adds a nice fade-out effect on the edges */
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    overflow: hidden;
+    /* Adds a nice fade-out effect on the edges */
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 /* This is the inner container that holds and moves all the flags */
 .scroller-track {
-  display: flex;
-  width: max-content; /* Ensures the track is wide enough */
-  
-  /* --- CONTROL SPEED HERE --- */
-  /* This one value controls the entire animation duration. */
-  /* A larger number means a SLOWER scroll (e.g., 80s is very slow). */
-  /* A smaller number means a FASTER scroll (e.g., 30s is fast). */
-  animation: scrollAnimation 60s linear infinite;
+    display: flex;
+    width: max-content;
+    /* Ensures the track is wide enough */
+
+    /* --- CONTROL SPEED HERE --- */
+    /* This one value controls the entire animation duration. */
+    /* A larger number means a SLOWER scroll (e.g., 80s is very slow). */
+    /* A smaller number means a FASTER scroll (e.g., 30s is fast). */
+    animation: scrollAnimation 60s linear infinite;
 }
 
 /* Pause the animation when the user hovers over it */
 .scroller:hover .scroller-track {
-  animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 /* The CSS animation that creates the seamless loop */
 @keyframes scrollAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    /* Moves the track to the left by exactly half its total width, creating a perfect loop */
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        /* Moves the track to the left by exactly half its total width, creating a perfect loop */
+        transform: translateX(-50%);
+    }
 }
 
 /* Styling for each individual flag image */
 .flag-image {
-  height: 28px; /* Tailwind's tw-h-7 */
-  border-radius: 9999px; /* Tailwind's tw-rounded-3xl */
-  flex-shrink: 0; /* Prevents flags from shrinking */
+    height: 28px;
+    /* Tailwind's tw-h-7 */
+    border-radius: 9999px;
+    /* Tailwind's tw-rounded-3xl */
+    flex-shrink: 0;
+    /* Prevents flags from shrinking */
 }
 
 /* The very first flag should not have the negative margin, so it's not clipped */
 .flag-image:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
-
-
