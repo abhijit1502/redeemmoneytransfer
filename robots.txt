@@ -1,0 +1,3 @@
+# https://redeemtransfer.net/sitemap.xml
+User-agent: *
+Disallow:
