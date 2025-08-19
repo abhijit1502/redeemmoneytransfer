@@ -222,7 +222,7 @@ const Header = () => {
                       <div className="position-relative z-1">
                         <NavLink
                           to="https://redeemtransfer.net/app/" target="_blank"
-                          className="header-three-item-link text-white hover-text-neutral-05 fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-600 border-two-px-solid rounded-2"
+                          className="header-three-item-link text-dark-600 hover-text-neutral-20 fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-600 border-two-px-solid rounded-2"
                         >
                           Login
                         </NavLink>

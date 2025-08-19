@@ -111,7 +111,7 @@ function Banner() {
                           </p>
                         </div>
                         <div
-                          className="d-flex align-items-center tw-gap-6 flex-wrap"
+                          className="d-flex align-items-center tw-gap-1 flex-wrap"
                           data-aos="fade-up"
                           data-aos-duration={1200}
                         >
@@ -119,30 +119,26 @@ function Banner() {
                             <NavLink
                               to="https://redeemtransfer.net/app/"
                               target="_blank"
-                              className="banner-three-item-link bg-main-600 text-white fw-semibold tw-text-lg tw-px-5 tw-py-3 border-two-px-solid rounded-3 hover-text-neutral-05"
+                              className="banner-three-item-link bg-main-600 text-dark-600 fw-semibold tw-text-lg tw-px-3 tw-py-3 border-two-px-solid rounded-3 hover-text-neutral-20"
                             >
                               Send Money Now
                             </NavLink>
                           </div>
-                          <div className="d-flex justify-content-center align-items-center tw-gap-4">
+                          <div className="d-flex justify-content-center align-items-center tw-gap-1">
                             <div>
                               <NavLink
                                 to="#"
-                                className="app-store-wrapper"
                                 target="_blank"
                               >
-                                <img src="assets/images/icon/Appstore.svg" />
-                                <span className="hover-text">App Store</span>
+                                <img src="assets/images/mobile-img2.png" />
                               </NavLink>
                             </div>
                             <div>
                               <NavLink
                                 to="#"
-                                className="app-store-wrapper"
                                 target="_blank"
                               >
-                                <img src="assets/images/icon/Play-store.svg" />
-                                <span className="hover-text">Google Play</span>
+                                <img src="assets/images/mobile-img1.png" />
                               </NavLink>
                             </div>
                           </div>

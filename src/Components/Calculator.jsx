@@ -1012,11 +1012,9 @@ function Calculator() {
 
               <div className="col-lg-12 col-md-12">
                 <div className="text-center">
-
-                  
                   <button
                     type="button"
-                    className="btn-link w-100 tw-py-3 text-white rounded-3 fw-semibold mt-3"
+                    className="btn-link w-100 tw-py-3 hover-text-neutral-20 text-dark-600 rounded-3 fw-semibold mt-3"
                     onClick={handleContinue}
                   >
                     Send Money

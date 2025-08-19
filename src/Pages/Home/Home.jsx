@@ -6,7 +6,7 @@ import Banner from "./Banner";
 import { NavLink } from "react-router-dom";
 import Testimonial from "./Testimonial";
 import Calculator from "../../Components/Calculator";
-import Seo from '../../Components/Seo';
+import Seo from "../../Components/Seo";
 import { homeSeo } from "../../seo-configs";
 
 function Home() {
@@ -83,9 +83,26 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#3b82f61a"}}>
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                      style={{ backgroundColor: "#3b82f61a" }}
+                    >
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"></path><path d="M6 12h16"></path></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#3B82F6"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-send-horizontal"
+                        >
+                          <path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"></path>
+                          <path d="M6 12h16"></path>
+                        </svg>
                       </span>
                     </span>
                     <div>
@@ -105,9 +122,26 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={600}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#a855f71a"}}>
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                      style={{ backgroundColor: "#a855f71a" }}
+                    >
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-walle"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#3B82F6"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-walle"
+                        >
+                          <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path>
+                          <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+                        </svg>
                       </span>
                     </span>
                     <div>
@@ -127,9 +161,25 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#6366f11a"}}>
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                      style={{ backgroundColor: "#6366f11a" }}
+                    >
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#6366F1"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-zap"
+                        >
+                          <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                        </svg>
                       </span>
                     </span>
                     <div>
@@ -149,9 +199,28 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#f59e0b1a"}}>
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                      style={{ backgroundColor: "#f59e0b1a" }}
+                    >
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#F59E0B"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-arrow-left-right"
+                        >
+                          <path d="M8 3 4 7l4 4"></path>
+                          <path d="M4 7h16"></path>
+                          <path d="m16 21 4-4-4-4"></path>
+                          <path d="M20 17H4"></path>
+                        </svg>
                       </span>
                     </span>
                     <div>
@@ -171,9 +240,25 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#22c55e1a"}}>
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                      style={{ backgroundColor: "#22c55e1a" }}
+                    >
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#22C55E"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-shield"
+                        >
+                          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                        </svg>
                       </span>
                     </span>
                     <div>
@@ -193,9 +278,27 @@ function Home() {
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
-                    <span className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto" style={{backgroundColor:"#ef44441a"}}>
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                      style={{ backgroundColor: "#ef44441a" }}
+                    >
                       <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#EF4444"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-globe"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                          <path d="M2 12h20"></path>
+                        </svg>
                       </span>
                     </span>
                     <div>
@@ -269,8 +372,27 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#3b82f61a"}}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus h-12 w-12"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                          <span
+                            className="tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative"
+                            style={{ backgroundColor: "#3b82f61a" }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="60"
+                              height="60"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#3B82F6"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-user-plus h-12 w-12"
+                            >
+                              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                              <circle cx="9" cy="7" r="4"></circle>
+                              <line x1="19" x2="19" y1="8" y2="14"></line>
+                              <line x1="22" x2="16" y1="11" y2="11"></line>
+                            </svg>
                             <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               1
                             </span>
@@ -294,8 +416,26 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="payment-method tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#f59e0b1a"}}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-12 w-12"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                          <span
+                            className="payment-method tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative"
+                            style={{ backgroundColor: "#f59e0b1a" }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="60"
+                              height="60"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#F59E0B"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-globe h-12 w-12"
+                            >
+                              <circle cx="12" cy="12" r="10"></circle>
+                              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                              <path d="M2 12h20"></path>
+                            </svg>
                             <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               2
                             </span>
@@ -319,8 +459,31 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="tw-w-100px tw-h-100-px tw-text-13 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#22c55e1a"}}>
-                           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card h-12 w-12"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                          <span
+                            className="tw-w-100px tw-h-100-px tw-text-13 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative"
+                            style={{ backgroundColor: "#22c55e1a" }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="60"
+                              height="60"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#22C55E"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-credit-card h-12 w-12"
+                            >
+                              <rect
+                                width="20"
+                                height="14"
+                                x="2"
+                                y="5"
+                                rx="2"
+                              ></rect>
+                              <line x1="2" x2="22" y1="10" y2="10"></line>
+                            </svg>
                             <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               3
                             </span>
@@ -344,8 +507,25 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="payment-method tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#6366f11a"}}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal h-12 w-12"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"></path><path d="M6 12h16"></path></svg>
+                          <span
+                            className="payment-method tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative"
+                            style={{ backgroundColor: "#6366f11a" }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="60"
+                              height="60"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#6366F1"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-send-horizontal h-12 w-12"
+                            >
+                              <path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"></path>
+                              <path d="M6 12h16"></path>
+                            </svg>
                             <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               4
                             </span>
@@ -399,10 +579,10 @@ function Home() {
                   </p>
                 </div>
               </div>
-              <div className="tw-mb-80-px">
+              <div className="mb-5 bg-neutral-10 p-3 rounded-4">
                 <div className="row gy-4">
                   <div className="col-xl-7">
-                    <div className="tw-px-12 tw-py-1405 bg-neutral-10 rounded-4">
+                    <div className="tw-px-12 tw-py-1405 rounded-4">
                       <div
                         className="feature-card d-flex align-items-center tw-gap-2 flex-wrap tw-mb-12"
                         data-aos="fade-up"
@@ -455,47 +635,81 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="row gy-4">
-                <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div
-                    className="tw-pe-8 text-center"
-                    data-aos="fade-up"
-                    data-aos-duration={600}
-                  >
-                    <h4 className="fw-normal text-dark-600 tw-mb-3">
-                      Active Users Worldwide
-                    </h4>
-                    <h2 className="banner-item-title tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
-                      5M+
-                    </h2>
-                  </div>
-                </div>
-                <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div
-                    className="tw-pe-8 text-center"
+
+              <div className="bg-neutral-10 p-5 rounded-4">
+                <div className="max-w-850-px text-center justify-content-center align-items-center mx-auto mb-5">
+                  <h2
+                    className="fw-bold text-dark-600 tw-mb-3 cursor-big aos-init aos-animate"
                     data-aos="fade-up"
                     data-aos-duration={800}
                   >
-                    <h4 className="fw-normal text-dark-600 tw-mb-3">
-                      Countries Supported
-                    </h4>
-                    <h2 className="banner-item-title h1 tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
-                      180+
-                    </h2>
-                  </div>
-                </div>
-                <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div
-                    className="tw-pe-8 text-center"
+                    The Redeem Difference
+                  </h2>
+                  <p
+                    className="fw-normal tw-text-lg text-dark-500 aos-init aos-animate"
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    <h4 className="fw-normal text-dark-600 tw-mb-3">
-                      Average Customer Rating
-                    </h4>
-                    <h2 className="banner-item-title tw-text-15 h1 text-primary-500 tw-mb-6 cursor-big counter">
-                      4.5/5
-                    </h2>
+                    Real impact from our commitment to making international
+                    money transfers better for everyone.
+                  </p>
+                </div>
+                <div className="row gy-4">
+                  <div className="col-xl-3 col-lg-6 col-md-6">
+                    <div
+                      className="tw-pe-8 text-center"
+                      data-aos="fade-up"
+                      data-aos-duration={600}
+                    >
+                      <h5 className="fw-normal text-dark-600 tw-mb-3">
+                        Active Users Worldwide
+                      </h5>
+                      <h2 className="banner-item-title tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
+                        5M+
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-lg-6 col-md-6">
+                    <div
+                      className="tw-pe-8 text-center"
+                      data-aos="fade-up"
+                      data-aos-duration={800}
+                    >
+                      <h5 className="fw-normal text-dark-600 tw-mb-3">
+                        Monthly Transfer Volume
+                      </h5>
+                      <h2 className="banner-item-title h1 tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
+                        $2B+
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-lg-6 col-md-6">
+                    <div
+                      className="tw-pe-8 text-center"
+                      data-aos="fade-up"
+                      data-aos-duration={800}
+                    >
+                      <h5 className="fw-normal text-dark-600 tw-mb-3">
+                        Countries Supported
+                      </h5>
+                      <h2 className="banner-item-title h1 tw-text-15 text-primary-500 tw-mb-6 cursor-big counter">
+                        180+
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-lg-6 col-md-6">
+                    <div
+                      className="tw-pe-8 text-center"
+                      data-aos="fade-up"
+                      data-aos-duration={1000}
+                    >
+                      <h5 className="fw-normal text-dark-600 tw-mb-3">
+                        Average Customer Rating
+                      </h5>
+                      <h2 className="banner-item-title tw-text-15 h1 text-primary-500 tw-mb-6 cursor-big counter">
+                        4.5/5
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -831,11 +1045,14 @@ function Home() {
                               <strong>No</strong>
                               <br />
                               If you decide to manually transfer the money
-                              directly to Our Bank account. <strong>The bank details
-                              from which the transfer is initiated must match
-                              the name(s) used during opening of your Redeem LLC
-                              Account.</strong><br/>Our customers can choose either of both
-                              options.
+                              directly to Our Bank account.{" "}
+                              <strong>
+                                The bank details from which the transfer is
+                                initiated must match the name(s) used during
+                                opening of your Redeem LLC Account.
+                              </strong>
+                              <br />
+                              Our customers can choose either of both options.
                             </p>
                           </div>
                         </div>

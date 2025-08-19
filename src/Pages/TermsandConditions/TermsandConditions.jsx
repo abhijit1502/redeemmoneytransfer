@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import Seo from '../../Components/Seo';
+import Seo from "../../Components/Seo";
 import { termsConditionsSeo } from "../../seo-configs";
 
 function TermsandConditions() {
@@ -100,7 +100,7 @@ function TermsandConditions() {
                       1. About Us
                     </h4>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -117,7 +117,7 @@ function TermsandConditions() {
                       Intermediary (FI).
                     </p>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -222,7 +222,7 @@ function TermsandConditions() {
                     </ul>
 
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -252,20 +252,29 @@ function TermsandConditions() {
                       </li>
                     </ul>
                     <div
-                      className="d-flex align-items-center fw-normal tw-text-lg text-dark-500 tw-mb-6 aos-init aos-animate"
+                      className="d-flex align-items-center fw-normal tw-text-lg text-dark-700 tw-mb-6 aos-init aos-animate"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
                       Social Media:&nbsp;
-                      <NavLink to="#">
-                        <i class="fa-brands fa-2x fa-square-facebook"></i>
-                      </NavLink>
-                      <NavLink to="#">
+                      <NavLink
+                        to="https://x.com/RedeemTransfer"
+                        target="_blank"
+                      >
                         <i class="fa-brands fa-2x fa-square-x-twitter"></i>
-                      </NavLink>
-                      <NavLink to="#">
+                      </NavLink>&nbsp;
+                      <NavLink
+                        to="https://www.facebook.com/RedeemTransfer"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-2x fa-square-facebook"></i>
+                      </NavLink>&nbsp;
+                      <NavLink
+                        to="https://www.instagram.com/redeemtransfer/"
+                        target="_blank"
+                      >
                         <i class="fa-brands fa-2x fa-square-instagram"></i>
-                      </NavLink>
+                      </NavLink>&nbsp;
                     </div>
                   </div>
 
@@ -447,7 +456,7 @@ function TermsandConditions() {
                       3. Our Responsibilities
                     </h4>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -457,7 +466,7 @@ function TermsandConditions() {
                       B2C, payments and to exercise reasonable care.
                     </p>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -468,7 +477,7 @@ function TermsandConditions() {
                       way.
                     </p>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -681,7 +690,7 @@ function TermsandConditions() {
                       5. Customer Service
                     </h4>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
@@ -880,7 +889,7 @@ function TermsandConditions() {
                       data-aos="fade-up"
                       data-aos-duration={900}
                     >
-                      7. INTELLECTUAL PROPEREDEEM GMBHY
+                      7. INTELLECTUAL PROPERTY
                     </h4>
                     <ul
                       className="ul4 mb-2 mt-2 mrl tw-text-lg aos-init aos-animate"
@@ -995,7 +1004,7 @@ function TermsandConditions() {
                     >
                       11. Restricted Jurisdictions and Businesses
                     </h4>
-                    <p className="fw-normal tw-text-lg text-dark-500 tw-mb-6">
+                    <p className="fw-normal tw-text-lg text-dark-700 tw-mb-6">
                       We will not onboard clients who have any relation with
                       either the jurisdictions or business lines listed below.
                     </p>
@@ -1202,44 +1211,63 @@ function TermsandConditions() {
                     </ul>
                   </div>
 
-                   <div className="tw-mb-10">
+                  <div className="tw-mb-10">
                     <h4
                       className="fw-normal text-dark-600 cursor-big tw-mb-3"
                       data-aos="fade-up"
                       data-aos-duration={900}
                     >
-                     12. ESTABLISHMENT OF THE BENEFICIAL OWNER’S IDENTITY
+                      12. ESTABLISHMENT OF THE BENEFICIAL OWNER’S IDENTITY
                     </h4>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
-                    In accordance with Article § 18 and § 19 Regulations SRO PolyReg, the contracting partner (Customer) hereby declares, that he/she/they is/are the beneficial owner(s) of the assets involved under the above relationship. The contracting party hereby undertakes to automatically inform the financial intermediary of any changes. He/she/they agree(s) that the financial intermediary can disclose(s) the beneficial owner to financial institution when cooperating with banks, EMIs, PIs, or other related institutions. It is a criminal offence to deliberately falsify this document or provide any false information (Article 251 of the Swiss Criminal Code, document forgery).
+                      In accordance with Article § 18 and § 19 Regulations SRO
+                      PolyReg, the contracting partner (Customer) hereby
+                      declares, that he/she/they is/are the beneficial owner(s)
+                      of the assets involved under the above relationship. The
+                      contracting party hereby undertakes to automatically
+                      inform the financial intermediary of any changes.
+                      He/she/they agree(s) that the financial intermediary can
+                      disclose(s) the beneficial owner to financial institution
+                      when cooperating with banks, EMIs, PIs, or other related
+                      institutions. It is a criminal offence to deliberately
+                      falsify this document or provide any false information
+                      (Article 251 of the Swiss Criminal Code, document
+                      forgery).
                     </p>
                   </div>
 
-                   <div className="tw-mb-10">
+                  <div className="tw-mb-10">
                     <h4
                       className="fw-normal text-dark-600 cursor-big tw-mb-3"
                       data-aos="fade-up"
                       data-aos-duration={900}
                     >
-                     13. ENTIRE AGREEMENT
+                      13. ENTIRE AGREEMENT
                     </h4>
                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
-                    These Terms and Conditions, jointly with all other contractual items referred to in this Terms and Conditions, constitute the entire agreement between You/Customer/Customer/Customer and Us/Redeem GmbH and supersedes any prior agreements which may exist between You/Customer/Customer and Us/REDEEM GMBH/Redeem GmbH.
+                      These Terms and Conditions, jointly with all other
+                      contractual items referred to in this Terms and
+                      Conditions, constitute the entire agreement between
+                      You/Customer/Customer/Customer and Us/Redeem GmbH and
+                      supersedes any prior agreements which may exist between
+                      You/Customer/Customer and Us/REDEEM GMBH/Redeem GmbH.
                     </p>
-                     <p
-                      className="fw-normal tw-text-lg text-dark-500 tw-mb-6"
+                    <p
+                      className="fw-normal tw-text-lg text-dark-700 tw-mb-6"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >
-                    These Terms and Conditions are governed by the laws of Switzerland and any mandatory provisions of Swiss consumer protection law.
+                      These Terms and Conditions are governed by the laws of
+                      Switzerland and any mandatory provisions of Swiss consumer
+                      protection law.
                     </p>
                   </div>
                 </div>

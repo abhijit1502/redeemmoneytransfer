@@ -130,9 +130,9 @@
     --main-s: 52%;
     --main-l: 43.3%;
     */
-    --main-h: 219;
-    --main-s: 90%;
-    --main-l: 68%;
+    --main-h: 200;
+    --main-s: 100%;
+    --main-l: 74%;
     --main: var(--main-h) var(--main-s) var(--main-l);
     /* White Color */
     --white: 0 0% 100%;
@@ -182,17 +182,17 @@
     --main-700: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.1));
     --main-800: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.2));
     --main-900: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.3));
-    --base-two-10: #6598f71A;
+    --base-two-10: #7aa6ff1A;
     --base-two-100: #12121299;
     --base-two-200: #00998B0D;
-    --base-two-300: #6598f799;
-    --base-two-600: #6598f7;
-    /* --base-two-600: #6598f7; */
+    --base-two-300: #7aa6ff99;
+    --base-two-600: #7aa6ff;
+    /* --base-two-600: #7aa6ff; */
     --primary-05: #5D69F40D;
     --primary-50: #101010;
     --primary-100: #4A91A7;
-    --primary-400: #6598f7;
-    --primary-500: #6598f7;
+    --primary-400: #7aa6ff;
+    --primary-500: #7aa6ff;
     --primary-600: #0000DF;
     --dark-100: #9d99990f;
     --dark-500: #65758b;
@@ -219,10 +219,10 @@
     --warning-200: #FEF08A;
     --warning-300: #FDE047;
     --warning-400: #74CDFF;
-    --warning-500: #6598f7;
+    --warning-500: #7aa6ff;
     --warning-600: #FF9F29;
-    --warning-700: #6598f7;
-    --warning-800: #6598f7;
+    --warning-700: #7aa6ff;
+    --warning-800: #7aa6ff;
     --warning-900: #0000FF;
     --danger-05: #FF61610D;
     --danger-30: #F376390D;
@@ -231,10 +231,10 @@
     --danger-200: #FEF08A;
     --danger-300: #FDE047;
     --danger-400: #74CDFF;
-    --danger-500: #6598f7;
+    --danger-500: #7aa6ff;
     --danger-600: #ED0000;
-    --danger-700: #6598f7;
-    --danger-800: #6598f7;
+    --danger-700: #7aa6ff;
+    --danger-800: #7aa6ff;
     --danger-900: #0000FF;
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
@@ -601,7 +601,7 @@ input[type=number] {
 }
 
 .form-switch .form-check-input:checked {
-    background-color: #6598f7;
+    background-color: #7aa6ff;
 }
 
 .form-switch .form-check-input:checked::before {
@@ -2694,11 +2694,11 @@ input:focus-visible {
 }
 
 .tw-border-base-two-600-dashed {
-    border: 1px dashed #6598f7;
+    border: 1px dashed #7aa6ff;
 }
 
 .tw-hover-border-bottom-base-two-600:hover {
-    border-bottom: 3px solid #6598f7;
+    border-bottom: 3px solid #7aa6ff;
 }
 
 .tw-hover-border-black:hover {
@@ -2718,7 +2718,7 @@ input:focus-visible {
 }
 
 .border-bottom-two-px-solid {
-    border-bottom: 3px solid #6598f7;
+    border-bottom: 3px solid #7aa6ff;
 }
 
 .border-neutral-two-px-solid {
@@ -2730,11 +2730,11 @@ input:focus-visible {
 }
 
 .border-base-two-100 {
-    border: 2px dashed #6598f7;
+    border: 2px dashed #7aa6ff;
 }
 
 .border-bottom-base-two-600 {
-    border-bottom: 3px solid #6598f7;
+    border-bottom: 3px solid #7aa6ff;
 }
 
 .border-neutral-1px-solid {
@@ -2762,7 +2762,7 @@ input:focus-visible {
 }
 
 .border-warning-600-2px {
-    border: 2px solid #6598f7;
+    border: 2px solid #7aa6ff;
 }
 
 .border-neutral-200 {
@@ -2774,7 +2774,7 @@ input:focus-visible {
 }
 
 .border-primary-400-1 {
-    border: 1px solid #6598f7;
+    border: 1px solid #7aa6ff;
 }
 
 .border-primary-600 {
@@ -3338,7 +3338,7 @@ input:focus-visible {
 }
 
 .hover-bg-base-two-600:hover {
-    background: #6598f7;
+    background: #7aa6ff;
 }
 
 .hover-border-bottom:hover {
@@ -3378,7 +3378,7 @@ input:focus-visible {
 }
 
 .focus-visible-border-main-600:focus-visible {
-    border: 1px solid #6598f7 !important;
+    border: 1px solid #7aa6ff !important;
     outline: 0;
 }
 
@@ -4069,7 +4069,7 @@ input:focus-visible {
 }
 
 .group:hover .group-hover-border-base-two-600 {
-    border-bottom: 2px solid #6598f7 !important;
+    border-bottom: 2px solid #7aa6ff !important;
 }
 
 .group-hover-text-transition {
@@ -8620,7 +8620,7 @@ input:focus-visible {
 .header-item-link::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 6px;
     left: 4px;
     width: 98px;
@@ -8633,7 +8633,7 @@ input:focus-visible {
 .header-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: -6px;
     left: -5px;
     width: 98px;
@@ -8902,7 +8902,7 @@ input:focus-visible {
 .banner-item-link::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -8915,7 +8915,7 @@ input:focus-visible {
 .banner-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: -4px;
     left: -4px;
     width: 100%;
@@ -9026,7 +9026,7 @@ input:focus-visible {
     content: "";
     width: 281px;
     height: 52px;
-    background: #6598f7;
+    background: #7aa6ff;
     z-index: -1;
     top: 6px;
     left: 7px;
@@ -9039,7 +9039,7 @@ input:focus-visible {
     content: "";
     width: 281px;
     height: 52px;
-    background: #6598f7;
+    background: #7aa6ff;
     z-index: -1;
     top: -6px;
     left: -5px;
@@ -9100,7 +9100,7 @@ input:focus-visible {
     z-index: -1;
     top: 8px;
     left: 8px;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9113,7 +9113,7 @@ input:focus-visible {
     z-index: -1;
     top: -8px;
     left: -8px;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
 }
 
@@ -9125,8 +9125,8 @@ input:focus-visible {
     padding: 15px 30px;
     font-size: 16px;
     font-weight: 500;
-    color: white;
-    background-color: #6598f7;
+    color: #000;
+    background-color: var(--main-600) !important;;
     /* Blue button color */
     border-radius: 0.5rem;
     text-decoration: none;
@@ -9154,7 +9154,7 @@ input:focus-visible {
 }
 
 .btn-link:hover {
-    color: var(--neutral-05) !important;
+    color: var(--neutral-20) !important;
 }
 
 .btn-link-pre {
@@ -9235,7 +9235,7 @@ input:focus-visible {
     width: 131px;
     height: 55px;
     z-index: -1;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 0.5rem;
     top: -3px;
     left: -3px;
@@ -9287,7 +9287,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -9300,7 +9300,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -9366,7 +9366,7 @@ input:focus-visible {
 .our-serbices-item-link::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -9379,7 +9379,7 @@ input:focus-visible {
 .our-serbices-item-link:hover::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: -4px;
     left: -4px;
     width: 100%;
@@ -9428,7 +9428,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9441,7 +9441,7 @@ input:focus-visible {
     top: -4px;
     left: -3px;
     z-index: -1;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
 }
 
@@ -9450,7 +9450,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 12px;
     top: 4px;
     left: 4px;
@@ -9467,7 +9467,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     z-index: -1;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -9480,7 +9480,7 @@ input:focus-visible {
     top: -4px;
     left: -4px;
     z-index: -1;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
 }
 
@@ -9529,7 +9529,7 @@ input:focus-visible {
 .our-services-three::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     max-width: 948px;
     width: 100%;
     height: 100%;
@@ -9624,7 +9624,7 @@ input:focus-visible {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #6598f7;
+    background-color: #7aa6ff;
 }
 
 /*==================== our services three css end =======================*/
@@ -9656,7 +9656,7 @@ input:focus-visible {
 .fast-safe::before {
     position: absolute;
     content: "";
-    background: linear-gradient(0deg, #6598f7 0%, rgba(37, 87, 236, 0) 100%);
+    background: linear-gradient(0deg, #7aa6ff 0%, rgba(37, 87, 236, 0) 100%);
     width: 3px;
     height: 201px;
     animation: upDown 24s linear infinite;
@@ -9858,7 +9858,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -9871,7 +9871,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -9977,7 +9977,7 @@ input:focus-visible {
     font-family: "Phosphor";
     width: 40px;
     height: 40px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     color: #fff;
     display: flex;
@@ -10014,7 +10014,7 @@ input:focus-visible {
 
 .nav-pills .nav-link-three.active,
 .nav-pills .show>.nav-link-three {
-    background-color: #6598f7 !important;
+    background-color: #7aa6ff !important;
     color: #FFFFFF !important;
     border-bottom: 3px solid #AEFF1C;
     border-radius: 12px;
@@ -10056,7 +10056,7 @@ input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10069,7 +10069,7 @@ input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 10px;
 }
 
@@ -10081,7 +10081,7 @@ input:focus-visible {
     z-index: -1;
     top: 4px;
     left: 4px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10094,7 +10094,7 @@ input:focus-visible {
     z-index: -1;
     top: -4px;
     left: -4px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -10174,7 +10174,7 @@ input:focus-visible {
     top: 3px;
     left: 3px;
     z-index: -1;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
     transition: 0.4s;
 }
@@ -10187,7 +10187,7 @@ input:focus-visible {
     top: -3px;
     left: -3px;
     z-index: -1;
-    background: #6598f7;
+    background: #7aa6ff;
     border-radius: 0.5rem;
 }
 
@@ -10197,7 +10197,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10210,7 +10210,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     top: -4px;
     left: -4px;
@@ -10240,7 +10240,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10253,7 +10253,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10304,7 +10304,7 @@ input:focus-visible {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background-color: #6598f7 !important;
+    background-color: #7aa6ff !important;
     color: #fff !important;
 }
 
@@ -10345,7 +10345,7 @@ input:focus-visible {
     top: 4px;
     left: 4px;
     border-radius: 0.5rem;
-    background: #6598f7;
+    background: #7aa6ff;
     transition: 0.4s;
 }
 
@@ -10358,7 +10358,7 @@ input:focus-visible {
     top: -4px;
     left: -4px;
     border-radius: 0.5rem;
-    background: #6598f7;
+    background: #7aa6ff;
 }
 
 .platform-two-link::before {
@@ -10366,7 +10366,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 4px;
     left: 4px;
     z-index: -1;
@@ -10379,7 +10379,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: -4px;
     left: -4px;
     z-index: -1;
@@ -10493,7 +10493,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     top: 4px;
     left: 4px;
@@ -10506,7 +10506,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     top: -4px;
     left: -3px;
@@ -10524,7 +10524,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -10537,7 +10537,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: -4px;
     left: -4px;
     z-index: -1;
@@ -10572,7 +10572,7 @@ input:focus-visible {
 .our-pricing-plan-three-link::before {
     position: absolute;
     content: "";
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 4px;
     left: 4px;
     width: 100%;
@@ -10587,7 +10587,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: 3px;
     left: 3px;
@@ -10600,7 +10600,7 @@ input:focus-visible {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: -3px;
     left: -3px;
@@ -10666,7 +10666,7 @@ input:focus-visible {
 }
 
 .header-nav-menu__item .activePage .header-nav-submenu__link {
-    background-color: #6598f7 !important;
+    background-color: #7aa6ff !important;
     color: #FFFFFF;
     border-radius: 12px;
 }
@@ -10891,7 +10891,7 @@ button.show {
     top: 4px;
     left: 4px;
     border-radius: 8px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
     transition: 0.4s;
 }
@@ -10904,7 +10904,7 @@ button.show {
     top: -3px;
     left: -3px;
     border-radius: 8px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     z-index: -1;
 }
 
@@ -10987,7 +10987,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: 3px;
     left: 3px;
     z-index: -1;
@@ -11000,7 +11000,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     top: -3px;
     left: -3px;
     z-index: -1;
@@ -11014,7 +11014,7 @@ button.show {
     height: 100%;
     top: 5px;
     left: 4px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     z-index: -1;
     transition: 0.4s;
@@ -11027,7 +11027,7 @@ button.show {
     height: 100%;
     top: -5px;
     left: -4px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11092,7 +11092,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: 4px;
     left: 4px;
@@ -11105,7 +11105,7 @@ button.show {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     top: -4px;
     left: -4px;
@@ -11148,7 +11148,7 @@ button.show {
     height: 100%;
     top: 4px;
     left: 4px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     z-index: -1;
     transition: 0.5s;
@@ -11161,7 +11161,7 @@ button.show {
     height: 100%;
     top: -4px;
     left: -4px;
-    background-color: #6598f7;
+    background-color: #7aa6ff;
     border-radius: 8px;
     z-index: -1;
 }
@@ -11778,7 +11778,7 @@ button.show {
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(38, 99, 242, 0) 0%, #6598f7 100%);
+    background: linear-gradient(90deg, rgba(38, 99, 242, 0) 0%, #7aa6ff 100%);
     animation: movingLine 2s linear infinite;
 }
 
