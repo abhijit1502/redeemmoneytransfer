@@ -32,7 +32,7 @@ const TestimonialCard = ({ name, location, message, imgSrc }) => {
                     width: 50,
                     height: 50,
                     borderRadius: "50%",
-                    backgroundColor: "#7ad3ff",
+                    backgroundColor: "#7aa6ff",
                     color: "#fff",
                     display: "flex",
                     alignItems: "center",
