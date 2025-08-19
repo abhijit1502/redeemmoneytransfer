@@ -657,7 +657,7 @@ function Home() {
                 <div className="row gy-4">
                   <div className="col-xl-3 col-lg-6 col-md-6">
                     <div
-                      className="tw-pe-8 text-center"
+                      className="text-center"
                       data-aos="fade-up"
                       data-aos-duration={600}
                     >
@@ -671,7 +671,7 @@ function Home() {
                   </div>
                   <div className="col-xl-3 col-lg-6 col-md-6">
                     <div
-                      className="tw-pe-8 text-center"
+                      className="text-center"
                       data-aos="fade-up"
                       data-aos-duration={800}
                     >
@@ -685,7 +685,7 @@ function Home() {
                   </div>
                   <div className="col-xl-3 col-lg-6 col-md-6">
                     <div
-                      className="tw-pe-8 text-center"
+                      className="text-center"
                       data-aos="fade-up"
                       data-aos-duration={800}
                     >
@@ -699,7 +699,7 @@ function Home() {
                   </div>
                   <div className="col-xl-3 col-lg-6 col-md-6">
                     <div
-                      className="tw-pe-8 text-center"
+                      className="text-center"
                       data-aos="fade-up"
                       data-aos-duration={1000}
                     >

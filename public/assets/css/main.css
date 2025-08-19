@@ -9269,7 +9269,7 @@ input:focus-visible {
 @media (max-width: 1201px) {
     .banner-shape-three-one {
         inset-block-start: 108px;
-        inset-inline-start: 57%;
+        inset-inline-start: 1%;
     }
 }
 
