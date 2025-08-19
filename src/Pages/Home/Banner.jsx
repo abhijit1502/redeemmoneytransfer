@@ -94,11 +94,11 @@ function Banner() {
                               </span>
                               Instantly
                             </h2>
-                            <img
+                            {/* <img
                               src="assets/images/shape/banner-three-shape1.png"
                               alt="Image"
                               className="banner-shape-three-one position-absolute z-n1 tw-block-start-130-px d-lg-block d-none"
-                            />
+                            /> */}
                           </div>
                           <p
                             className="banner-item-text text-dark-500 tw-text-xl line-clamp-2"
@@ -144,11 +144,11 @@ function Banner() {
                           </div>
                         </div>
                       </div>
-                      <img
+                      {/* <img
                         src="assets/images/shape/banner-three-start-shape1.png"
                         alt="Image"
                         className="position-absolute bottom-0 tw-end-100-px tw-mb--30px z-n1 d-xl-block d-none animation-rotation__two"
-                      />
+                      /> */}
                     </div>
 
                     {/* --- FINAL FLAG SCROLLER SECTION --- */}
