@@ -1,4 +1,4 @@
-// --- START OF FILE: custom-gsap.js (Corrected for React, Mobile Cursor & Mobile Scrolling) ---
+// --- START OF FILE: custom-gsap.js (Corrected for React & Mobile Cursor) ---
 
 // This part MUST run immediately when the script is loaded to prepare GSAP.
 // It should be at the top level, outside any function.
@@ -11,16 +11,9 @@ let gsapContext;
 function initGsapScripts() {
   console.log("🚀 Initializing custom GSAP scripts...");
 
-  // ==============================================================================
-  // ===== CRITICAL FIX FOR MOBILE SCROLLING ISSUE =====
-  // This line removes any 'overflow: hidden' style that might be leftover
-  // from the mobile menu on the previous page. This MUST run immediately.
-  document.body.style.overflow = "";
-  // ==============================================================================
-
-
   // --- CLEANUP PHASE ---
   // Before we create new animations, we must clean up the old ones.
+  // gsap.context().revert() is the modern, safe way to do this.
   if (gsapContext) {
     console.log("🧹 Cleaning up previous GSAP context...");
     gsapContext.revert();
@@ -31,10 +24,14 @@ function initGsapScripts() {
   // Use a small timeout to be extra sure the DOM is ready.
   setTimeout(() => {
     // --- INITIALIZATION PHASE ---
+    // All our GSAP logic is wrapped in a context.
+    // This allows us to easily clean it all up later.
     gsapContext = gsap.context(() => {
 
       // =================================== Custom Cursor Js Start (Desktop Only) =====================================
+      // This logic is wrapped in matchMedia to run only on desktops.
       const cursorMatcher = gsap.matchMedia();
+
       cursorMatcher.add("(min-width: 992px)", () => {
           const body = document.body;
           const cursor = document.querySelector(".cursor");
@@ -43,6 +40,8 @@ function initGsapScripts() {
           const cursorBigs = document.querySelectorAll(".cursor-big");
 
           if (cursor && dot) {
+              // The event listeners are now created inside the gsap.context,
+              // so they will be automatically removed during cleanup.
               const moveCursor = (event) => {
                   gsap.to(cursor, { x: event.clientX, y: event.clientY, duration: 2, delay: 0.1, visibility: "visible", ease: "expo.out" });
                   gsap.to(dot, { x: event.clientX, y: event.clientY, duration: 1.5, visibility: "visible", ease: "expo.out" });
@@ -58,7 +57,7 @@ function initGsapScripts() {
                   cursorBig.addEventListener("mouseleave", () => { gsap.to(dot, { scale: 1, backgroundColor: "#fff" }); gsap.to(cursor, { visibility: "visible", opacity: 1 }); });
               });
           }
-          return () => {
+          return () => { // Optional cleanup function for matchMedia
               if (cursor) cursor.style.visibility = 'hidden';
               if (dot) dot.style.visibility = 'hidden';
           }
@@ -79,6 +78,7 @@ function initGsapScripts() {
               mtl.from(".nav-menu__item", { opacity: 0, duration: 0.1, y: -60, stagger: 0.05 });
               mtl.from(".close-button", { opacity: 0, scale: 0 });
 
+              // Event listeners are also tracked by the context
               toggleMobileMenu.addEventListener("click", () => { mtl.play(); document.body.style.overflow = "hidden"; });
               closeButton.addEventListener("click", () => { mtl.reverse(); document.body.style.overflow = ""; });
               mobileSideOverlay.addEventListener("click", () => { mtl.reverse(); document.body.style.overflow = ""; });
@@ -100,6 +100,10 @@ function initGsapScripts() {
       // =================================== Custom Split text Js End =====================================
 
       // **************************** Position Aware button hover js start ****************************
+      // Assuming the Button class adds its own event listeners. By re-instantiating on new elements,
+      // we ensure functionality. The gsap.context() revert will not clean these up unless
+      // the Button class is modified to integrate with it. However, since components re-render,
+      // we get new button elements on each page, making this safe.
       class Button {
           constructor(buttonElement) {
               this.button = buttonElement;
@@ -107,29 +111,45 @@ function initGsapScripts() {
               this.text = this.button.querySelector('.text');
               this.init();
           }
-          init() { this.initEvents(); }
+          init() {
+              this.initEvents();
+          }
           getXY(e) {
-              let { left, top } = this.button.getBoundingClientRect();
+              let {
+                  left,
+                  top
+              } = this.button.getBoundingClientRect();
               let x = e.clientX - left;
               let y = e.clientY - top;
-              return { x, y };
+              return {
+                  x,
+                  y
+              };
           }
           initEvents() {
               this.button.addEventListener('mouseenter', e => {
-                  const { x, y } = this.getXY(e);
+                  const {
+                      x,
+                      y
+                  } = this.getXY(e);
                   this.text.style.setProperty('--x', `${x}px`);
                   this.text.style.setProperty('--y', `${y}px`);
               });
               this.button.addEventListener('mouseleave', e => {
-                  const { x, y } = this.getXY(e);
+                  const {
+                      x,
+                      y
+                  } = this.getXY(e);
                   this.text.style.setProperty('--x', `${x}px`);
                   this.text.style.setProperty('--y', `${y}px`);
               });
           }
       }
       const buttonElements = document.querySelectorAll('[data-block="button"]');
-      buttonElements.forEach((buttonElement) => { new Button(buttonElement); });
-      // **************************** Position Aware button hover js End *============================
+      buttonElements.forEach((buttonElement) => {
+          new Button(buttonElement);
+      });
+      // **************************** Position Aware button hover js End ****************************
 
     }); // End of gsap.context()
 
