@@ -3,7 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import Cookie_Policy_Seo from "../../SEO/Cookie_Policy_Seo";
+import Seo from '../../Components/Seo';
+import { cookiePolicySeo } from "../../seo-configs";
 
 function CookiePolicy() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function CookiePolicy() {
 
   return (
     <>
-      <Cookie_Policy_Seo />
+      <Seo {...cookiePolicySeo} />
       {isLoading ? (
         <Preloader />
       ) : (

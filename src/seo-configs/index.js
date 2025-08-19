@@ -95,3 +95,10 @@ export const moneyTransferSeo = {
   image: "https://redeemtransfer.net/assets/images/logo/logo.png",
   canonicalUrl: "https://redeemtransfer.net/money-transfer"
 };
+
+export const finishSeo = {
+   title: "Redeem Money Transfer Onboarding - Easy & Secure Money Transfers Worldwide",
+  description: "Sign up with Redeem Money Transfer for fast, secure international money transfers. Send money to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & more with real-time tracking and seamless transactions.",
+  image: "/https://redeemtransfer.net/assets/images/logo/logo.png",
+  canonicalUrl: "https://redeemtransfer.net/finish"
+};

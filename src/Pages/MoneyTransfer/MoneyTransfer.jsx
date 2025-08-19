@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import Money_Transfer_Seo from "../../SEO/Money_Transfer_Seo";
 import Calculator from "../../Components/Calculator";
 import Testimonial from "./Testimonial";
+import Seo from '../../Components/Seo';
+import { moneyTransferSeo } from "../../seo-configs";
 
 function MoneyTransfer() {
 const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +35,7 @@ const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
-      <Money_Transfer_Seo />
+      <Seo {...moneyTransferSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

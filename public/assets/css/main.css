@@ -11869,3 +11869,30 @@ button.show {
 .flag-image:first-child {
     margin-left: 0;
 }
+
+.app-store-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hover-text {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.app-store-wrapper:hover .hover-text {
+  opacity: 1;
+}

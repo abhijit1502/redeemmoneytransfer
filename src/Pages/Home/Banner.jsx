@@ -124,15 +124,25 @@ function Banner() {
                               Send Money Now
                             </NavLink>
                           </div>
-                          <div className="d-none justify-content-center align-items-center tw-gap-6 mt-4">
+                          <div className="d-flex justify-content-center align-items-center tw-gap-4">
                             <div>
-                              <NavLink to="#" target="_blank">
-                                <img src="assets/images/Appstore.svg" />
+                              <NavLink
+                                to="#"
+                                className="app-store-wrapper"
+                                target="_blank"
+                              >
+                                <img src="assets/images/icon/Appstore.svg" />
+                                <span className="hover-text">App Store</span>
                               </NavLink>
                             </div>
                             <div>
-                              <NavLink to="#" target="_blank">
-                                <img src="assets/images/Playstore.svg" />
+                              <NavLink
+                                to="#"
+                                className="app-store-wrapper"
+                                target="_blank"
+                              >
+                                <img src="assets/images/icon/Play-store.svg" />
+                                <span className="hover-text">Google Play</span>
                               </NavLink>
                             </div>
                           </div>

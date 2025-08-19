@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
-import Home_Seo from "../../SEO/Home_Seo";
 import Preloader from "../../Components/Preloader";
 import Banner from "./Banner";
 import { NavLink } from "react-router-dom";
 import Testimonial from "./Testimonial";
 import Calculator from "../../Components/Calculator";
+import Seo from '../../Components/Seo';
+import { homeSeo } from "../../seo-configs";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +36,7 @@ function Home() {
 
   return (
     <>
-      <Home_Seo />
+      <Seo {...homeSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

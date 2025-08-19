@@ -22,12 +22,29 @@
         {
           "key": "Access-Control-Allow-Methods",
           "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/assets/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
   ],
   "env": {
     "VITE_API_BASE_URL": "/api",
-    "VITE_SITE_URL": "https://redeemtransfer.net/pilot"
+    "VITE_SITE_URL": "https://redeemtransfer.net"
   }
 }

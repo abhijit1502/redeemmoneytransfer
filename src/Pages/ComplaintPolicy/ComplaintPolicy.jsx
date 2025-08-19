@@ -3,7 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import Complaint_Policy_Seo from "../../SEO/Complaint_Policy_Seo";
+import Seo from '../../Components/Seo';
+import { complaintPolicySeo } from "../../seo-configs";
 
 function ComplaintPolicy() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function ComplaintPolicy() {
 
   return (
     <>
-      <Complaint_Policy_Seo />
+      <Seo {...complaintPolicySeo} />
       {isLoading ? (
         <Preloader />
       ) : (

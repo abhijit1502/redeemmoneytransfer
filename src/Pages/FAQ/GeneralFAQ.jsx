@@ -4,8 +4,8 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import "../../css/steps.css";
-import CookieConsent from "../../Components/CookieConsent";
-import General_FAQ_Seo from "../../SEO/General_FAQ_Seo";
+import Seo from '../../Components/Seo';
+import { generalFaqSeo } from "../../seo-configs";
 
 function GeneralFAQ() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,7 @@ function GeneralFAQ() {
 
   return (
     <>
-      <General_FAQ_Seo />
+      <Seo {...generalFaqSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

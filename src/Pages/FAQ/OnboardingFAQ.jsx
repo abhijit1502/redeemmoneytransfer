@@ -3,9 +3,9 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import CookieConsent from "../../Components/CookieConsent";
 import "../../css/steps.css";
-import Onboarding_FAQ_Seo from "../../SEO/Onboarding_FAQ_Seo";
+import Seo from '../../Components/Seo';
+import { onboardingFaqSeo } from "../../seo-configs";
 
 function OnboardingFAQ() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,7 @@ function OnboardingFAQ() {
 
   return (
     <>
-      <Onboarding_FAQ_Seo />
+      <Seo {...onboardingFaqSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

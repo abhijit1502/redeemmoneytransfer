@@ -5,8 +5,9 @@ import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
-import Contact_Us_Seo from "../../SEO/Contact_Us_Seo";
 import Swal from "sweetalert2"; // ✅ Added SweetAlert2
+import Seo from '../../Components/Seo';
+import { contactSeo } from "../../seo-configs";
 
 function ContactUs() {
   const [isLoading, setIsLoading] = useState(true);
@@ -114,7 +115,7 @@ function ContactUs() {
 
   return (
     <>
-      <Contact_Us_Seo />
+      <Seo {...contactSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

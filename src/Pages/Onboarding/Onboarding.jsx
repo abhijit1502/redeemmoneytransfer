@@ -4,7 +4,8 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import "../../css/steps.css";
-import Onboarding_Seo from "../../SEO/Onboarding_Seo";
+import Seo from '../../Components/Seo';
+import { onboardingSeo } from "../../seo-configs";
 
 function Onboarding() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +26,7 @@ function Onboarding() {
 
   return (
     <>
-      <Onboarding_Seo />
+      <Seo {...onboardingSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

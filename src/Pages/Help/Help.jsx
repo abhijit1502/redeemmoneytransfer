@@ -3,8 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import CookieConsent from "../../Components/CookieConsent";
-import Help_Seo from "../../SEO/Help_Seo";
+import Seo from '../../Components/Seo';
+import { helpSeo } from "../../seo-configs";
 
 function Help() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +25,7 @@ function Help() {
 
   return (
     <>
-      <Help_Seo />
+      <Seo {...helpSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

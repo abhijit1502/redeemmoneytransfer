@@ -4,7 +4,8 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import "../../css/steps.css";
-import Finish_Seo from "../../SEO/Finish_Seo";
+import Seo from '../../Components/Seo';
+import { finishSeo } from "../../seo-configs";
 
 function Finish() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +26,7 @@ function Finish() {
 
   return (
     <>
-      <Finish_Seo />
+      <Seo {...finishSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

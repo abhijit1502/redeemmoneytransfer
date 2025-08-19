@@ -3,7 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import Terms_and_Conditions_Seo from "../../SEO/Terms_and_Conditions_Seo";
+import Seo from '../../Components/Seo';
+import { termsConditionsSeo } from "../../seo-configs";
 
 function TermsandConditions() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function TermsandConditions() {
 
   return (
     <>
-      <Terms_and_Conditions_Seo />
+      <Seo {...termsConditionsSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

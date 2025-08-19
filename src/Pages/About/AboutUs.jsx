@@ -3,7 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import About_Seo from "../../SEO/About_Seo";
+import Seo from '../../Components/Seo';
+import { aboutSeo } from '../../seo-configs';
 
 function AboutUs() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function AboutUs() {
 
   return (
     <>
-      <About_Seo />
+      <Seo {...aboutSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

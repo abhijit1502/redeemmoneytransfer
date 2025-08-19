@@ -15,12 +15,20 @@
     <meta property="og:title" content="<%- title %>">
     <meta property="og:description" content="<%- description %>">
     <meta property="og:image" content="<%- defaultImage %>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Redeem Money Transfer">
     
     <!-- Twitter -->
-    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<%- title %>">
     <meta name="twitter:description" content="<%- description %>">
-    <meta name="twitter:image" content="<%- defaultImage %>"> -->
+    <meta name="twitter:image" content="<%- defaultImage %>">
+    <meta name="twitter:site" content="@redeemtransfer">
+
+     <!-- WhatsApp Specific -->
+    <meta property="og:image:secure_url" content="<%- defaultImage %>">
+    <meta property="og:image:alt" content="<%- title %>">
 
     <!-- Favicon and Styles -->
     <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
@@ -30,9 +38,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://redeemtransfer.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fallback for crawlers -->
+    <noscript>
+      <meta property="og:title" content="Redeem Money Transfer - Secure Worldwide Money Transfers">
+      <meta property="og:description" content="Fast, secure money transfers to 100+ countries">
+      <meta property="og:image" content="https://redeemtransfer.net/assets/images/logo/logo.png">
+      <meta property="og:image:secure_url" content="https://redeemtransfer.net/assets/images/logo/logo.png">
+    </noscript>
   </head>
   <body class="position-relative">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Crawler Fallback Script -->
+    <script>
+      const pageMeta = {
+        '/': {
+          title: 'Redeem Money Transfer - Secure Worldwide Money Transfers',
+          description: 'Fast, secure money transfers to 100+ countries',
+          image: 'https://redeemtransfer.net/assets/images/social/home.jpg'
+        },
+        '/aboutus': {
+          title: 'About Redeem Money Transfer',
+          description: 'Licensed money transfer services worldwide',
+          image: 'https://redeemtransfer.net/assets/images/social/about.jpg'
+        },
+        '/contactus': {
+          title: 'Contact Us - Redeem Money Transfer',
+          description: 'Get in touch with our support team',
+          image: 'https://redeemtransfer.net/assets/images/social/contact.jpg'
+        }
+        // Add other pages as needed
+      };
+      
+      const path = window.location.pathname;
+      if(pageMeta[path]) {
+        const meta = pageMeta[path];
+        document.title = meta.title;
+        document.querySelector('meta[name="description"]').content = meta.description;
+        document.querySelector('meta[property="og:title"]').content = meta.title;
+        document.querySelector('meta[property="og:description"]').content = meta.description;
+        document.querySelector('meta[property="og:image"]').content = meta.image;
+        document.querySelector('meta[property="og:url"]').content = window.location.href;
+        document.querySelector('meta[name="twitter:title"]').content = meta.title;
+        document.querySelector('meta[name="twitter:description"]').content = meta.description;
+        document.querySelector('meta[name="twitter:image"]').content = meta.image;
+        document.querySelector('meta[property="og:image:secure_url"]').content = meta.image;
+      }
+    </script>
   </body>
 </html>

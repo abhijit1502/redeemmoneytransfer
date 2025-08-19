@@ -4,7 +4,8 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import "../../css/steps.css";
-import Livenesscheck_Seo from "../../SEO/Livenesscheck_Seo";
+import Seo from '../../Components/Seo';
+import { livenessCheckSeo } from "../../seo-configs";
 
 function Livenesscheck() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +26,7 @@ function Livenesscheck() {
 
   return (
     <>
-      <Livenesscheck_Seo />
+      <Seo {...livenessCheckSeo} />
       {isLoading ? (
         <Preloader />
       ) : (

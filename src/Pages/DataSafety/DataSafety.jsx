@@ -4,7 +4,8 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
 import "../../css/steps.css";
-import DataSafety_Seo from "../../SEO/DataSafety_Seo";
+import Seo from '../../Components/Seo';
+import { dataSafetySeo } from "../../seo-configs";
 
 function DataSafety() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +26,7 @@ function DataSafety() {
 
   return (
     <>
-      <DataSafety_Seo />
+      <Seo {...dataSafetySeo} />
       {isLoading ? (
         <Preloader />
       ) : (

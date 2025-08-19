@@ -3,7 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Preloader from "../../Components/Preloader";
-import Privacy_Policy_Seo from "../../SEO/Privacy_Policy_Seo";
+import Seo from '../../Components/Seo';
+import { privacyPolicySeo } from "../../seo-configs";
 
 function PrivacyPolicy() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function PrivacyPolicy() {
 
   return (
     <>
-      <Privacy_Policy_Seo />
+      <Seo {...privacyPolicySeo} />
       {isLoading ? (
         <Preloader />
       ) : (

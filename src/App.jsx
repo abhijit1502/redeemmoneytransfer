@@ -15,10 +15,9 @@ import {
   complaintPolicySeo,
   privacyPolicySeo,
   termsConditionsSeo,
-  moneyTransferSeo
+  moneyTransferSeo,
+  finishSeo
 } from "./seo-configs";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import Preloader from "./Components/Preloader";
 import Home from "./Pages/Home/Home";
 import Error from "./Pages/Error";
@@ -73,7 +72,7 @@ function App() {
               }
             });
           }
-          window.location.reload(true);
+          window.location.reload();
         }
       }); 
   }, []);
@@ -96,7 +95,7 @@ function App() {
               <Route path="/general-faq" element={<><Seo {...generalFaqSeo} /><GeneralFAQ /></>} />
               <Route path="/onboarding" element={<><Seo {...onboardingSeo} /><Onboarding /></>} />
               <Route path="/livenesscheck" element={<><Seo {...livenessCheckSeo} /><Livenesscheck /></>} />
-              <Route path="/finish" element={<><Seo title="Setup Complete" /><Finish /></>} />
+              <Route path="/finish" element={<><Seo {...finishSeo} /><Finish /></>} />
               <Route path="/data-safety" element={<><Seo {...dataSafetySeo} /><DataSafety /></>} />
               <Route path="/cookie-policy" element={<><Seo {...cookiePolicySeo} /><CookiePolicy /></>} />
               <Route path="/complaint-policy" element={<><Seo {...complaintPolicySeo} /><ComplaintPolicy /></>} />
