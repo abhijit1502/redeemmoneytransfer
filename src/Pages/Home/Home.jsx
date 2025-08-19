@@ -269,9 +269,9 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
-                            <i className="fa-solid fa-circle-user"></i>
-                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                          <span className="tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#3b82f61a"}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus h-12 w-12"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                            <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               1
                             </span>
                           </span>
@@ -294,9 +294,9 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="payment-method tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
-                            <i className="fa-solid fa-globe"></i>
-                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                          <span className="payment-method tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#f59e0b1a"}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-12 w-12"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               2
                             </span>
                           </span>
@@ -319,9 +319,9 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="tw-w-100px tw-h-100-px bg-base-two-10 tw-text-13 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
-                            <i className="fa-solid fa-paper-plane"></i>
-                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                          <span className="tw-w-100px tw-h-100-px tw-text-13 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#22c55e1a"}}>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card h-12 w-12"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                            <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               3
                             </span>
                           </span>
@@ -344,9 +344,9 @@ function Home() {
                         data-aos-duration={1000}
                       >
                         <div className="text-center p-4 h-100">
-                          <span className="payment-method tw-w-100px tw-h-100-px bg-base-two-10 tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative">
-                            <i className="fa-solid fa-thumbs-up"></i>
-                            <span className="step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
+                          <span className="payment-method tw-w-100px tw-h-100-px tw-text-15 rounded-circle d-flex align-items-center justify-content-center text-primary-400 flex-shrink-0 mx-auto mb-4 position-relative" style={{backgroundColor:"#6366f11a"}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal h-12 w-12"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"></path><path d="M6 12h16"></path></svg>
+                            <span className="d-none step-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-500">
                               4
                             </span>
                           </span>

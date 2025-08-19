@@ -56,24 +56,109 @@
     <script type="module" src="/src/main.jsx"></script>
     <!-- Crawler Fallback Script -->
     <script>
-      const pageMeta = {
-        '/': {
-          title: 'Redeem Money Transfer - Secure Worldwide Money Transfers',
-          description: 'Fast, secure money transfers to 100+ countries',
-          image: 'https://redeemtransfer.net/assets/images/social/home.jpg'
-        },
-        '/aboutus': {
-          title: 'About Redeem Money Transfer',
-          description: 'Licensed money transfer services worldwide',
-          image: 'https://redeemtransfer.net/assets/images/social/about.jpg'
-        },
-        '/contactus': {
-          title: 'Contact Us - Redeem Money Transfer',
-          description: 'Get in touch with our support team',
-          image: 'https://redeemtransfer.net/assets/images/social/contact.jpg'
-        }
-        // Add other pages as needed
-      };
+   const pageMeta = {
+  '/': {
+    title: "Redeem Money Transfer - Secure Worldwide Money Transfers | Send Money Online",
+    description:
+      "Redeem Money Transfer offers fast, secure, and affordable money transfers worldwide. Send money to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & more with real-time tracking and encrypted transactions.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/"
+  },
+  '/aboutus': {
+    title: "About Redeem Money Transfer - Trusted Global Money Transfer Services",
+    description:
+      "Redeem Money Transfer is a licensed Money Services Business (MSB) providing secure, fast, and cost-effective money transfers from Canada & UK to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & more.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/aboutus"
+  },
+  '/contactus': {
+    title: "Contact Redeem Money Transfer - Secure Worldwide Money Transfers",
+    description:
+      "Get in touch with Redeem Money Transfer for secure money transfers from Canada & UK to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong, and more. Reach us via phone or email.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/contactus"
+  },
+  '/help': {
+    title: "Redeem Money Transfer Help - Secure Money Transfer Assistance Worldwide",
+    description:
+      "Need help with your international money transfer? Redeem Money Transfer offers support for secure, fast, and affordable transactions. Get assistance with sending money to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong, and more.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/help"
+  },
+  '/onboarding': {
+    title: "Redeem Money Transfer Onboarding - Easy & Secure Money Transfers Worldwide",
+    description:
+      "Sign up with Redeem Money Transfer for fast, secure international money transfers. Send money to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & more with real-time tracking and seamless transactions.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/onboarding"
+  },
+  '/livenesscheck': {
+    title: "Identity Verification - Redeem Money Transfer",
+    description: "Complete your identity verification to secure your account.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/livenesscheck"
+  },
+  '/data-safety': {
+    title: "Redeem Money Transfer Data Safety - Secure & Encrypted Money Transfers",
+    description:
+      "Redeem Money Transfer prioritizes data security with encrypted transactions for safe and transparent money transfers. Send funds securely to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & beyond.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/data-safety"
+  },
+  '/general-faq': {
+    title: "Redeem Money Transfer FAQ - Answers to Secure Money Transfers Worldwide",
+    description:
+      "Find answers to common questions about sending money securely with Redeem Money Transfer. Learn about exchange rates, transaction security, transfer timelines, fees, and remittance services for UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & beyond.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/general-faq"
+  },
+  '/onboarding-faq': {
+    title: "Onboarding FAQ - Redeem Money Transfer",
+    description: "Frequently asked questions about account setup and verification.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/onboarding-faq"
+  },
+  '/cookie-policy': {
+    title: "Cookie Policy - Redeem Money Transfer",
+    description: "Learn how we use cookies to improve your experience.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/cookie-policy"
+  },
+  '/complaint-policy': {
+    title: "Complaint Policy - Redeem Money Transfer",
+    description: "Our process for handling customer complaints and feedback.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/complaint-policy"
+  },
+  '/privacy-policy': {
+    title: "Redeem Money Transfer Privacy Policy - Secure & Transparent Money Transfers",
+    description:
+      "Learn how Redeem Money Transfer protects your data with secure encryption and privacy safeguards. We ensure safe and transparent money transfers to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & beyond.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/privacy-policy"
+  },
+  '/terms-and-conditions': {
+    title: "Terms & Conditions - Redeem Money Transfer",
+    description: "Legal terms governing your use of our services.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/terms-and-conditions"
+  },
+  '/money-transfer': {
+    title: "Redeem Money Transfer - Fast & Secure Global Money Transfers",
+    description:
+      "Send money worldwide securely with Redeem Money Transfer. Enjoy fast transactions, competitive rates, and real-time tracking when transferring funds to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & beyond.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/money-transfer"
+  },
+  '/finish': {
+    title: "Redeem Money Transfer Onboarding - Easy & Secure Money Transfers Worldwide",
+    description:
+      "Sign up with Redeem Money Transfer for fast, secure international money transfers. Send money to UAE, UK, Australia, Japan, Switzerland, Singapore, Hong Kong & more with real-time tracking and seamless transactions.",
+    image: "https://redeemtransfer.net/assets/images/logo/logo.png",
+    canonicalUrl: "https://redeemtransfer.net/finish"
+  }
+};
+
       
       const path = window.location.pathname;
       if(pageMeta[path]) {
