@@ -471,7 +471,7 @@ function Calculator() {
       justifyContent: "space-between",
       width: "100%",
       height: "54px",
-      backgroundColor: "transparent",
+      backgroundColor: "#f8fafc",
       border: "1px solid #d1d1d1",
       borderRadius:"7px",
       padding: "10px 15px",
