@@ -52,24 +52,16 @@ function Calculator() {
   const countryDropdownRef = useRef(null);
   const [hoveredCountryId, setHoveredCountryId] = useState(null); // For hover effect
 
-  // --- START OF NEW LOGIC: Helper function to fix image path case-sensitivity ---
   const getLowercaseImagePath = (path) => {
-    // If the path is not a valid string, return it as is.
     if (!path || typeof path !== 'string') {
       return path;
     }
-    // Split the path into parts
     const parts = path.split('/');
-    // Get the filename (the last part)
     const filename = parts.pop();
-    // Convert only the filename to lowercase
     const lowercaseFilename = filename.toLowerCase();
-    // Re-add the corrected filename to the path parts
     parts.push(lowercaseFilename);
-    // Join the parts back together and return the corrected path
     return parts.join('/');
   };
-  // --- END OF NEW LOGIC ---
 
   useEffect(() => {
     const pathParts = location.pathname.split("_");
@@ -468,7 +460,7 @@ function Calculator() {
     country.countryName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // --- Your provided styles as a JavaScript object ---
+  // --- Styles object with changes for the sticky search bar ---
   const dropdownStyles = {
     dropdownContainer: {
       position: "relative",
@@ -478,23 +470,23 @@ function Calculator() {
       alignItems: "center",
       justifyContent: "space-between",
       width: "100%",
-      height: "55px",
+      height: "54px",
       backgroundColor: "transparent",
-      borderBottom: "1px solid #000", // Adjusted for better visibility
-      padding: "10px 15px", // Adjusted padding
-      color: "#000", // Adjusted for consistency with other inputs
-      fontWeight: "normal", // Adjusted for consistency
+      borderBottom: "1px solid #000",
+      padding: "10px 15px",
+      color: "#000",
+      fontWeight: "normal",
       fontSize: "16px",
       cursor: "pointer",
       position: "relative",
-      boxSizing: "border-box", // Important for correct sizing
+      boxSizing: "border-box",
     },
     dropdownHeaderText: {
       flexGrow: 1,
       whiteSpace: "nowrap",
       overflow: "hidden",
       textOverflow: "ellipsis",
-      paddingLeft: "35px", // Make space for the absolutely positioned flag
+      paddingLeft: "35px",
       fontWeight: "bolder",
       color: "#000",
       fontSize: "20px"
@@ -509,7 +501,7 @@ function Calculator() {
       display: 'inline-block',
       padding: '4px',
     },
-    dropdownListContainer: {
+    dropdownMenu: { // Main container for the dropdown content
       position: "absolute",
       top: "100%",
       left: 0,
@@ -518,19 +510,26 @@ function Calculator() {
       borderRadius: "5px",
       backgroundColor: "#fff",
       zIndex: 1000,
-      maxHeight: "250px",
-      overflowY: "auto",
       boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+      display: 'flex',
+      flexDirection: 'column',
     },
-    searchInput: {
-      width: "calc(100% - 20px)",
+    searchContainer: { // Container for the search input to keep it sticky
+      padding: '10px',
+      borderBottom: '1px solid #eee',
+    },
+    searchInput: { // Modified search input styles
+      width: "100%",
       padding: "10px",
-      margin: "10px",
-      border: "1px solid #eee",
+      border: "1px solid #ddd",
       borderRadius: "5px",
       boxSizing: "border-box",
       fontSize: "16px",
       outline: 'none',
+    },
+    dropdownList: { // The scrollable list part
+      maxHeight: "200px",
+      overflowY: "auto",
     },
     dropdownListItem: {
       display: "flex",
@@ -540,7 +539,7 @@ function Calculator() {
       color: "#000",
       fontSize: "16px",
       gap: '10px',
-      fontWeight:"bolder"
+      fontWeight: "bolder"
     },
     dropdownListItemHover: {
       backgroundColor: "#f0f0f0",
@@ -554,8 +553,8 @@ function Calculator() {
     currencyCodeInHeader: {
       color: '#888',
       fontWeight: '500',
-      marginLeft: 'auto', // Pushes it to the right
-      paddingRight: '30px', // Space before the arrow
+      marginLeft: 'auto',
+      paddingRight: '30px',
     }
   };
 
@@ -584,7 +583,7 @@ function Calculator() {
                     <img
                       className="flagicon baseflag mt-0"
                       src={
-                        getLowercaseImagePath(baseCurrencyData.find( // Applied fix here
+                        getLowercaseImagePath(baseCurrencyData.find(
                           (currency) =>
                             currency.baseCurrencyID.toString() ===
                             baseCurrencyId1
@@ -676,7 +675,7 @@ function Calculator() {
                   />
                   <img
                     className="flagicon baseflag mt-0"
-                    src={getLowercaseImagePath(selectedCurrency?.currencyFlag) || "default-flag.png"} // Applied fix here
+                    src={getLowercaseImagePath(selectedCurrency?.currencyFlag) || "default-flag.png"}
                     alt="Currency Flag"
                   />
                   <select value={currencyCode} onChange={handleCurrencyChange}>
@@ -692,7 +691,7 @@ function Calculator() {
                 </div>
               </div>
 
-              {/* --- Custom Searchable Dropdown for Destination Country --- */}
+              {/* --- Custom Searchable Dropdown with Sticky Search --- */}
               <div className="col-lg-12 col-md-12">
                 <div className="form-group" ref={countryDropdownRef}>
                   <label htmlFor="send_money">Destination Country</label>
@@ -702,7 +701,7 @@ function Calculator() {
                       onClick={() => setIsCountryDropdownOpen((prev) => !prev)}
                     >
                       <img
-                        src={getLowercaseImagePath(selectedCountryDetails?.flag || selectedCountryDetails?.countryFlag)} // Applied fix here
+                        src={getLowercaseImagePath(selectedCountryDetails?.flag || selectedCountryDetails?.countryFlag)}
                         alt="flag"
                         style={dropdownStyles.flagInDropdownHeader}
                       />
@@ -714,16 +713,18 @@ function Calculator() {
                     </div>
 
                     {isCountryDropdownOpen && (
-                      <div style={dropdownStyles.dropdownListContainer}>
-                        <input
-                          type="text"
-                          style={dropdownStyles.searchInput}
-                          placeholder="Search country..."
-                          value={searchTerm}
-                          onChange={(e) => setSearchTerm(e.target.value)}
-                          autoFocus
-                        />
-                        <div>
+                      <div style={dropdownStyles.dropdownMenu}>
+                        <div style={dropdownStyles.searchContainer}>
+                          <input
+                            type="text"
+                            style={dropdownStyles.searchInput}
+                            placeholder="Search country..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            autoFocus
+                          />
+                        </div>
+                        <div style={dropdownStyles.dropdownList}>
                           {filteredCountries.length > 0 ? (
                             filteredCountries.map((country) => (
                               <div
@@ -737,6 +738,11 @@ function Calculator() {
                                 onMouseLeave={() => setHoveredCountryId(null)}
                                 onClick={() => handleCountrySelect(country)}
                               >
+                                <img
+                                  src={getLowercaseImagePath(country.flag || country.countryFlag)}
+                                  alt={`${country.countryName} flag`}
+                                  style={{ width: "24px", height: "auto" }}
+                                />
                                 <span>{country.countryName}</span>
                               </div>
                             ))
