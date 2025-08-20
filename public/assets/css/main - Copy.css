@@ -11522,350 +11522,124 @@ button.show {
     margin-right: 10px;
 }
 
-/* *Calculator CSS*/ */
-
-.calcssmr {
-  background-color: rgba(255, 255, 255, 0.6) !important; /* Semi-transparent background */
-  padding: 20px!important;
-  border-radius: 20px!important;
-  -webkit-backdrop-filter: blur(10px)!important; /* Safari support */
-  backdrop-filter: blur(10px)!important; /* Blur effect */
-  border: 1px solid rgba(255, 255, 255, 0.2)!important; /* Light border for better glass look */
-  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05)!important;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05)!important;
+/* Calculator Css */
+.calculator {
+    padding: 25px;
+    border-radius: 30px;
+    border: 0 !important;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(24.9px);
+    backdrop-filter: blur(24.9px);
 }
 
-.calcssmr {  
- background-color: rgba(255, 255, 255, 0.6) !important; /* Semi-transparent background */
-  padding: 20px!important;
-  border-radius: 20px!important;
-  -webkit-backdrop-filter: blur(10px)!important; /* Safari support */
-  backdrop-filter: blur(10px)!important; /* Blur effect */
-  border: 1px solid rgba(255, 255, 255, 0.2)!important; /* Light border for better glass look */
-  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05)!important;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05)!important;
-}
-.bg-color-cal .calcssmr{
-  background-color: rgba(45, 43, 181, 0.9) !important; /* Semi-transparent background */
-}
-
-
-@media only screen and (max-width: 600px) {
-  .calcssmr {
-        margin-right: 0px;
-        margin: 20px 0;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-  .calcssmr {
-        margin-right: 0px !important;
-        margin-bottom: 20px;
-    }
-}
-
-.service-charge-wrap .charge-form .form-group img {
-    position: absolute;
-    bottom: 0;
-    right: 100px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-}
-
-.service-charge-wrap .charge-form .form-group {
-    position: relative;
-    margin-bottom: 20px
-}
-
-.service-charge-wrap .charge-form .form-group label {
-    font-size: 14px;
-    display: block;
-    margin: 0 0 5px;
-    line-height: 1;
-    color: #000;
-}
-
-.service-charge-wrap .charge-form .form-group input {
+.calculator label {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-align: left;
     width: 100%;
-    height: 54px;
-    background-color: transparent;
-    border: 1px solid #000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0 0 5px 0;
-    padding: 10px 7px;
+}
+
+.send-money-input {
+    /* This input will grow to fill all available space */
+    flex-grow: 1;
+    /* This prevents it from overflowing when the screen is narrow */
+    min-width: 0;
+
+    /* Your original styling */
+    font-weight: 600;
+    font-size: 24px !important;
     color: #000;
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-.service-charge-wrap .charge-form .form-group select.myselect {
-    width: 100%;
-    height: 55px;
-    background-color: transparent;
-    border: 1px solid #000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0 0 5px 0;
-    padding: 10px 7px;
-    color: #000;
-    font-weight: bolder;
-    font-size: 20px;
-    position: relative;
-    bottom: 0px;
-    right: 7px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
-    background-size: 10px 10px;
-    background-position: 70% 50%;
-    background-repeat: no-repeat, repeat;
-    cursor: pointer;
-}
-
-.service-charge-wrap .charge-form .form-group select.myselect option{
-    background-color: #fff;
-    color: #000;
-}
-
-.service-charge-wrap .charge-form .form-group select.selectcollectiontype {
-    width: 100%;
-    height: 55px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    border: 1px solid #000;
-    padding: 10px 7px;
-    color: #292929;
-    font-weight: bolder;
-    font-size: 20px;
-    position: relative;
-    bottom: 0px;
-    right: 0;
-    background-image: url(../img/down-arrow.png);
-    background-position: 95% 50%;
-    background-repeat: no-repeat, repeat;
-    cursor: pointer;
-}
-
-
-.service-charge-wrap .charge-form .form-group select {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color:#7aa6ff;
-    color: #fff;
-    border-radius: 5px;
-    width: 100px;
-    height: 54px;
-    padding: 15px 10px;
+    padding: 12px 10px 12px 0;
     border: none;
-    /* background-image: url(../img/down-arrow-2.png);
-        background-size: 12px;
-        background-position: 85% 53%; */
+    border-bottom: 1px solid #000 !important;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* --- KEY FIX IS HERE --- */
+/* Target the wrapper div that you are using */
+.form-group {
+    /* This tells the wrapper div NOT to shrink, protecting the selector inside */
+    flex-shrink: 0;
+}
+
+/* The currency selector box */
+.send-money-side {
+    /* This is CRUCIAL to prevent text like "GBP" from wrapping to "G BP" */
+    white-space: nowrap;
+
+    /* Your original styling for the selector */
+    display: flex !important;
+    align-items: center;
+    gap: 8px !important;
+    outline: 1px solid #000 !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
     cursor: pointer;
-    font-weight: bolder;
-    border-bottom: 1px solid #000;
-}
-
-.service-charge-wrap .charge-form .form-group select option{
-    background-color: #fff;
-    color: #000;
-}
-
-.service-charge-wrap .charge-form .form-group span.inputgbp {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #7aa6ff;
-    color: #fff;
-    border-radius: 5px;
-    width: 100px;
-    height: 54px;
-    padding: 15px 10px;
-    border: none;
-    background-size: 12px;
-    background-position: 85% 53%;
     font-size: 16px !important;
-}
-
-.service-charge-wrap .charge-form .form-group img {
-    position: absolute;
-    bottom: 0;
-    right: 95px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-}
-
-.service-charge-wrap .charge-form p {
-    font-size: 14px;
-}
-
-.service-charge-wrap .charge-form .form-btn {
-    margin-top: 5px
-}
-
-.service-charge-wrap .charge-form p {
-    display: inline-block;
-    color: #000;
-    margin: 0 15px 0 0;
-    padding-right: 15px;
-    position: relative
-}
-
-.service-charge-wrap .charge-form p:last-child {
-    margin: 0;
-    padding: 0
-}
-
-.service-charge-wrap .charge-form p:last-child:after {
-    display: none
-}
-
-.service-charge-wrap .charge-form p:after {
-    position: absolute;
-    top: 9px;
-    right: 0;
-    content: "";
-    width: 1px;
-    height: 14px;
-    background-color: rgba(255, 255, 255, .5)
-}
-
-.service-charge-wrap .charge-form p strong {
-    color: #7aa6ff;
-}
-
-.service-charge-wrap .charge-form p span {
     font-weight: 600;
+    height: fit-content;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info {
-    position: relative;
-    z-index: 1;
-    padding-left: 0px;
-    margin-top: 10px;
-    margin-bottom: 15px
+/* --- The rest of your styles --- */
+.dropdown-clc {
+    padding: 13px;
+    position: absolute !important;
+    max-width: 500px;
+    right: 20px;
+    z-index: 999;
+    border-radius: 10px;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 7px;
-    width: 2px;
-    height: 95px;
-    background-color: #7aa6ff;
-    z-index: -1;
-}
-
-.service-charge-wrap .charge-form .amount-currency-info li {
-    margin-bottom: 10px
-}
-
-.service-charge-wrap .charge-form .amount-currency-info li:last-child {
-    margin-bottom: 0
-}
-
-.service-charge-wrap .charge-form .amount-currency-info li .info-icon i {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    line-height: 30px;
-    background-color: #7aa6ff;
-    text-align: center;
-    font-size: 1px;
+.dropdown-clc input[type="text"] {
+    border-radius: 8px !important;
+    font-weight: 600;
+    font-size: 18px !important;
     color: #000;
-    border-radius: 50%
+    width: 100% !important;
+    padding: 15px 24px 15px 20px;
+    background-color: transparent;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-icon strong {
-    color: #7aa6ff;
-    margin-left: 7px;
+.dropdown-clc ul,
+.dropdown-clc ul.currency-list {
+    overflow-y: auto !important;
+    height: 25vh;
+    padding: 0;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-icon b {
-    color: #7aa6ff;
-    margin-left: 15px;
+.common-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-left b {
-    color: #5D7079;
+.list-group-item.active {
+    z-index: 2;
+    color: #000000 !important;
+    background-color: #e3e3e3 !important;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-left span {
-    color: #5D7079;
+.countryNamecss {
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-left strong {
-    color: #000
+.currencycodecss {
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-left strong i {
-    margin-left: 5px;
-    color: #000;
+.payment-icon img {
+    max-width: 70%;
 }
 
-.service-charge-wrap .charge-form .amount-currency-info li .info-right {
-    position: relative;
-    padding-right: 0px
-}
-
-.service-charge-wrap .charge-form .amount-currency-info li .info-right .amount-currency-select button {
-    background: #f7fbfc;
-    border: 1px solid #000;
-    color: #2A3F65;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.service-charge-wrap .charge-form .amount-currency-info li .info-right .amount-currency-select .dropdown-toggle {
-    /*background: #f7fbfc;*/
-    border: 1px solid #000;
-    color: #2A3F65;
-    font-size: 15px;
-    padding: 10px 20px 10px 10px;
-    border-radius: 5px;
+.cursor-pointer {
     cursor: pointer;
 }
-
-
-.service-charge-wrap .charge-form a {
-    font-size: 15px;
-    background: #7aa6ff;
-    padding: 15px 30px;
-    border-radius: 0px;
-    color: #000;
-    font-weight: 600;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    top: 3px;
-    border-radius: 100px;
-    border: 1px solid #7aa6ff;
-    text-align: center;
-}
-
-.service-charge-wrap .charge-form a:hover {
-    background-color: #2d2bb5;
-    border: 1px solid #2d2bb5;
-    color: #7aa6ff;
-}
-
-@media only screen and (max-width: 767px) {
-    .service-charge-wrap .charge-form .form-group select.myselect {
-        background-position: 53% 50%;
-        font-size: 16px;
-    }
-    .hero_online_banking .service-charge-wrap .charge-form {
-      text-align: start;
-    }
-}
-/* End */
 
 .error-text {
     color: red;
