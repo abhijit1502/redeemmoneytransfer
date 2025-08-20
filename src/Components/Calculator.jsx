@@ -41,14 +41,35 @@ function Calculator() {
   const baseUrl = "../ApiConfig.js";
   const location = useLocation();
   const amountTimeoutRef = useRef(null);
-  // const baseCountryFlags = {
-  //   1: 'assets/img/flags/gbp.png',
-  //   6: 'assets/img/flags/eur.png',
-  // };
   const [baseCountryFlag, setBaseCountryFlag] = useState("");
   const [baseCurrencyCode, setBaseCurrencyCode] = useState("");
   const [foreignCurrencyCode, setForeignCurrencyCode] = useState("");
   const [selectedCurrency, setSelectedCurrency] = useState(null);
+
+  // --- State and refs for custom searchable dropdown ---
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const countryDropdownRef = useRef(null);
+  const [hoveredCountryId, setHoveredCountryId] = useState(null); // For hover effect
+
+  // --- START OF NEW LOGIC: Helper function to fix image path case-sensitivity ---
+  const getLowercaseImagePath = (path) => {
+    // If the path is not a valid string, return it as is.
+    if (!path || typeof path !== 'string') {
+      return path;
+    }
+    // Split the path into parts
+    const parts = path.split('/');
+    // Get the filename (the last part)
+    const filename = parts.pop();
+    // Convert only the filename to lowercase
+    const lowercaseFilename = filename.toLowerCase();
+    // Re-add the corrected filename to the path parts
+    parts.push(lowercaseFilename);
+    // Join the parts back together and return the corrected path
+    return parts.join('/');
+  };
+  // --- END OF NEW LOGIC ---
 
   useEffect(() => {
     const pathParts = location.pathname.split("_");
@@ -84,30 +105,26 @@ function Calculator() {
     setpaymenttypeId(selectedPaymentType);
   };
 
-  const handleCountryChange = (event) => {
-    const newCountryId = event.target.value;
-    setSelectedCountry(newCountryId);
-    const newCountryDetails = countries.find(
-      (country) => country.countryID.toString() === newCountryId
-    );
-    setSelectedCountryDetails(newCountryDetails);
-    if (newCountryDetails) {
-      setCurrencyCode(newCountryDetails.countryCurrency);
+  const handleCountrySelect = (country) => {
+    setSelectedCountry(country.countryID.toString());
+    setSelectedCountryDetails(country);
+    if (country) {
+      setCurrencyCode(country.countryCurrency);
     }
+    setIsCountryDropdownOpen(false);
+    setSearchTerm("");
   };
+
   const handleCalculatedAmountChange = (event) => {
     event.preventDefault();
     let newCalculatedAmount = event.target.value;
     setRecipentGetInput(true);
-    // Remove any non-numeric characters from the input
     newCalculatedAmount = newCalculatedAmount.replace(/[^0-9.]/g, "");
 
-    // Ensure the input does not exceed 7 digits
     if (newCalculatedAmount.length > 12) {
       newCalculatedAmount = newCalculatedAmount.slice(0, 0);
     }
 
-    // Update the state with the cleaned amount
     setCalculatedAmount(newCalculatedAmount);
     setUserEnteredAmount(newCalculatedAmount / rate || "");
     setAmount(newCalculatedAmount / rate || "");
@@ -117,60 +134,42 @@ function Calculator() {
     event.preventDefault();
     const newAmount = event.target.value;
     setyouSendInput(true);
-
-    // Remove leading zeros
     let cleanedAmount = newAmount.replace(/^0+/, "");
-
-    // Allow typing with .00 or without it
     if (cleanedAmount.endsWith(".00")) {
-      cleanedAmount = cleanedAmount.slice(0, -3); // Remove the .00 for valid input
+      cleanedAmount = cleanedAmount.slice(0, -3);
     }
 
-    // Check if the cleaned amount is a valid number
     if (!isNaN(cleanedAmount)) {
-      // Limit the input to 12 digits
       if (cleanedAmount.length <= 12) {
         setAmount(cleanedAmount);
         setUserEnteredAmount(cleanedAmount);
       } else {
-        // Allow input after 12 digits
-        setAmount(cleanedAmount.substring(0, 12)); // Limit to 12 digits
+        setAmount(cleanedAmount.substring(0, 12));
         setUserEnteredAmount(cleanedAmount.substring(0, 12));
       }
     } else {
-      // Handle non-numeric input
       setAmount("0");
       setUserEnteredAmount("0");
-      // setRate('0');
-      // setFees('0');
       setCalculatedAmount("0");
     }
   };
   const handleAmountBlur = (event) => {
     let value = event.target.value;
-
-    // Remove any non-numeric characters (except for decimal points)
     value = value.replace(/[^0-9.]/g, "");
 
-    // Check if the value is a valid number
     if (!isNaN(value) && value !== "") {
-      // Convert to float
       const numericValue = parseFloat(value);
-
-      // Only format if the value is greater than 0
       if (numericValue > 0) {
         const formattedValue = numericValue.toFixed(2);
-        setAmount(formattedValue); // Update the state
-        setUserEnteredAmount(formattedValue); // Update user entered amount
-        event.target.value = formattedValue; // Ensure input reflects formatted value
+        setAmount(formattedValue);
+        setUserEnteredAmount(formattedValue);
+        event.target.value = formattedValue;
       } else {
-        // If the value is 0 or empty, reset to an empty string
         setAmount("0");
         setUserEnteredAmount("0");
         event.target.value = "0";
       }
     } else {
-      // If not a valid number, reset to an empty string
       setAmount("0");
       setUserEnteredAmount("0");
       event.target.value = "0";
@@ -182,7 +181,6 @@ function Calculator() {
   };
 
   const handleInputFocus = () => {
-    // Set minimumFractionDigits to 0 when focus is in
     setMinimumFractionDigits(0);
   };
 
@@ -193,11 +191,9 @@ function Calculator() {
       return;
     }
     toast.success("Amount Calculated Successfully!");
-    // Open the link in a new tab
     window.open("https://redeemtransfer.net/app/", "_blank");
   };
 
-  // Fetch countries on component mount
   useEffect(() => {
     axios
       .post(`${ApiConfig.baseUrl}/checkrateslistcountry/basecurrencylist`, {
@@ -224,8 +220,8 @@ function Calculator() {
     );
 
     if (selectedCurrency) {
-      setBaseCurrencyId1(selectedId); // Update selected baseCurrencyID
-      setBaseCurrencyCode(selectedCurrency.countryCurrency); // Update the displayed currency code
+      setBaseCurrencyId1(selectedId);
+      setBaseCurrencyCode(selectedCurrency.countryCurrency);
     }
   };
 
@@ -242,7 +238,7 @@ function Calculator() {
             const firstCurrency = response.data.data[0];
             if (firstCurrency) {
               setCurrencyCode(firstCurrency.currencyCode);
-              setSelectedCurrency(firstCurrency); // Set initial flag
+              setSelectedCurrency(firstCurrency);
               setForeignCurrencyCode(firstCurrency?.currencyID.toString());
               setstaticCurrencyCode(firstCurrency.currencyCode);
             }
@@ -258,18 +254,16 @@ function Calculator() {
     const selectedCode = e.target.value;
     setCurrencyCode(selectedCode);
 
-    // Find the selected currency from the list
     const selectedCurrency = currencyList.find(
       (currency) => currency.currencyCode === selectedCode
     );
 
     if (selectedCurrency) {
       setSelectedCurrency(selectedCurrency);
-      setForeignCurrencyCode(selectedCurrency.currencyID.toString()); // Update currencyID dynamically
+      setForeignCurrencyCode(selectedCurrency.currencyID.toString());
     }
   };
 
-  // This useEffect fetches the country list, sorts it, and sets the default selection.
   useEffect(() => {
     axios
       .post(`${ApiConfig.baseUrl}/checkrateslistcountry/checklistcountry`, {
@@ -281,20 +275,16 @@ function Calculator() {
           response.data.data &&
           response.data.data.length > 0
         ) {
-          // Sort the fetched countries alphabetically by countryName
           const sortedCountries = response.data.data.sort((a, b) =>
             a.countryName.localeCompare(b.countryName)
           );
-
           setCountries(sortedCountries);
 
-          // If selectedCountry is not yet set, default to the first country from the sorted list.
           if (!selectedCountry) {
             const firstCountry = sortedCountries[0];
             setSelectedCountry(firstCountry.countryID.toString());
             setSelectedCountryDetails(firstCountry);
           } else {
-            // Otherwise, find and set the details for the currently selected country.
             const currentCountryDetails = sortedCountries.find(
               (country) => country.countryID === parseInt(selectedCountry, 10)
             );
@@ -306,7 +296,7 @@ function Calculator() {
   }, [selectedCountry]);
 
   useEffect(() => {
-    if (!selectedCountry) return; // Don't fetch if no country is selected
+    if (!selectedCountry) return;
     axios
       .post(`${ApiConfig.baseUrl}/collection/getcollectiontype`, {
         clientID: "1",
@@ -331,7 +321,7 @@ function Calculator() {
   }, [selectedCountry, selectedBranchId]);
 
   useEffect(() => {
-    if (!selectedCountry) return; // Don't fetch if no country is selected
+    if (!selectedCountry) return;
     axios
       .post(`${ApiConfig.baseUrl}/deliverytype/getdeliverytype`, {
         clientID: "1",
@@ -459,6 +449,117 @@ function Calculator() {
     selectBasecountryId,
   ]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        countryDropdownRef.current &&
+        !countryDropdownRef.current.contains(event.target)
+      ) {
+        setIsCountryDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const filteredCountries = countries.filter((country) =>
+    country.countryName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // --- Your provided styles as a JavaScript object ---
+  const dropdownStyles = {
+    dropdownContainer: {
+      position: "relative",
+    },
+    dropdownHeader: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      width: "100%",
+      height: "55px",
+      backgroundColor: "transparent",
+      borderBottom: "1px solid #000", // Adjusted for better visibility
+      padding: "10px 15px", // Adjusted padding
+      color: "#000", // Adjusted for consistency with other inputs
+      fontWeight: "normal", // Adjusted for consistency
+      fontSize: "16px",
+      cursor: "pointer",
+      position: "relative",
+      boxSizing: "border-box", // Important for correct sizing
+    },
+    dropdownHeaderText: {
+      flexGrow: 1,
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      paddingLeft: "35px", // Make space for the absolutely positioned flag
+      fontWeight: "bolder",
+      color: "#000",
+      fontSize: "20px"
+    },
+    dropdownArrow: {
+      position: 'absolute',
+      right: '15px',
+      top: '50%',
+      transform: 'translateY(-50%) rotate(45deg)',
+      border: 'solid #000',
+      borderWidth: '0 1px 1px 0',
+      display: 'inline-block',
+      padding: '4px',
+    },
+    dropdownListContainer: {
+      position: "absolute",
+      top: "100%",
+      left: 0,
+      right: 0,
+      border: "1px solid #ddd",
+      borderRadius: "5px",
+      backgroundColor: "#fff",
+      zIndex: 1000,
+      maxHeight: "250px",
+      overflowY: "auto",
+      boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+    },
+    searchInput: {
+      width: "calc(100% - 20px)",
+      padding: "10px",
+      margin: "10px",
+      border: "1px solid #eee",
+      borderRadius: "5px",
+      boxSizing: "border-box",
+      fontSize: "16px",
+      outline: 'none',
+    },
+    dropdownListItem: {
+      display: "flex",
+      alignItems: "center",
+      padding: "10px 15px",
+      cursor: "pointer",
+      color: "#000",
+      fontSize: "16px",
+      gap: '10px',
+      fontWeight:"bolder"
+    },
+    dropdownListItemHover: {
+      backgroundColor: "#f0f0f0",
+    },
+    flagInDropdownHeader: {
+      position: 'absolute',
+      left: '0px',
+      top: '50%',
+      transform: 'translateY(-50%)',
+    },
+    currencyCodeInHeader: {
+      color: '#888',
+      fontWeight: '500',
+      marginLeft: 'auto', // Pushes it to the right
+      paddingRight: '30px', // Space before the arrow
+    }
+  };
+
+
   return (
     <>
       <div className="calcss calcssmr">
@@ -480,21 +581,18 @@ function Calculator() {
                     placeholder="0.00"
                   />
                   <div className="currency-selector">
-                    {/* Display selected flag with fallback */}
                     <img
                       className="flagicon baseflag mt-0"
                       src={
-                        baseCurrencyData.find(
+                        getLowercaseImagePath(baseCurrencyData.find( // Applied fix here
                           (currency) =>
                             currency.baseCurrencyID.toString() ===
                             baseCurrencyId1
-                        )?.countryFlag || "images/flags/gbp.png" // Hardcoded fallback image path
+                        )?.countryFlag) || "assets/images/flags/gbp.png"
                       }
                       alt="Selected Country Flag"
                       style={{ verticalAlign: "middle" }}
                     />
-
-                    {/* Dropdown for currency selection */}
                     <select
                       className="inputgbp"
                       value={baseCurrencyId1}
@@ -568,17 +666,17 @@ function Calculator() {
                     name="received_money"
                     value={calculatedAmount
                       .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} // Comma-separated format
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                     onChange={handleCalculatedAmountChange}
                     onBlur={handleInputFocusOut}
                     onFocus={handleInputFocus}
                     disabled={rate === 0 ? true : false}
-                    maxLength={12} // Limiting input to 12 characters
+                    maxLength={12}
                     placeholder="0.00"
                   />
                   <img
                     className="flagicon baseflag mt-0"
-                    src={selectedCurrency?.currencyFlag || "default-flag.png"} // Default fallback
+                    src={getLowercaseImagePath(selectedCurrency?.currencyFlag) || "default-flag.png"} // Applied fix here
                     alt="Currency Flag"
                   />
                   <select value={currencyCode} onChange={handleCurrencyChange}>
@@ -594,29 +692,63 @@ function Calculator() {
                 </div>
               </div>
 
+              {/* --- Custom Searchable Dropdown for Destination Country --- */}
               <div className="col-lg-12 col-md-12">
-                <div className="form-group">
+                <div className="form-group" ref={countryDropdownRef}>
                   <label htmlFor="send_money">Destination Country</label>
-                  <select
-                    className="myselect"
-                    value={selectedCountry}
-                    onChange={handleCountryChange}
-                  >
-                    {countries.map((country) => (
-                      <option key={country.countryID} value={country.countryID}>
-                        {country.countryName}
-                      </option>
-                    ))}
-                  </select>
-                  <img
-                    className="flagicon ddlcurrency_flag"
-                    src={
-                      selectedCountryDetails?.flag ||
-                      selectedCountryDetails?.countryFlag
-                    }
-                    alt="Currency Flags"
-                  />
-                  <span className="inputgbp">{staticCurrencyCode}</span>
+                  <div style={dropdownStyles.dropdownContainer}>
+                    <div
+                      style={dropdownStyles.dropdownHeader}
+                      onClick={() => setIsCountryDropdownOpen((prev) => !prev)}
+                    >
+                      <img
+                        src={getLowercaseImagePath(selectedCountryDetails?.flag || selectedCountryDetails?.countryFlag)} // Applied fix here
+                        alt="flag"
+                        style={dropdownStyles.flagInDropdownHeader}
+                      />
+                      <span style={dropdownStyles.dropdownHeaderText}>
+                        {selectedCountryDetails?.countryName || "Select Country"}
+                      </span>
+                      <span className="d-none" style={dropdownStyles.currencyCodeInHeader}>{staticCurrencyCode}</span>
+                      <span style={dropdownStyles.dropdownArrow}></span>
+                    </div>
+
+                    {isCountryDropdownOpen && (
+                      <div style={dropdownStyles.dropdownListContainer}>
+                        <input
+                          type="text"
+                          style={dropdownStyles.searchInput}
+                          placeholder="Search country..."
+                          value={searchTerm}
+                          onChange={(e) => setSearchTerm(e.target.value)}
+                          autoFocus
+                        />
+                        <div>
+                          {filteredCountries.length > 0 ? (
+                            filteredCountries.map((country) => (
+                              <div
+                                key={country.countryID}
+                                style={
+                                  hoveredCountryId === country.countryID
+                                    ? { ...dropdownStyles.dropdownListItem, ...dropdownStyles.dropdownListItemHover }
+                                    : dropdownStyles.dropdownListItem
+                                }
+                                onMouseEnter={() => setHoveredCountryId(country.countryID)}
+                                onMouseLeave={() => setHoveredCountryId(null)}
+                                onClick={() => handleCountrySelect(country)}
+                              >
+                                <span>{country.countryName}</span>
+                              </div>
+                            ))
+                          ) : (
+                            <div style={dropdownStyles.dropdownListItem}>
+                              No countries found
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -636,11 +768,11 @@ function Calculator() {
                 <p>
                   <span>Exchange Rate:</span>{" "}
                   <strong className="txtExchangeRates">
-                    1 GBP = {rate} {currencyCode}
+                    1 {baseCurrencyCode} = {rate} {currencyCode}
                   </strong>
                 </p>
               </div>
-               <div className="col-lg-12 text-center mb-2">
+              <div className="col-lg-12 text-center mb-2">
                 <p>
                   <span>Transfer Fee</span>{" "}
                   <strong id="txtTransferFee" className="txtTransferFee">

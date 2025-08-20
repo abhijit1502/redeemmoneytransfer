@@ -11688,6 +11688,7 @@ button.show {
     background-size: 12px;
     background-position: 85% 53%;
     font-size: 16px !important;
+    font-weight: bolder;
 }
 
 .service-charge-wrap .charge-form .form-group img {
