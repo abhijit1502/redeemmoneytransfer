@@ -472,7 +472,8 @@ function Calculator() {
       width: "100%",
       height: "54px",
       backgroundColor: "transparent",
-      borderBottom: "1px solid #000",
+      border: "1px solid #d1d1d1",
+      borderRadius:"7px",
       padding: "10px 15px",
       color: "#000",
       fontWeight: "normal",
@@ -486,7 +487,7 @@ function Calculator() {
       whiteSpace: "nowrap",
       overflow: "hidden",
       textOverflow: "ellipsis",
-      paddingLeft: "35px",
+      // paddingLeft: "35px",
       fontWeight: "bolder",
       color: "#000",
       fontSize: "20px"
@@ -494,7 +495,7 @@ function Calculator() {
     dropdownArrow: {
       position: 'absolute',
       right: '15px',
-      top: '50%',
+      top: '45%',
       transform: 'translateY(-50%) rotate(45deg)',
       border: 'solid #000',
       borderWidth: '0 1px 1px 0',
@@ -581,7 +582,7 @@ function Calculator() {
                   />
                   <div className="currency-selector">
                     <img
-                      className="flagicon baseflag mt-0"
+                      className="flagicon baseflag mt-0 d-none"
                       src={
                         getLowercaseImagePath(baseCurrencyData.find(
                           (currency) =>
@@ -674,7 +675,7 @@ function Calculator() {
                     placeholder="0.00"
                   />
                   <img
-                    className="flagicon baseflag mt-0"
+                    className="flagicon baseflag mt-0 d-none"
                     src={getLowercaseImagePath(selectedCurrency?.currencyFlag) || "default-flag.png"}
                     alt="Currency Flag"
                   />
@@ -701,6 +702,7 @@ function Calculator() {
                       onClick={() => setIsCountryDropdownOpen((prev) => !prev)}
                     >
                       <img
+                        className="d-none"
                         src={getLowercaseImagePath(selectedCountryDetails?.flag || selectedCountryDetails?.countryFlag)}
                         alt="flag"
                         style={dropdownStyles.flagInDropdownHeader}
@@ -762,7 +764,7 @@ function Calculator() {
                 <div className="form-group form-btn">
                   <button
                     type="button"
-                    className="btn-link w-100 tw-py-3 hover-text-neutral-20 text-white rounded-3 fw-semibold mt-3"
+                    className="btn-link w-100 hover-text-neutral-20 text-white rounded-3 fw-semibold"
                     onClick={handleContinue}
                   >
                     Send Money
