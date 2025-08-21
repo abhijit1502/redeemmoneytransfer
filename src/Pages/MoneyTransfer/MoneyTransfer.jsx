@@ -85,32 +85,29 @@ const [isLoading, setIsLoading] = useState(true);
           {/* ======================= Our Feature Section Start ================ */}
           <section className="py-80 z-1 overflow-hidden">
             <div className="container">
-              <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap tw-mb-80-px">
-                <div className="max-w-560">
+  <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap">
+                <div className="tw-mb-80-px mx-auto text-center align-items-center justify-content-center">
                   <div
-                    className="d-flex align-items-center tw-gap-1 tw-mb-3"
+                    className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
                     data-aos="fade-up"
-                    data-aos-duration={800}
+                    data-aos-duration={600}
                   >
                     <img src="assets/images/icon/star-icon2.png" alt="Image" />
-                    <h5 className="text-primary-500 fw-normal">
-                      {" "}
-                     Send Money
+                    <h5 className="fw-normal text-primary-500">
+                      Send Money
                     </h5>
                   </div>
                   <h2
-                    className="fw-bold text-dark-600 h1 cursor-big"
+                    className="fw-bold tw-mb-3 cursor-big"
                     data-aos="fade-up"
-                    data-aos-duration={1000}
+                    data-aos-duration={800}
                   >
                     Super Fast & Secure Money Transfer Services
                   </h2>
-                </div>
-                <div className="max-w-400">
                   <p
-                    className="fw-normal tw-text-lg text-dark-500"
+                    className="tw-text-lg text-dark-500 fw-normal"
                     data-aos="fade-up"
-                    data-aos-duration={1200}
+                    data-aos-duration={1000}
                   >
                     Reliable, secure, fast, global, convenient, trusted,
                     seamless, innovative.
@@ -189,7 +186,7 @@ const [isLoading, setIsLoading] = useState(true);
           {/* ======================= Our Feature Section End ================ */}
 
           {/* About Us Section */}
-          <section className="py-80 z-1 overflow-hidden">
+          <section className="py-80 z-1 overflow-hidden d-none">
             <div className="container">
               <div className="row gy-4 align-items-center">
                 <div className="col-lg-6">
@@ -249,6 +246,183 @@ const [isLoading, setIsLoading] = useState(true);
               </div>
             </div>
           </section>
+
+
+
+           {/* =================== why choose us section start ======================= */}
+          <section className="py-80">
+            <div className="container">
+              <div className="d-flex align-items-center tw-gap-3 justify-content-between flex-wrap">
+                <div className="tw-mb-80-px mx-auto text-center align-items-center justify-content-center">
+                  <div
+                    className="d-flex justify-content-center align-items-center tw-gap-1 tw-mb-3 d-none"
+                    data-aos="fade-up"
+                    data-aos-duration={600}
+                  >
+                    <img src="assets/images/icon/star-icon2.png" alt="Image" />
+                    <h5 className="fw-normal text-primary-500">
+                      Send Money
+                    </h5>
+                  </div>
+                  <h2
+                    className="fw-bold tw-mb-3 cursor-big"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                  >
+                   Money Transfer at your Fingertips
+                  </h2>
+                  <p
+                    className="tw-text-lg text-dark-500 fw-normal"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    Experience hassle-free international transactions with Redeem. Securely send money online anytime, anywhere with instant transfers, competitive rates, and real-time tracking for complete peace of mind.
+                  </p>
+                </div>
+              </div>
+              <div className="row gy-4">
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
+                    data-aos="fade-up"
+                    data-aos-duration={600}
+                  >
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                    >
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
+                       <img src="assets/images/icon/Easy-Sign-Up.png" alt="Easy Sign Up" />
+                      </span>
+                    </span>
+                    <div>
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
+                        Easy Sign Up
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500 ">
+                        Get started in minutes with a quick, hassle-free process.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
+                    data-aos="fade-up"
+                    data-aos-duration={600}
+                  >
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                    >
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icon/Choose-Your-Payment-Method.png" alt="Choose Your Payment Method" />
+                      </span>
+                    </span>
+                    <div>
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
+                        Choose Your Payment Method
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500 ">
+                        Multiple secure payment options at your fingertips.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                    >
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icon/End-to-End-Data-Encryption.png" alt="End-to-End Data Encryption" />
+                      </span>
+                    </span>
+                    <div>
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
+                        End-to-End Data Encryption
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500 ">
+                        Maximum protection for every transaction you make.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                  >
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                     >
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icon/Live-Exchange-Rate-Updates.png" alt="Live Exchange Rate Updates" />
+                      </span>
+                    </span>
+                    <div>
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
+                        Live Exchange Rate Updates
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500 ">
+                        Always enjoy the most accurate and current rates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                    >
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icon/Transaction-Success-Confirmation.png" alt="Transaction Success Confirmation" />
+                      </span>
+                    </span>
+                    <div>
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
+                        Transaction Success Confirmation
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500 ">
+                        Instant confirmation when your transfer is complete.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="tw-rounded-xl tw-px-10 tw-py-10 text-center tw-hover-border-bottom-base-two-600 tw-duration-400"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                  >
+                    <span
+                      className="tw-w-72-px tw-h-72-px border-base-two-600 border tw-border-dashed tw-rounded-md d-flex align-items-center justify-content-center tw-mb-10 mx-auto"
+                    >
+                      <span className="tw-w-15 tw-h-15 tw-rounded-md  d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icon/Instant-Security-Alerts.png" alt="Instant Security Alerts" />
+                      </span>
+                    </span>
+                    <div>
+                      <h5 className="fw-semibold text-dark-60 tw-mb-3 cursor-big">
+                        Instant Security Alerts
+                      </h5>
+                      <p className="fw-normal tw-text-lg text-dark-500 ">
+                        Stay protected with real-time security notifications.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* =================== why choose us section end ======================= */}
 
           {/* ==================== Testimonials Two Section Start ================ */}
           <Testimonial />

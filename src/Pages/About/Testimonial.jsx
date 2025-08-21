@@ -9,56 +9,85 @@ const getInitials = (name) => {
 };
 
 // Testimonial card component
-const TestimonialCard = ({ name, location, message, imgSrc }) => {
+const TestimonialCard = ({ name, location, message, imgSrc, rating }) => {
   const [imageError, setImageError] = useState(false);
   const initials = getInitials(name);
 
   return (
     <div className="swiper-slide">
       <div className="bg-neutral-10 tw-px-8 tw-py-8 rounded-3">
-        <div>
-          <div className="d-flex align-items-center justify-content-between tw-gap-3 flex-wrap tw-mb-6">
-            <div className="d-flex align-items-center tw-gap-3">
-              {!imageError ? (
-                <img
-                  src={imgSrc}
-                  alt={name}
-                  onError={() => setImageError(true)}
-                  style={{ width: 50, height: 50, borderRadius: "50%", objectFit: "cover" }}
-                />
-              ) : (
-                <div
-                  style={{
-                    width: 50,
-                    height: 50,
-                    borderRadius: "50%",
-                    backgroundColor: "#497cf4",
-                    color: "#fff",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: "bold",
-                    fontSize: "16px"
-                  }}
-                >
-                  {initials}
-                </div>
-              )}
-              <div>
-                <h5 className="fw-medium text-dark-600 tw-mb-05">{name}</h5>
-                <span className="fw-normal text-dark-500 tw-text-lg">
-                  {location}
-                </span>
-              </div>
-            </div>
+        {/* Stars left | Quote right */}
+        <div className="d-flex align-items-center justify-content-between tw-mb-6">
+          {/* Dynamic Gold Stars (Left) */}
+          {/* Proper Gold Stars (Left) */}
+          <div className="d-flex align-items-center">
+            {[...Array(rating)].map((_, i) => (
+              <i
+                key={i}
+                className="fas fa-star"
+                style={{
+                  color: "#FFC107",
+                  fontSize: "20px",
+                  marginRight: "2px",
+                }}
+              ></i>
+            ))}
+          </div>
+
+          {/* Quote Icon (Right) */}
+          <img
+            src="assets/images/icon/testimonial-icon1.png"
+            alt="Quote Icon"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </div>
+
+        {/* Testimonial Message */}
+        <p className="fw-normal text-dark-500 tw-text-lg tw-mb-6">
+          "{message}"
+        </p>
+        <span className="w-100 bg-neutral-05 h-005 d-block" />
+
+        {/* Profile + Name */}
+        <div className="d-flex align-items-center tw-gap-3 mt-3">
+          {/* Uncomment below if you want profile images */}
+          {/* {!imageError ? (
             <img
-              src="assets/images/icon/testimonial-icon1.png"
-              alt="Quote Icon"
+              src={imgSrc}
+              alt={name}
+              onError={() => setImageError(true)}
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
             />
+          ) : (
+            <div
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: "50%",
+                backgroundColor: "#497cf4",
+                color: "#fff",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
+            >
+              {initials}
+            </div>
+          )} */}
+          <div>
+            <h5 className="fw-medium text-dark-600 tw-mb-05">{name}</h5>
+            <span className="fw-normal text-dark-500 tw-text-lg">
+              {location}
+            </span>
           </div>
         </div>
-        <p className="fw-normal text-dark-500 tw-text-lg tw-mb-6">"{message}"</p>
-        <span className="w-100 bg-neutral-05 h-005 d-block" />
       </div>
     </div>
   );
@@ -72,6 +101,7 @@ function Testimonial() {
       message:
         "I've been sending money to my family in Mexico for years, and Redeem is by far the fastest and most affordable service I've used.",
       imgSrc: "",
+      rating: 5, // ⭐⭐⭐⭐⭐
     },
     {
       name: "Rajiv Patel",
@@ -79,6 +109,7 @@ function Testimonial() {
       message:
         "The exchange rates are significantly better than my bank offers. I save over $30 every time I send money to my parents in India.",
       imgSrc: "",
+      rating: 5, // ⭐⭐⭐⭐⭐
     },
     {
       name: "Lisa Wong",
@@ -86,6 +117,7 @@ function Testimonial() {
       message:
         "The app is so easy to use, and I love being able to track my transfer every step of the way. It gives me peace of mind.",
       imgSrc: "",
+      rating: 4, // ⭐⭐⭐
     },
     {
       name: "James Santos",
@@ -93,6 +125,7 @@ function Testimonial() {
       message:
         "Redeem has the best rates for sending money to the Philippines. The money is always there within minutes of my transfer.",
       imgSrc: "",
+      rating: 5,
     },
     {
       name: "Emma Wilson",
@@ -100,6 +133,7 @@ function Testimonial() {
       message:
         "I was skeptical at first, but Redeem has been a game-changer for my business. We use it for all our international payments now.",
       imgSrc: "",
+      rating: 5,
     },
     {
       name: "Mohammed Al-Farsi",
@@ -107,6 +141,7 @@ function Testimonial() {
       message:
         "Customer service was exceptional when I had an issue with my first transfer. They resolved it immediately and I've been a loyal customer since.",
       imgSrc: "",
+      rating: 4,
     },
   ];
 
@@ -121,10 +156,7 @@ function Testimonial() {
               data-aos-duration={600}
             >
               <span>
-                <img
-                  src="assets/images/icon/star-icon2.png"
-                  alt="Image"
-                />
+                <img src="assets/images/icon/star-icon2.png" alt="Image" />
               </span>
               <h5 className="text-primary-600 fw-normal">Our Testimonials</h5>
             </div>
@@ -175,6 +207,7 @@ function Testimonial() {
                 location={item.location}
                 message={item.message}
                 imgSrc={item.imgSrc}
+                rating={item.rating} // Pass rating
               />
             ))}
           </div>

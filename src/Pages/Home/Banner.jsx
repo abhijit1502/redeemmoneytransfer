@@ -78,7 +78,7 @@ function Banner() {
                               src="assets/images/icon/star-icon3.png"
                               alt="star"
                             />
-                            <h5 className="text-primary-600 cursor-big">
+                            <h5 className="text-primary-500 cursor-big">
                               Global Money Transfers
                             </h5>
                           </div>
@@ -89,7 +89,7 @@ function Banner() {
                           >
                             <h2 className="banner-item-title h1 text-dark-600 tw-mb-3 tw-text-15 cursor-big">
                               Send Money{" "}
-                              <span className="text-primary-600">
+                              <span className="text-primary-500">
                                 Across Borders
                               </span>
                               Instantly
