@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import CookieConsent from "../Components/CookieConsent";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -286,6 +287,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+
+       <CookieConsent />
 
       {/* ==================== Footer Two Section End Here ==================== */}
     </>

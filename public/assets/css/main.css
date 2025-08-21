@@ -11886,7 +11886,7 @@ button.show {
     bottom: 30px;
     left: 50px;
     max-width: 365px;
-    background: var(--primary-color);
+    background: #e6eaf5;
     /* Fallback color if --primary-color isn't defined */
     padding: 25px 25px 30px 25px;
     border-radius: 15px;
@@ -11895,7 +11895,7 @@ button.show {
 }
 
 .wrapper-cookie a {
-    color: #e3e3e3
+    color: #000
 }
 
 .wrapper-cookie.hide {
