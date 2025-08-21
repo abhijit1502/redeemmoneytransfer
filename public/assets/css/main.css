@@ -12122,3 +12122,10 @@ button.show {
 .app-store-wrapper:hover .hover-text {
   opacity: 1;
 }
+
+.no-copy {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

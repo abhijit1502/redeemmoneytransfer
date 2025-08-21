@@ -23,6 +23,24 @@ function CookiePolicy() {
     }
   }, [isLoading]);
 
+    // Disable right-click & copy shortcuts
+    useEffect(() => {
+      const handleContextMenu = (e) => e.preventDefault();
+      const handleKeyDown = (e) => {
+        if ((e.ctrlKey || e.metaKey) && ["c", "u", "x", "s", "a"].includes(e.key.toLowerCase())) {
+          e.preventDefault();
+        }
+      };
+  
+      document.addEventListener("contextmenu", handleContextMenu);
+      document.addEventListener("keydown", handleKeyDown);
+  
+      return () => {
+        document.removeEventListener("contextmenu", handleContextMenu);
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }, []);
+
   return (
     <>
       <Seo {...cookiePolicySeo} />
@@ -74,7 +92,7 @@ function CookiePolicy() {
           {/* ==================== Breadcrumb End Here ==================== */}
 
           {/*====== Start Cookies Policy Section ======*/}
-          <section className="py-80">
+          <section className="py-80 no-copy">
             <div className="container">
               <div className="d-flex tw-gap-10 w-100 flex-wrap">
                  <div className="mx-auto text-center align-items-center justify-content-center">
